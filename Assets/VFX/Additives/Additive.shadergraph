@@ -439,10 +439,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -547.2000122070313,
-            "y": 15.200019836425782,
-            "width": 208.0,
-            "height": 277.5999755859375
+            "x": -446.3999328613281,
+            "y": 42.39998245239258,
+            "width": 118.39999389648438,
+            "height": 93.60002136230469
         }
     },
     "m_Slots": [
@@ -452,7 +452,7 @@
     ],
     "synonyms": [],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 2,
     "m_CustomColors": {
