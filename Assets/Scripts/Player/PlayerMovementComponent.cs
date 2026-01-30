@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class PlayerMovementComponent : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class PlayerMovementComponent : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-      
-        
+
+
 
     }
 
@@ -31,20 +32,8 @@ public class PlayerMovementComponent : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext obj)
     {
-        if(playerID == 1)
-        {
-            direction = obj.ReadValue<Vector2>();
-            Debug.Log("Player 1 goes to " + direction);
-        }
-        else if (playerID == 2)
-        {
-            direction = obj.ReadValue<Vector2>();
-            Debug.Log("Player 2 goes to " + direction);
-        }
-
-
-
-
+        direction = obj.ReadValue<Vector2>();
+        Debug.Log("Player" + playerID + " goes to " + direction);
     }
 
 
