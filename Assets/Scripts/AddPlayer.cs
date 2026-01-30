@@ -20,6 +20,8 @@ public class AddPlayer : MonoBehaviour
     {
         GameObject pf;
 
+        //PlayerInputManager pim = getComponent
+
        
 
     }
