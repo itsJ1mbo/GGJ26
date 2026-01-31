@@ -10,14 +10,13 @@ public class SaveManager : MonoBehaviour
     
     public void SaveGame()
     {
-        PlayerPrefs.SetInt("Level", _currentLevel);
-        PlayerPrefs.Save();
-        
         _currentLevel++;
         if (_currentLevel > _levels)
         {
             _currentLevel = 1;
         }
+        
+        PlayerPrefs.SetInt("Level", _currentLevel);
     }
 
     private void Awake()
