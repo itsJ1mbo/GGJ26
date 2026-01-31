@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: baseColor
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2069179312332479721, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
+      propertyPath: colorObject
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2475257593867214137, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
       propertyPath: m_Name
       value: Player2Blue Variant
