@@ -39,18 +39,26 @@ public class BasicEnemy : MonoBehaviour
     {
         if (patrolPoints.Length == 0) return;
 
+      
+        if (targetPoint.x > transform.position.x)
+        {
+            _spriteRenderer.flipX = false; 
+        }
+        else if (targetPoint.x < transform.position.x)
+        {
+            _spriteRenderer.flipX = true; 
+        }
+
         transform.position = Vector3.MoveTowards(transform.position, targetPoint, moveSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, targetPoint) < 0.1f)
         {
-
             if (patrolPoints.Length > 1)
             {
                 if (currentPointIndex >= patrolPoints.Length - 1)
                 {
                     direction = -1;
                 }
-
                 else if (currentPointIndex <= 0)
                 {
                     direction = 1;
@@ -58,7 +66,6 @@ public class BasicEnemy : MonoBehaviour
 
                 currentPointIndex += direction;
             }
-
 
             if (patrolPoints[currentPointIndex] != null)
             {
