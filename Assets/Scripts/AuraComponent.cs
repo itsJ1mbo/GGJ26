@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-public class AuraComponent : MonoBehaviour
+public class AuraComponent : ColorObject
 {
     // 1. Definimos los colores como BITS (Potencias de 2)
     // RED=1, GREEN=2, BLUE=4. Los demás son combinaciones automáticas.
@@ -24,11 +24,9 @@ public class AuraComponent : MonoBehaviour
     [Header("Configuración")]
     [SerializeField] AuraColor baseColor; // El color nativo de ESTE objeto
     [SerializeField] bool isPlayer;
-    [SerializeField] CapsuleCollider2D PlayerCollider;
 
     // Variables internas
     private CircleCollider2D AuraCollider;
-    private AuraColor currentFinalColor;
 
     // DICCIONARIO CONTADOR: 
     // Guarda cuántos objetos de cada color primario nos están tocando ahora mismo.
@@ -134,7 +132,7 @@ public class AuraComponent : MonoBehaviour
         if (colorCounters[AuraColor.BLUE] > 0) finalMask |= (int)AuraColor.BLUE;
 
         // Guardamos el resultado
-        currentFinalColor = (AuraColor)finalMask;
+        colorObject = (AuraColor)finalMask;
     }
 
     public void ForceChangeColor(AuraColor newColor)
@@ -152,8 +150,8 @@ public class AuraComponent : MonoBehaviour
     }
 
     public AuraColor GetBaseColor() => baseColor;
-    public AuraColor GetCurrentColor() => currentFinalColor;
-    public int GetCurrentColorID() => (int)currentFinalColor;
+    public AuraColor GetCurrentColor() => colorObject;
+    public int GetCurrentColorID() => (int)colorObject;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()

@@ -388,6 +388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080c4578940c2154aa34ff9dd7cbce88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AuraComponent
+  colorObject: 0
+  coloredSprite: {fileID: 6486852622828951300}
   baseColor: 4
   isPlayer: 0
   PlayerCollider: {fileID: 0}
