@@ -25,8 +25,6 @@ public class PlayerMovementComponent : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
 
-    SpriteRenderer spriteRenderer;
-
 
     void Awake()
     {
