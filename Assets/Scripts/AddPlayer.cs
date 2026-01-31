@@ -21,7 +21,12 @@ public class AddPlayer : MonoBehaviour
             pairWithDevice: Keyboard.current);
 
         if (spawn.Length > 0)
+        {
             player1.transform.position = spawn[0].position;
+            player1.GetComponent<AuraComponent>().SetInitialColor(1);
+        }
+
+
 
 
         var player2 = PlayerInput.Instantiate(playerPrefab,
@@ -29,7 +34,10 @@ public class AddPlayer : MonoBehaviour
             pairWithDevice: Keyboard.current);
 
         if (spawn.Length > 1)
+        {
             player2.transform.position = spawn[1].position;
+            player2.GetComponent<AuraComponent>().SetInitialColor(2);
+        }
         
         GameManager.Instance.AddPlayers(player1.gameObject, player2.gameObject);
     }

@@ -9,6 +9,12 @@ public class AuraComponent : MonoBehaviour
     CircleCollider2D AuraCollider;
     [SerializeField] CircleCollider2D PlayerCollider;
 
+    public void SetInitialColor(int id)
+    {
+        colorID = id;
+        startingColorID = id;
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         PlayerComponent other = collision.GetComponent<PlayerComponent>();
@@ -46,6 +52,20 @@ public class AuraComponent : MonoBehaviour
         AuraCollider = GetComponent<CircleCollider2D>();
 
         Debug.Log("Player color: " + colorID);
+
+        if (PlayerCollider == null)
+        {
+            // busca en los hijos un collider que NO sea trigger
+            var colliders = GetComponentsInChildren<CircleCollider2D>();
+            foreach (var col in colliders)
+            {
+                if (col != AuraCollider)
+                {
+                    PlayerCollider = col;
+                    break;
+                }
+            }
+        }
     }
 
     // Update is called once per frame

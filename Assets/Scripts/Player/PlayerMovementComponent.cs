@@ -11,6 +11,21 @@ public class PlayerMovementComponent : MonoBehaviour
     [SerializeField]
     int playerID = 1;
 
+    Rigidbody2D rb;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+
+        rb.gravityScale = 0;
+        rb.freezeRotation = true;
+    }
+
+    void FixedUpdate()
+    {
+        rb.linearVelocity = direction * speed;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,22 +38,11 @@ public class PlayerMovementComponent : MonoBehaviour
     void Update()
     {
 
-        // 
-        float xVel = speed * Time.deltaTime * direction.x;
-        float yVel = speed * Time.deltaTime * direction.y;
-        transform.position += new Vector3(xVel, yVel, 0 );
-
     }
 
     public void OnMove(InputAction.CallbackContext obj)
     {
         direction = obj.ReadValue<Vector2>();
-        Debug.Log("Player" + playerID + " goes to " + direction);
+        // Debug.Log("Player" + playerID + " goes to " + direction);
     }
-
-
-
-
-
-
 }
