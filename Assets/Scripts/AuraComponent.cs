@@ -22,8 +22,9 @@ public class AuraComponent : ColorObject
     }
 
     [Header("Configuración")]
-    [SerializeField] AuraColor baseColor; // El color nativo de ESTE objeto
     [SerializeField] bool isPlayer;
+
+    private AuraColor baseColor;
 
     // Variables internas
     private CircleCollider2D AuraCollider;
@@ -157,6 +158,8 @@ public class AuraComponent : ColorObject
     void Awake()
     {
         AuraCollider = GetComponent<CircleCollider2D>();
+
+        baseColor = colorObject;
 
         // Inicializamos los contadores con nuestro propio color base
         AddColorToCounters(baseColor);
