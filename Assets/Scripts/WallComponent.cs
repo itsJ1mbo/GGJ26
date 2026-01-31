@@ -2,43 +2,43 @@ using UnityEngine;
 
 public class WallComponent : MonoBehaviour
 {
-    [SerializeField] int colorID;
+    // ID: 0=NEGRO 1=AZUL 2=ROJO 3=VERDE
+    [SerializeField] int wallColorID;
+    [SerializeField] private Collider2D muroCollider;
 
+    // area de deteccion (trigger)
     private void OnTriggerStay2D(Collider2D collision)
-    {
-        AuraComponent other = collision.GetComponent<AuraComponent>();
-        if (other != null)
+    { 
+        if (collision.CompareTag("Player"))
         {
-            if (other.GetColorID() == colorID)
+            AuraComponent playerAura = collision.GetComponentInParent<AuraComponent>();
+            if (playerAura != null)
             {
-                Debug.Log("Colision con color igual detectada");
+                Debug.Log("ASDF " + wallColorID + " " + playerAura.GetColorID());
 
-                // desactivar el collider del player para permitir el paso
-                other.setColliderEnabled(false);
+                //comprobamos si los colores coinciden
+                if (playerAura.GetColorID() == wallColorID)
+                {
+                    Physics2D.IgnoreCollision(collision, muroCollider, true);
+                    Debug.Log("Pared " + wallColorID + " dejando pasar al jugador.");
+                }
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        AuraComponent other = collision.GetComponent<AuraComponent>();
-        if (other != null)
-        {
-            // reactivar el collider del player al salir del trigger
-            other.setColliderEnabled(true);
-        }
+        Physics2D.IgnoreCollision(collision, muroCollider, false);
+        Debug.Log("Pared " + wallColorID + " bloqueando al jugador.");
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int getWallColorID()
+    {
+        return wallColorID;
+    }
+
     void Start()
     {
+        //muroCollider = GetComponent<Collider2D>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
 }

@@ -3,28 +3,27 @@ using UnityEngine;
 public class AuraComponent : MonoBehaviour
 {
     [SerializeField] int colorID;
+    [SerializeField] CapsuleCollider2D PlayerCollider;
 
-    int startingColorID;
+    private int startingColorID;
+    private CircleCollider2D AuraCollider;
 
-    CircleCollider2D AuraCollider;
-    [SerializeField] CircleCollider2D PlayerCollider;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    // cuando otro jugador entra en el aura, cambia el color a morado
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerComponent other = collision.GetComponent<PlayerComponent>();
-        if (other != null)
+        if (collision.CompareTag("Player"))
         {
-            colorID = 3;
-            Debug.Log("Colision con aura detectada, color cambiado a 3");
+            colorID = collision.GetComponentInParent<AuraComponent>().GetOriginalColorID() + colorID; // SUMA IDS 1rojo +2azul = 3morado
         }
     }
 
+    // cuando otro jugador sale del aura, vuelve al color inicial
     private void OnTriggerExit2D(Collider2D collision)
     {
-        PlayerComponent other = collision.GetComponent<PlayerComponent>();
-        if (other != null)
+        if (collision.CompareTag("Player"))
         {
-            colorID = startingColorID;
+            colorID = startingColorID; // MORADO
         }
     }
 
@@ -39,13 +38,17 @@ public class AuraComponent : MonoBehaviour
         return colorID;
     }
 
+    public int GetOriginalColorID()
+    {
+        return startingColorID;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         startingColorID = colorID;
         AuraCollider = GetComponent<CircleCollider2D>();
 
-        Debug.Log("Player color: " + colorID);
     }
 
     // Update is called once per frame
