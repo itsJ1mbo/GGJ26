@@ -16,7 +16,11 @@ public class AddPlayer : MonoBehaviour
         if (Keyboard.current == null) return;
         
         var allDevices = new List<InputDevice> { Keyboard.current };
-        if (Gamepad.all.Count > 0) allDevices.Add(Gamepad.all[0]);
+        if (Gamepad.all.Count > 0)
+        {
+            allDevices.Add(Gamepad.all[0]);
+            GameManager.Instance._gamepad = true;
+        }
 
         // mete al player1
         var player1 = PlayerInput.Instantiate(player1Prefab,
