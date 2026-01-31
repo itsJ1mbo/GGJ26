@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{f905a444-db7f-4d86-8264-256fab653dc8}">
+		<property name="name">
+			<value>P1Movement</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d8c8ff72-6a15-428b-8b05-a7687abfaea2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{964e84ab-3f9f-41ef-a327-dbe26121d6f8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{964e84ab-3f9f-41ef-a327-dbe26121d6f8}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Quieto</value>
+			<value>Movimiento</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

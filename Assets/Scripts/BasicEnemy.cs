@@ -3,7 +3,7 @@ using UnityEngine;
 public class BasicEnemy : MonoBehaviour
 {
    
-    [SerializeField] int colorID; 
+    [SerializeField] AuraComponent.AuraColor colorID; 
     [SerializeField] float moveSpeed = 3f;
 
     [SerializeField] Transform pointA;
@@ -44,7 +44,7 @@ public class BasicEnemy : MonoBehaviour
 
         if (lightSource != null)
         {
-            if (lightSource.GetCurrentColorID() == this.colorID)
+            if (lightSource.GetBaseColor() == this.colorID)
             {
                 SetEnemyHidden(true);
             }
@@ -92,14 +92,12 @@ public class BasicEnemy : MonoBehaviour
 
         if (player != null || playerAura != null)
         {
-            int playerColorID = -1;
+            AuraComponent.AuraColor playerColorID = AuraComponent.AuraColor.NONE;
 
             if (playerAura != null)
             {
-                playerColorID = playerAura.GetCurrentColorID();
+                playerColorID = playerAura.GetBaseColor();
             }
-
-            Debug.Log(playerColorID);
 
             if (playerColorID == this.colorID)
             {
