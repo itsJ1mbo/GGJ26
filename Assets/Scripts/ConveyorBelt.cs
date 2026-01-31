@@ -83,6 +83,17 @@ public class ConveyorBelt : MonoBehaviour
         }
     }
 
+    public void ReverseDirection()
+    {
+        switch (direction)
+        {
+            case Direction.Up: direction = Direction.Down; break;
+            case Direction.Down: direction = Direction.Up; break;
+            case Direction.Left: direction = Direction.Right; break;
+            case Direction.Right: direction = Direction.Left; break;
+        }
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
