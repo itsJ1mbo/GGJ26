@@ -25,7 +25,6 @@ public class PlayerMovementComponent : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
 
-    SpriteRenderer spriteRenderer;
 
 
     void Awake()
@@ -80,11 +79,6 @@ public class PlayerMovementComponent : MonoBehaviour
             GetComponent<SpriteRenderer>().flipX = true;
         }
 
-        if (obj.canceled)
-            animator.SetBool("walking", false);
-        else
-            animator.SetBool("walking", true);
-
         if(animator != null)
         {
             if (obj.canceled)
@@ -94,12 +88,6 @@ public class PlayerMovementComponent : MonoBehaviour
         }
 
     }
-
-    void Flip()
-    {
-        transform.localScale *= -1;
-    }
-
 
     public void Interact(InputAction.CallbackContext value)
     {
