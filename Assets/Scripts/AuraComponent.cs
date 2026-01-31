@@ -138,6 +138,20 @@ public class AuraComponent : MonoBehaviour
         currentFinalColor = (AuraColor)finalMask;
     }
 
+    public void ForceChangeColor(AuraColor newColor)
+    {
+        RemoveColorFromCounters(baseColor);
+
+        // 2. Actualizamos el color base al nuevo
+        baseColor = newColor;
+
+        // 3. Añadimos el nuevo color base a los contadores
+        AddColorToCounters(baseColor);
+
+        // 4. Refrescamos el color final resultante
+        RecalculateFinalColor();
+    }
+
     public AuraColor GetBaseColor() => baseColor;
     public AuraColor GetCurrentColor() => currentFinalColor;
     public int GetCurrentColorID() => (int)currentFinalColor;
