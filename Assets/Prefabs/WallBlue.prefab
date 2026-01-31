@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 260236721038494778, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_Name
-      value: BlueWall
+      value: WallBlue
       objectReference: {fileID: 0}
     - target: {fileID: 1256532439263313138, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: wallColorID
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1256532439263313138, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: muroCollider

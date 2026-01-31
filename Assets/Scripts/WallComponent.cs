@@ -3,7 +3,7 @@ using UnityEngine;
 public class WallComponent : MonoBehaviour
 {
     // ID: 0=NEGRO 1=AZUL 2=ROJO 3=VERDE
-    [SerializeField] int wallColorID;
+    [SerializeField] AuraComponent.AuraColor wallColorID;
     [SerializeField] private Collider2D muroCollider;
 
     // area de deteccion (trigger)
@@ -14,10 +14,9 @@ public class WallComponent : MonoBehaviour
             AuraComponent playerAura = collision.GetComponentInParent<AuraComponent>();
             if (playerAura != null)
             {
-                Debug.Log("ASDF " + wallColorID + " " + playerAura.GetColorID());
 
                 //comprobamos si los colores coinciden
-                if (playerAura.GetColorID() == wallColorID)
+                if (playerAura.GetCurrentColor() == wallColorID)
                 {
                     Physics2D.IgnoreCollision(collision, muroCollider, true);
                     Debug.Log("Pared " + wallColorID + " dejando pasar al jugador.");
@@ -32,10 +31,6 @@ public class WallComponent : MonoBehaviour
         Debug.Log("Pared " + wallColorID + " bloqueando al jugador.");
     }
 
-    public int getWallColorID()
-    {
-        return wallColorID;
-    }
 
     void Start()
     {

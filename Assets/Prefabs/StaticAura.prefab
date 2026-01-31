@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 106904444802123180}
   - component: {fileID: 6486852622828951300}
   - component: {fileID: 2975532723105066399}
-  - component: {fileID: 6285418251472930957}
   m_Layer: 6
   m_Name: RoundAura
   m_TagString: Untagged
@@ -114,20 +113,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6285418251472930957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 494741291356939343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 080c4578940c2154aa34ff9dd7cbce88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AuraComponent
-  colorID: 0
-  PlayerCollider: {fileID: 0}
 --- !u!1 &3471411187680653257
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,9 +349,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1600758930380941744}
   - component: {fileID: 3476129672700083511}
+  - component: {fileID: 3836513169215319984}
+  - component: {fileID: 169823611086876195}
   m_Layer: 0
   m_Name: StaticAura
-  m_TagString: Untagged
+  m_TagString: StaticLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,7 +366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6637898021465938647}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.55, y: 4.12, z: 0}
   m_LocalScale: {x: 1.6222999, y: 1.6222999, z: 1.6222999}
   m_ConstrainProportionsScale: 0
@@ -401,5 +388,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080c4578940c2154aa34ff9dd7cbce88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AuraComponent
-  colorID: 1
+  baseColor: 4
+  isPlayer: 0
   PlayerCollider: {fileID: 0}
+--- !u!58 &3836513169215319984
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6637898021465938647}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2.2
+--- !u!50 &169823611086876195
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6637898021465938647}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

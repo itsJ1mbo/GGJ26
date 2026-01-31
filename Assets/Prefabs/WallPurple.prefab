@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1256532439263313138, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: wallColorID
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1256532439263313138, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: muroCollider
@@ -86,11 +86,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.434094
+      value: 5.44
       objectReference: {fileID: 0}
     - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.35812145
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_LocalPosition.z

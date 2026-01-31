@@ -33,6 +33,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7702446373479798959, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: baseColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702446373479798959, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: PlayerCollider
       value: 
       objectReference: {fileID: 7801598265609174632}
