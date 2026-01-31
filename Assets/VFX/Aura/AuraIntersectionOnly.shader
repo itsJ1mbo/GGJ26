@@ -18,7 +18,7 @@ Shader "Custom/Stencil_VisibleOnlyOn2_VertexColor"
         Stencil
         {
             Ref 2
-            Comp Equal
+            Comp LEqual
             Pass Keep
         }
 
