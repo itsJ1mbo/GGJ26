@@ -26,6 +26,7 @@ MonoBehaviour:
   Parameters:
   - {fileID: -6274588524207127740}
   - {fileID: -754445781111388672}
+  - {fileID: 6346007953626634368}
   MinDistance: 1
   MaxDistance: 20
   Length: 95059
@@ -44,7 +45,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639054768607595094
+  lastModified: 639054678025024344
   FileSizes:
   - Name: Desktop
     Value: 1378
@@ -125,10 +126,36 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7157888826486579222}
   cacheVersion: 131858
-  cacheTime: 639054768608080085
+  cacheTime: 639054898652607948
   SerializableEventsDict:
   - key: event:/PruebaEvento
     index: 0
+--- !u!114 &6346007953626634368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PruebaEvento/P2Movement
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: P2Movement
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2126709602
+    data2: 3268434515
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Quieto
+  - Movimiento
+  Exists: 1
 --- !u!114 &6748151734440654471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,10 +171,10 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/PruebaBank.bank
   Name: PruebaBank
   StudioPath: bank:/PruebaBank
-  lastModified: 639054768608080085
+  lastModified: 639054898652607948
   FileSizes:
   - Name: Desktop
-    Value: 2055584
+    Value: 2969728
   Exists: 1
 --- !u!114 &7157888826486579222
 MonoBehaviour:
@@ -164,8 +191,8 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639054768607605153
+  lastModified: 639054898652168360
   FileSizes:
   - Name: Desktop
-    Value: 998
+    Value: 1050
   Exists: 1

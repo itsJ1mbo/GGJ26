@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
-using UnityEngine.Windows;
 
 public class PlayerMovementComponent : MonoBehaviour
 {
@@ -9,8 +7,8 @@ public class PlayerMovementComponent : MonoBehaviour
     [SerializeField]
     float speed = 1;
 
-    [SerializeField]
-    int playerID = 1;
+    //[SerializeField]
+    //int playerID = 1;
 
     [SerializeField]
     public bool canInteract = false;
@@ -21,6 +19,9 @@ public class PlayerMovementComponent : MonoBehaviour
     [HideInInspector] public bool _player1;
 
     private bool _firstMove = true;
+
+    private float stopTimer = 0f;
+    public float stopDelay = 1.0f;
 
     Animator animator;
     SpriteRenderer spriteRenderer;
@@ -43,6 +44,39 @@ public class PlayerMovementComponent : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = direction * speed;
+
+        if (rb.linearVelocity.magnitude != 0)
+        {
+            stopTimer = 0f;
+
+            // Actualizo musica a movimiento inmediatamente
+            if (_player1)
+            {
+                MusicManager.Instance.SetPlayer1State(MusicManager.PlayerState.CAMINANDO);
+            }
+            else
+            {
+                MusicManager.Instance.SetPlayer2State(MusicManager.PlayerState.CAMINANDO);
+            }
+        }
+        else
+        {
+            // SI ESTOY QUIETO: Empiezo a contar tiempo
+            stopTimer += Time.fixedDeltaTime;
+
+            // Solo cambio la m�sica si ha pasado m�s de 1 segundo
+            if (stopTimer >= stopDelay)
+            {
+                if (_player1)
+                {
+                    MusicManager.Instance.SetPlayer1State(MusicManager.PlayerState.QUIETO);
+                }
+                else
+                {
+                    MusicManager.Instance.SetPlayer2State(MusicManager.PlayerState.QUIETO);
+                }
+            }
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
