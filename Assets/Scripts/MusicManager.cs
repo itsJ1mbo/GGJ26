@@ -5,16 +5,7 @@ using UnityEngine.InputSystem;
 
 public class MusicManager : MonoBehaviour
 {
-    private static MusicManager _instance;
-    public static MusicManager Instance
-    {
-        get
-        {
-            if(_instance == null)
-                _instance = new MusicManager();
-            return _instance;
-        }
-    }
+    public static MusicManager Instance { get; private set; }
 
 
     public EventReference musicEventReference;
@@ -34,8 +25,15 @@ public class MusicManager : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
-        _instance = this;
+        if(!Instance)
+        {
+            DontDestroyOnLoad(transform.gameObject);
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     void Start()
     {
@@ -94,27 +92,27 @@ public class MusicManager : MonoBehaviour
         if (Keyboard.current.cKey.wasPressedThisFrame)
         {
             SetMusicState(MusicState.MENU);
-            Debug.Log("Música cambiada a Menu");
+            Debug.Log("Mï¿½sica cambiada a Menu");
         }
 
         // Tecla C -> Cambia a Caminando
         if (Keyboard.current.gKey.wasPressedThisFrame)
         {
             SetMusicState(MusicState.GAME);
-            Debug.Log("Música cambiada a Game");
+            Debug.Log("Mï¿½sica cambiada a Game");
         }
         // Tecla Q -> Cambia a Quieto
         if (Keyboard.current.qKey.wasPressedThisFrame)
         {
             SetPlayer1State(PlayerState.QUIETO);
-            Debug.Log("Música cambiada a Quieto");
+            Debug.Log("Mï¿½sica cambiada a Quieto");
         }
 
         // Tecla C -> Cambia a Caminando
         if (Keyboard.current.cKey.wasPressedThisFrame)
         {
             SetPlayer1State(PlayerState.CAMINANDO);
-            Debug.Log("Música cambiada a Caminando");
+            Debug.Log("Mï¿½sica cambiada a Caminando");
         }
     }
 

@@ -7,8 +7,8 @@ public class PlayerMovementComponent : MonoBehaviour
     [SerializeField]
     float speed = 1;
 
-    [SerializeField]
-    int playerID = 1;
+    //[SerializeField]
+    //int playerID = 1;
 
     [SerializeField]
     public bool canInteract = false;
