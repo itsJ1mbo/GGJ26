@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,11 +14,14 @@ public class AddPlayer : MonoBehaviour
     void Start()
     {
         if (Keyboard.current == null) return;
+        
+        var allDevices = new List<InputDevice> { Keyboard.current };
+        if (Gamepad.all.Count > 0) allDevices.Add(Gamepad.all[0]);
 
         // mete al player1
         var player1 = PlayerInput.Instantiate(player1Prefab,
             controlScheme: "WASD",
-            pairWithDevice: Keyboard.current);
+            pairWithDevices: allDevices.ToArray());
 
         if (spawn.Length > 0)
         {
@@ -26,7 +30,7 @@ public class AddPlayer : MonoBehaviour
 
         var player2 = PlayerInput.Instantiate(player2Prefab,
             controlScheme: "ARROW",
-            pairWithDevice: Keyboard.current);
+            pairWithDevices: allDevices.ToArray());
 
         if (spawn.Length > 1)
         {
