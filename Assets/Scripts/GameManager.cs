@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject _camera;
     private GameObject[] _players = new GameObject[2];
+    [HideInInspector] public bool _gamepad;
     
     public TutorialComponent _tutorial;
 
