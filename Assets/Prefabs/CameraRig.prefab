@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6264387624102308521}
+  - component: {fileID: 8273437621933779978}
   m_Layer: 0
   m_Name: CameraRig
   m_TagString: Untagged
@@ -34,6 +35,22 @@ Transform:
   - {fileID: 8461424038449171459}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8273437621933779978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4643462929719712635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcd7052840eff741938900c0d2057cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
+  _zOffset: -10
+  _threshHold: 11
+  _camera1: {fileID: 2177428108839743369}
+  _camera2: {fileID: 1997178534649205169}
 --- !u!1 &6069741029052305966
 GameObject:
   m_ObjectHideFlags: 0
