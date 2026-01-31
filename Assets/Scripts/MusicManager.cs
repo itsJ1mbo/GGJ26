@@ -20,6 +20,10 @@ public class MusicManager : MonoBehaviour
         CAMINANDO = 1
     }
 
+    void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
     void Start()
     {
         InitializeMusic();
@@ -49,6 +53,16 @@ public class MusicManager : MonoBehaviour
         SetParameter("P1Movement", (float)newState);
     }
 
+    public void SetMusicStateByIndex(int index)
+    {
+        SetMusicState((MusicState)index);
+    }
+
+    public void SetPlayerStateByIndex(int index)
+    {
+        SetPlayerState((PlayerState)index);
+    }
+
     void Update()
     {
         if (Keyboard.current == null) return;
@@ -74,7 +88,7 @@ public class MusicManager : MonoBehaviour
         }
 
         // Tecla C -> Cambia a Caminando
-        if (Keyboard.current.qKey.wasPressedThisFrame)
+        if (Keyboard.current.cKey.wasPressedThisFrame)
         {
             SetPlayerState(PlayerState.CAMINANDO);
             Debug.Log("Música cambiada a Caminando");

@@ -1,135 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8137468972630000954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: FMOD/GGJ26/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-<<<<<<< HEAD
-  lastModified: 639054600397513995
-=======
-<<<<<<< Updated upstream
-  lastModified: 639054593703587001
-=======
-  lastModified: 639054576955375024
->>>>>>> Stashed changes
->>>>>>> f2c47a197e45b67b0ad0b2f71e15f949e9dd81c2
-  FileSizes:
-  - Name: Desktop
-    Value: 930
-  Exists: 1
---- !u!114 &-5135822768830744799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/PruebaEvento
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/PruebaEvento
-  Guid:
-    Data1: -802894679
-    Data2: 1232014215
-    Data3: -1602851148
-    Data4: -823576147
-  Banks:
-  - {fileID: 4544695764927067161}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-<<<<<<< HEAD
-  - {fileID: 4498451621119422715}
-  - {fileID: -1064222275521773965}
-=======
-<<<<<<< Updated upstream
-  - {fileID: -1203603339654039324}
-  - {fileID: -226262835812170799}
-=======
-  - {fileID: -2207804028062093928}
-  - {fileID: -3011336384134455801}
->>>>>>> Stashed changes
->>>>>>> f2c47a197e45b67b0ad0b2f71e15f949e9dd81c2
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 95059
---- !u!114 &-3041530291135232747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: FMOD/GGJ26/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-<<<<<<< HEAD
-  lastModified: 639054236360699516
-=======
-<<<<<<< Updated upstream
-  lastModified: 639054155528753268
-=======
-  lastModified: 639054576955365012
->>>>>>> Stashed changes
->>>>>>> f2c47a197e45b67b0ad0b2f71e15f949e9dd81c2
-  FileSizes:
-  - Name: Desktop
-    Value: 1074
-  Exists: 1
-<<<<<<< HEAD
---- !u!114 &-1064222275521773965
-=======
-<<<<<<< Updated upstream
---- !u!114 &-1203603339654039324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PruebaEvento/P1Movement
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: P1Movement
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3672639199
-    data2: 1906402181
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Quieto
-  - Movimiento
-  Exists: 1
---- !u!114 &-226262835812170799
-=======
---- !u!114 &-3011336384134455801
->>>>>>> Stashed changes
->>>>>>> f2c47a197e45b67b0ad0b2f71e15f949e9dd81c2
+--- !u!114 &-8188206953431141478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,11 +26,27 @@ MonoBehaviour:
   - Menu
   - Game
   Exists: 1
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
---- !u!114 &-2207804028062093928
+--- !u!114 &-6910545615704123559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD/GGJ26/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639054576955375024
+  FileSizes:
+  - Name: Desktop
+    Value: 930
+  Exists: 1
+--- !u!114 &-2366887845320990964
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,8 +72,6 @@ MonoBehaviour:
   - Quieto
   - Movimiento
   Exists: 1
->>>>>>> Stashed changes
->>>>>>> f2c47a197e45b67b0ad0b2f71e15f949e9dd81c2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,30 +85,22 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
   EditorBanks:
-  - {fileID: -8137468972630000954}
-  - {fileID: -3041530291135232747}
-  - {fileID: 4544695764927067161}
+  - {fileID: -6910545615704123559}
+  - {fileID: 5295671328746281274}
+  - {fileID: 7295482592189945541}
   EditorEvents:
-  - {fileID: -5135822768830744799}
+  - {fileID: 4554778932596411079}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -3041530291135232747}
+  - {fileID: 5295671328746281274}
   StringsBanks:
-  - {fileID: -8137468972630000954}
+  - {fileID: -6910545615704123559}
   cacheVersion: 131858
-<<<<<<< HEAD
-  cacheTime: 639054600397579350
-=======
-<<<<<<< Updated upstream
-  cacheTime: 639054593703682470
-=======
-  cacheTime: 639054610672618820
->>>>>>> Stashed changes
->>>>>>> f2c47a197e45b67b0ad0b2f71e15f949e9dd81c2
+  cacheTime: 639054629187604935
   SerializableEventsDict:
   - key: event:/PruebaEvento
     index: 0
---- !u!114 &4498451621119422715
+--- !u!114 &4554778932596411079
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,24 +109,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PruebaEvento/P1Movement
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: P1Movement
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3672639199
-    data2: 1906402181
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Quieto
-  - Movimiento
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PruebaEvento
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PruebaEvento
+  Guid:
+    Data1: -802894679
+    Data2: 1232014215
+    Data3: -1602851148
+    Data4: -823576147
+  Banks:
+  - {fileID: 7295482592189945541}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2366887845320990964}
+  - {fileID: -8188206953431141478}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 95059
+--- !u!114 &5295671328746281274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD/GGJ26/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639054576955365012
+  FileSizes:
+  - Name: Desktop
+    Value: 1074
   Exists: 1
---- !u!114 &4544695764927067161
+--- !u!114 &7295482592189945541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,22 +164,8 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/PruebaBank.bank
   Name: PruebaBank
   StudioPath: bank:/PruebaBank
-<<<<<<< HEAD
-  lastModified: 639054600397579350
-  FileSizes:
-  - Name: Desktop
-    Value: 2055136
-=======
-<<<<<<< Updated upstream
-  lastModified: 639054593703682470
-  FileSizes:
-  - Name: Desktop
-    Value: 2055136
-=======
-  lastModified: 639054610672618820
+  lastModified: 639054629187604935
   FileSizes:
   - Name: Desktop
     Value: 2055584
->>>>>>> Stashed changes
->>>>>>> f2c47a197e45b67b0ad0b2f71e15f949e9dd81c2
   Exists: 1
