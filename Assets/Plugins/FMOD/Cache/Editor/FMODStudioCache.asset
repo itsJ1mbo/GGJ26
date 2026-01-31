@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639054123338148988
+  lastModified: 639054600876415208
   FileSizes:
   - Name: Desktop
-    Value: 826
+    Value: 930
   Exists: 1
 --- !u!114 &-5135822768830744799
 MonoBehaviour:
@@ -40,13 +40,15 @@ MonoBehaviour:
     Data4: -823576147
   Banks:
   - {fileID: 4544695764927067161}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1203603339654039324}
+  - {fileID: -226262835812170799}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 95059
 --- !u!114 &-3041530291135232747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,6 +68,58 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1074
+  Exists: 1
+--- !u!114 &-1203603339654039324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PruebaEvento/P1Movement
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: P1Movement
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3672639199
+    data2: 1906402181
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Quieto
+  - Movimiento
+  Exists: 1
+--- !u!114 &-226262835812170799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PruebaEvento/GameState
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: GameState
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2878392550
+    data2: 3094782888
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Menu
+  - Game
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -91,7 +145,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -8137468972630000954}
   cacheVersion: 131858
-  cacheTime: 639054123338270407
+  cacheTime: 639054600876580664
   SerializableEventsDict:
   - key: event:/PruebaEvento
     index: 0
@@ -110,8 +164,8 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/PruebaBank.bank
   Name: PruebaBank
   StudioPath: bank:/PruebaBank
-  lastModified: 639054123338270407
+  lastModified: 639054600876580664
   FileSizes:
   - Name: Desktop
-    Value: 1214
+    Value: 2055136
   Exists: 1

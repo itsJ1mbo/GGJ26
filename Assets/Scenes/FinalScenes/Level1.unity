@@ -198,7 +198,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3149389169688070996, guid: 0c0e954cc89d97b47ac6f60809fc5cd0, type: 3}
   m_Color: {r: 0.3283019, g: 0.3283019, b: 0.3283019, a: 1}
   m_FlipX: 0
@@ -366,6 +366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1095552494}
   - component: {fileID: 1095552495}
+  - component: {fileID: 1095552496}
   m_Layer: 0
   m_Name: First
   m_TagString: Untagged
@@ -434,7 +435,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3149389169688070996, guid: 0c0e954cc89d97b47ac6f60809fc5cd0, type: 3}
   m_Color: {r: 0.4566037, g: 0.4566037, b: 0.4566037, a: 1}
   m_FlipX: 0
@@ -446,6 +447,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1095552496
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095552493}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2daa9cf4b3959d04c9800dac6ced7bc7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1470670577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -459,6 +482,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1095552495}
     - target: {fileID: 371242263438471789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: redColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 371242263438471789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: redColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -471,6 +498,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 371242263438471789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: baseColor.a
+      value: 0.5686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 371242263438471789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: baseColor.b
       value: 0.5471698
       objectReference: {fileID: 0}
@@ -481,6 +512,10 @@ PrefabInstance:
     - target: {fileID: 371242263438471789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: baseColor.r
       value: 0.5471698
+      objectReference: {fileID: 0}
+    - target: {fileID: 371242263438471789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: blueColor.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 371242263438471789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: blueColor.b
@@ -498,6 +533,10 @@ PrefabInstance:
       propertyPath: secondSpark
       value: 
       objectReference: {fileID: 32059185}
+    - target: {fileID: 371242263438471789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: greenColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 371242263438471789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: greenColor.b
       value: 0
