@@ -46,11 +46,11 @@ public class SplineParticlesController : MonoBehaviour
 
         while (currentIndex < particles.Length)
         {
-            // Activamos la partícula actual
-            // Asumo que SplineFollowerParticle tiene un método o puedes activar su GameObject
+            // Activamos la partï¿½cula actual
+            // Asumo que SplineFollowerParticle tiene un mï¿½todo o puedes activar su GameObject
             particles[currentIndex].gameObject.SetActive(true);
 
-            // Si el componente tiene un método para empezar el movimiento, llámalo aquí:
+            // Si el componente tiene un mï¿½todo para empezar el movimiento, llï¿½malo aquï¿½:
             // particles[currentIndex].Play(); 
 
             currentIndex++;
@@ -68,8 +68,8 @@ public class SplineParticlesController : MonoBehaviour
         foreach (var particle in particles)
         {
             particle.progress = 0;
-            particle.gameObject.GetComponent<SpriteRenderer>().sharedMaterial.color = color;
-            particle.gameObject.GetComponent<TrailRenderer>().sharedMaterial.color = color;
+            particle.gameObject.GetComponent<SpriteRenderer>().material.color = color;
+            particle.gameObject.GetComponent<TrailRenderer>().material.color = color;
         }
     }
 
