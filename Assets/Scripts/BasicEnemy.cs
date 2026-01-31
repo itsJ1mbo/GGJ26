@@ -44,7 +44,7 @@ public class BasicEnemy : MonoBehaviour
 
         if (lightSource != null)
         {
-            if (lightSource.GetColorID() == this.colorID)
+            if (lightSource.GetCurrentColorID() == this.colorID)
             {
                 SetEnemyHidden(true);
             }
@@ -96,7 +96,7 @@ public class BasicEnemy : MonoBehaviour
 
             if (playerAura != null)
             {
-                playerColorID = playerAura.GetColorID();
+                playerColorID = playerAura.GetCurrentColorID();
             }
 
             Debug.Log(playerColorID);

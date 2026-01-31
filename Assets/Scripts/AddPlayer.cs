@@ -15,8 +15,6 @@ public class AddPlayer : MonoBehaviour
     {
         if (Keyboard.current == null) return;
 
-        Debug.Log("si o que");
-
         // mete al player1
         var player1 = PlayerInput.Instantiate(playerPrefabRed,
             controlScheme: "WASD",
@@ -25,10 +23,7 @@ public class AddPlayer : MonoBehaviour
         if (spawn.Length > 0)
         {
             player1.transform.position = spawn[0].position;
-            //player1.GetComponent<AuraComponent>().SetInitialColor(1);
         }
-
-        Debug.Log("hmmmm");
 
         var player2 = PlayerInput.Instantiate(playerPrefabBlue,
             controlScheme: "ARROW",
@@ -37,7 +32,6 @@ public class AddPlayer : MonoBehaviour
         if (spawn.Length > 1)
         {
             player2.transform.position = spawn[1].position;
-            //player2.GetComponent<AuraComponent>().SetInitialColor(2);
         }
         
         GameManager.Instance.SetUpPlayers(player1.gameObject, player2.gameObject);

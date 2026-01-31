@@ -78,7 +78,6 @@ public class AuraComponent : MonoBehaviour
     // cuando otro jugador entra en el aura, cambia el color a morado
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.CompareTag("Player"))
         {
             AddColorToCounters(collision.GetComponentInParent<AuraComponent>().GetBaseColor());
