@@ -61,6 +61,7 @@ public class AuraComponent : MonoBehaviour
     {
         startingColorID = colorID;
         AuraCollider = GetComponent<CircleCollider2D>();
+
     }
 
     // Update is called once per frame
