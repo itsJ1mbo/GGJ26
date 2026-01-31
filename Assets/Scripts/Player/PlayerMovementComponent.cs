@@ -66,9 +66,17 @@ public class PlayerMovementComponent : MonoBehaviour
             GameManager.Instance.SetFirstMove(_player1);
             _firstMove = false;
         }
+
         direction = obj.ReadValue<Vector2>();
 
-
+        if (direction.x > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (direction.x < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
 
         if(animator != null)
         {
@@ -77,20 +85,8 @@ public class PlayerMovementComponent : MonoBehaviour
             else
                 animator.SetBool("walking", true);
         }
- 
-
-        if (direction.x < 0)
-            spriteRenderer.flipX = true;
-        else if(direction.x > 0)
-            spriteRenderer.flipX = false;
 
     }
-
-    void Flip()
-    {
-        transform.localScale *= -1;
-    }
-
 
     public void Interact(InputAction.CallbackContext value)
     {
