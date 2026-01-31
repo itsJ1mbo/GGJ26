@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/PruebaBank.bank
   Name: PruebaBank
   StudioPath: bank:/PruebaBank
-  lastModified: 639054155529309226
+  lastModified: 639054123338270407
   FileSizes:
   - Name: Desktop
     Value: 1214
@@ -44,7 +44,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 6493635715044914541}
   cacheVersion: 131858
-  cacheTime: 639054155529309226
+  cacheTime: 639054123338270407
   SerializableEventsDict:
   - key: event:/PruebaEvento
     index: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639054155528753268
+  lastModified: 639054123338038015
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -83,7 +83,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639054155529024721
+  lastModified: 639054123338148988
   FileSizes:
   - Name: Desktop
     Value: 826
