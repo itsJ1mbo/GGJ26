@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerRed Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3586489008071549592, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586489008071549592, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586489008071549592, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702446373479798959, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: colorID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702446373479798959, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: PlayerCollider
+      value: 
+      objectReference: {fileID: 7801598265609174632}
     - target: {fileID: 9128651725517641673, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.60203
@@ -57,3 +77,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+--- !u!70 &7801598265609174632 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5578286121162340955, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+  m_PrefabInstance: {fileID: 2391083634501043251}
+  m_PrefabAsset: {fileID: 0}
