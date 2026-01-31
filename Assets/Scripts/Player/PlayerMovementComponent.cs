@@ -23,11 +23,14 @@ public class PlayerMovementComponent : MonoBehaviour
 
     Animator animator;
 
+    SpriteRenderer spriteRenderer;
+
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         rb.gravityScale = 0;
         rb.freezeRotation = true;
@@ -63,11 +66,19 @@ public class PlayerMovementComponent : MonoBehaviour
             GameManager.Instance.SetFirstMove(_player1);
             _firstMove = false;
         }
+
         direction = obj.ReadValue<Vector2>();
 
+        if (direction.x > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (direction.x < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
 
-
-        if(obj.canceled)
+        if (obj.canceled)
             animator.SetBool("walking", false);
         else
             animator.SetBool("walking", true);
