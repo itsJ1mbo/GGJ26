@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: InnerAura
-  m_Shader: {fileID: -6465566751694194690, guid: db0170fc7a1e1e040a617221d9faba61, type: 3}
+  m_Name: Additive
+  m_Shader: {fileID: -6465566751694194690, guid: 1470a945084255642b90fa4b6ee549c1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -40,15 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - _AlphaSmoothStep: 0
-    - _Fade: 0
-    - _NoiseAddition: 0.17
-    - _NoiseMultiplier: 0.2
+    m_Floats: []
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &8279001865254881736
+--- !u!114 &1981815334847209377
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
