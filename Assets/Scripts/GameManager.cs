@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] LevelManager levelManager;
     public enum Player
     {
         ONE,
@@ -37,6 +36,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void OnRestart(InputAction.CallbackContext obj)
+    {
+        LevelManager.Instance.RestartLevel();
+
+    }
+
     private void Start()
     {
         
@@ -45,11 +50,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // provisionallll
-        if (Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame)
-        {
-            levelManager.RestartLevel();
-        }
 
     }
 }

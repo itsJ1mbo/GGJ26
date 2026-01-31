@@ -3,9 +3,8 @@ using UnityEngine.InputSystem;
 
 public class AddPlayer : MonoBehaviour
 {
-    [SerializeField] GameObject playerPrefabRed;
-    [SerializeField] GameObject playerPrefabBlue;
-    [SerializeField] GameObject playerPrefabGreen;
+    [SerializeField] GameObject player1Prefab;
+    [SerializeField] GameObject player2Prefab;
     [SerializeField] Transform[] spawn;
 
 
@@ -16,22 +15,22 @@ public class AddPlayer : MonoBehaviour
         if (Keyboard.current == null) return;
 
         // mete al player1
-        var player1 = PlayerInput.Instantiate(playerPrefabRed,
+        var player1 = PlayerInput.Instantiate(player1Prefab,
             controlScheme: "WASD",
             pairWithDevice: Keyboard.current);
 
         if (spawn.Length > 0)
         {
-            player1.transform.position = spawn[0].position;
+            player1.transform.parent.position = spawn[0].position;
         }
 
-        var player2 = PlayerInput.Instantiate(playerPrefabBlue,
+        var player2 = PlayerInput.Instantiate(player2Prefab,
             controlScheme: "ARROW",
             pairWithDevice: Keyboard.current);
 
         if (spawn.Length > 1)
         {
-            player2.transform.position = spawn[1].position;
+            player2.transform.parent.position = spawn[1].position;
         }
         
         GameManager.Instance.SetUpPlayers(player1.gameObject, player2.gameObject);

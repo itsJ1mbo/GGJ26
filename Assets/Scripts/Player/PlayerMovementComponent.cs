@@ -52,7 +52,6 @@ public class PlayerMovementComponent : MonoBehaviour
     public void OnMove(InputAction.CallbackContext obj)
     {
         direction = obj.ReadValue<Vector2>();
-
     }
 
 
