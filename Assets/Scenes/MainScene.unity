@@ -371,6 +371,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &627171449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2622936247318142393, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+  m_PrefabInstance: {fileID: 8378814996772997508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &627171450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627171449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301af643f5c0ba84197d799781df5390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  sceneNamesInOrder:
+  - 
 --- !u!1 &1784215147
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +429,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2153080757942341553, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 519420028}
+    - target: {fileID: 2153080757942341553, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 627171450}
     - target: {fileID: 2408503192649815972, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -469,7 +496,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2622936247318142393, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 627171450}
   m_SourcePrefab: {fileID: 100100000, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
