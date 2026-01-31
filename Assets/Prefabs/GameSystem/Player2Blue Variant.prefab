@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.745283
       objectReference: {fileID: 0}
+    - target: {fileID: 4131127234752996040, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7467129856190224180, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
       propertyPath: baseColor
       value: 4
@@ -83,5 +87,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2028108943387127947, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7102234277731664300}
   m_SourcePrefab: {fileID: 100100000, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
+--- !u!1 &4833930630282049238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2028108943387127947, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
+  m_PrefabInstance: {fileID: 6859219841731429981}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7102234277731664300
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4833930630282049238}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb17cb1c39ef06e4eae25fb6bfbf066b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
