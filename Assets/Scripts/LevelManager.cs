@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
     /// Poner el nombre de las escenas en orden como queramos que se vayan mostrando.
     /// Cuando se pasa un nivel, se llega a un GoalComponent, que llama a este metodo, 
     /// mira la escena en la que estamos y busca el siguiente indice en la lista, si
-    /// ya está en el final, vuelve a la primera.
+    /// ya estï¿½ en el final, vuelve a la primera.
     /// </summary>
     public string[] sceneNamesInOrder;
     public void NextLevel()
@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("La escena actual no está en la lista de sceneNamesInOrder.");
+            Debug.LogError("La escena actual no estï¿½ en la lista de sceneNamesInOrder.");
         }
     }
 

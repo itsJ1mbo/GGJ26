@@ -14,12 +14,12 @@ public class GoalComponent : MonoBehaviour
         LevelManager.Instance.NextLevel();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!_levelDone && other.CompareTag("Player"))
         {
             _playersInside++;
-
+            
             if (_playersInside == 2)
             {
                 _levelDone = true;
@@ -27,7 +27,7 @@ public class GoalComponent : MonoBehaviour
             }
         }
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
