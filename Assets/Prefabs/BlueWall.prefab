@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 260236721038494778, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_Name
-      value: Wall Variant
+      value: BlueWall
       objectReference: {fileID: 0}
     - target: {fileID: 1256532439263313138, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: wallColorID
@@ -19,6 +19,10 @@ PrefabInstance:
     - target: {fileID: 2892686473253628195, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_Name
       value: OnlyDrawsOnAuraIntersection
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892686473253628195, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3057571602585492595, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_Color.b
@@ -31,6 +35,10 @@ PrefabInstance:
     - target: {fileID: 3057571602585492595, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766500891180047925, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_LocalPosition.x

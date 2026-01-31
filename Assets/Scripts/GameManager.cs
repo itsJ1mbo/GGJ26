@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public GameObject _camera;
-    public GameObject[] _players;
+    private GameObject[] _players = new GameObject[2];
 
     public void SetUpPlayers(GameObject player1, GameObject player2)
     {
