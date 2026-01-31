@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SprintEnemyRaycast : MonoBehaviour
+public class SprintEnemy : MonoBehaviour
 {
     [SerializeField] AuraComponent.AuraColor enemyColor;
     [SerializeField] float detectionRange = 10f;
@@ -13,43 +13,38 @@ public class SprintEnemyRaycast : MonoBehaviour
     private enum State { Idle, Charging, Sprinting, Cooldown }
     [SerializeField] private State currentState = State.Idle;
 
-    private Transform playerTransform;
+    private Transform targetTransform; 
     private Vector3 targetPosition;
     private float timer;
 
     private SpriteRenderer spriteRenderer;
     private bool isHidden = false;
-    private GameObject player;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null) playerTransform = playerObj.transform;
-
         UpdateEnemyColorVisuals();
     }
 
     void Update()
     {
-        if (playerTransform == null)
+        if (isHidden) return;
+
+        if (currentState == State.Idle)
         {
-            player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null) playerTransform = player.transform;
-            return;
+            FindClosestPlayer();
         }
 
-        if (isHidden) return;
+        if (targetTransform == null && currentState != State.Sprinting) return;
 
         switch (currentState)
         {
             case State.Idle:
-                HandleFlip(playerTransform.position); 
+                HandleFlip(targetTransform.position);
                 CheckForPlayer();
                 break;
             case State.Charging:
-                HandleFlip(playerTransform.position); 
+                HandleFlip(targetTransform.position);
                 HandleCharging();
                 break;
             case State.Sprinting:
@@ -62,25 +57,39 @@ public class SprintEnemyRaycast : MonoBehaviour
         }
     }
 
+    void FindClosestPlayer()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        float closestDistance = Mathf.Infinity;
+        Transform closestPlayer = null;
+
+        foreach (GameObject p in players)
+        {
+            float dist = Vector2.Distance(transform.position, p.transform.position);
+            if (dist < closestDistance)
+            {
+                closestDistance = dist;
+                closestPlayer = p.transform;
+            }
+        }
+        targetTransform = closestPlayer;
+    }
+
     void HandleFlip(Vector3 focusPoint)
     {
-        if (focusPoint.x > transform.position.x)
-        {
-            spriteRenderer.flipX = false; 
-        }
-        else if (focusPoint.x < transform.position.x)
-        {
-            spriteRenderer.flipX = true; 
-        }
+        if (spriteRenderer == null) return;
+        spriteRenderer.flipX = focusPoint.x < transform.position.x;
     }
 
     void CheckForPlayer()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+        if (targetTransform == null) return;
+
+        float distanceToPlayer = Vector2.Distance(transform.position, targetTransform.position);
 
         if (distanceToPlayer <= detectionRange)
         {
-            Vector3 direction = (playerTransform.position - transform.position).normalized;
+            Vector3 direction = (targetTransform.position - transform.position).normalized;
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, detectionRange, visionMask);
 
             if (hit.collider != null && hit.collider.CompareTag("Player"))
@@ -96,7 +105,7 @@ public class SprintEnemyRaycast : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-            targetPosition = playerTransform.position;
+            targetPosition = targetTransform.position;
             currentState = State.Sprinting;
         }
     }
@@ -130,21 +139,21 @@ public class SprintEnemyRaycast : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        PlayerComponent playerComp = collision.gameObject.GetComponent<PlayerComponent>();
-        AuraComponent playerAura = collision.gameObject.GetComponentInChildren<AuraComponent>();
-
-        if (playerComp != null || playerAura != null)
+        if (collision.gameObject.CompareTag("Player"))
         {
+            PlayerComponent playerComp = collision.gameObject.GetComponent<PlayerComponent>();
+            AuraComponent playerAura = collision.gameObject.GetComponentInChildren<AuraComponent>();
+
             AuraComponent.AuraColor playerColor = AuraComponent.AuraColor.NONE;
             if (playerAura != null) playerColor = playerAura.GetCurrentColor();
 
-            if ((playerColor & enemyColor) == enemyColor) AbsorbEnemy();
+            if ((playerColor & enemyColor) == enemyColor)
+            {
+                AbsorbEnemy();
+            }
             else if (!isHidden)
             {
-                if (LevelManager.Instance != null)
-                {
-                    LevelManager.Instance.RestartLevel();
-                }
+                if (LevelManager.Instance != null) LevelManager.Instance.RestartLevel();
                 Destroy(collision.gameObject);
             }
         }
