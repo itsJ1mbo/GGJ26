@@ -9,16 +9,33 @@ public class AuraComponent : MonoBehaviour
     CircleCollider2D AuraCollider;
     [SerializeField] CircleCollider2D PlayerCollider;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    public void SetInitialColor(int id)
+    {
+        colorID = id;
+        startingColorID = id;
+
+        //mientras q no tengamos sprites lo pongo aqui manual:
+        if(id == 1)
+        {
+            GetComponent<SpriteRenderer>().color = Color.blue;
+        }
+        else if(id == 2)
+        {
+            GetComponent<SpriteRenderer>().color = Color.red;
+        }
+    }
+
+    // cuando otro jugador entra en el aura, cambia el color a morado
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerComponent other = collision.GetComponent<PlayerComponent>();
         if (other != null)
         {
-            colorID = 3;
-            Debug.Log("Colision con aura detectada, color cambiado a 3");
+            colorID = 3; // MORADO
         }
     }
 
+    // cuando otro jugador sale del aura, vuelve al color inicial
     private void OnTriggerExit2D(Collider2D collision)
     {
         PlayerComponent other = collision.GetComponent<PlayerComponent>();
@@ -44,8 +61,6 @@ public class AuraComponent : MonoBehaviour
     {
         startingColorID = colorID;
         AuraCollider = GetComponent<CircleCollider2D>();
-
-        Debug.Log("Player color: " + colorID);
     }
 
     // Update is called once per frame
