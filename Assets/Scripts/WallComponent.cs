@@ -1,10 +1,12 @@
 using UnityEngine;
 
+
+[RequireComponent(typeof(Collider2D))]
 public class WallComponent : MonoBehaviour
 {
     // ID: 0=NEGRO 1=AZUL 2=ROJO 3=VERDE
     [SerializeField] AuraComponent.AuraColor wallColorID;
-    [SerializeField] private Collider2D muroCollider;
+    private Collider2D muroCollider;
 
     // area de deteccion (trigger)
     private void OnTriggerStay2D(Collider2D collision)
@@ -34,6 +36,6 @@ public class WallComponent : MonoBehaviour
 
     void Start()
     {
-        //muroCollider = GetComponent<Collider2D>();
+        muroCollider = GetComponents<Collider2D>()[1];
     }
 }
