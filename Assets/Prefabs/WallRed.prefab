@@ -13,6 +13,10 @@ PrefabInstance:
       value: WallRed
       objectReference: {fileID: 0}
     - target: {fileID: 1256532439263313138, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: colorObject
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256532439263313138, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: wallColorID
       value: 1
       objectReference: {fileID: 0}

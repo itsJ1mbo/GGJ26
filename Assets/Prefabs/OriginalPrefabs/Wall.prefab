@@ -168,6 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa210463542603e4d8b0685c5a130755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  colorObject: 0
+  coloredSprite: {fileID: 2717099908744366669}
   wallColorID: 0
 --- !u!1 &2892686473253628195
 GameObject:
