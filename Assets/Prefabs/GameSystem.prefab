@@ -45,9 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   _camera: {fileID: 0}
-  _players:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &2619024690887690912
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +439,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0

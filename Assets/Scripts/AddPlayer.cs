@@ -25,7 +25,7 @@ public class AddPlayer : MonoBehaviour
         if (spawn.Length > 0)
         {
             player1.transform.position = spawn[0].position;
-            player1.GetComponent<AuraComponent>().SetInitialColor(1);
+            //player1.GetComponent<AuraComponent>().SetInitialColor(1);
         }
 
         var player2 = PlayerInput.Instantiate(playerPrefabBlue,
@@ -35,7 +35,7 @@ public class AddPlayer : MonoBehaviour
         if (spawn.Length > 1)
         {
             player2.transform.position = spawn[1].position;
-            player2.GetComponent<AuraComponent>().SetInitialColor(2);
+            //player2.GetComponent<AuraComponent>().SetInitialColor(2);
         }
         
         GameManager.Instance.SetUpPlayers(player1.gameObject, player2.gameObject);

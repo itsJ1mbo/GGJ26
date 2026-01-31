@@ -18,8 +18,7 @@ public class AuraComponent : MonoBehaviour
     // cuando otro jugador entra en el aura, cambia el color a morado
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerComponent other = collision.GetComponent<PlayerComponent>();
-        if (other != null)
+        if (collision.CompareTag("Player"))
         {
             colorID = 3; // MORADO
         }
@@ -28,10 +27,9 @@ public class AuraComponent : MonoBehaviour
     // cuando otro jugador sale del aura, vuelve al color inicial
     private void OnTriggerExit2D(Collider2D collision)
     {
-        PlayerComponent other = collision.GetComponent<PlayerComponent>();
-        if (other != null)
+        if (collision.CompareTag("Player"))
         {
-            colorID = startingColorID;
+            colorID = startingColorID; // MORADO
         }
     }
 
@@ -47,7 +45,7 @@ public class AuraComponent : MonoBehaviour
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         startingColorID = colorID;
         AuraCollider = GetComponent<CircleCollider2D>();

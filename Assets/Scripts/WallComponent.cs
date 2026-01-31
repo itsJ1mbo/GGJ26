@@ -2,21 +2,26 @@ using UnityEngine;
 
 public class WallComponent : MonoBehaviour
 {
+    // ID: 0=NEGRO 1=AZUL 2=ROJO 3=VERDE
     [SerializeField] int wallColorID;
-    [SerializeField] Collider2D muroCollider;
+    [SerializeField] private Collider2D muroCollider;
 
     // area de deteccion (trigger)
     private void OnTriggerStay2D(Collider2D collision)
     { 
-        AuraComponent playerAura = collision.GetComponentInParent<AuraComponent>();
-
-        if (playerAura != null)
+        if (collision.CompareTag("Player"))
         {
-            //comprobamos si los colores coinciden
-            if (playerAura.GetColorID() == wallColorID)
+            AuraComponent playerAura = collision.GetComponentInParent<AuraComponent>();
+            if (playerAura != null)
             {
-                Physics2D.IgnoreCollision(collision, muroCollider, true);
-                //Debug.Log("Pared " + wallColorID + " dejando pasar al jugador.");
+                Debug.Log("ASDF " + wallColorID + " " + playerAura.GetColorID());
+
+                //comprobamos si los colores coinciden
+                if (playerAura.GetColorID() == wallColorID)
+                {
+                    Physics2D.IgnoreCollision(collision, muroCollider, true);
+                    Debug.Log("Pared " + wallColorID + " dejando pasar al jugador.");
+                }
             }
         }
     }
@@ -24,7 +29,7 @@ public class WallComponent : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Physics2D.IgnoreCollision(collision, muroCollider, false);
-        //Debug.Log("Pared " + wallColorID + " bloqueando al jugador.");
+        Debug.Log("Pared " + wallColorID + " bloqueando al jugador.");
     }
 
     public int getWallColorID()
@@ -34,6 +39,6 @@ public class WallComponent : MonoBehaviour
 
     void Start()
     {
-        
+        //muroCollider = GetComponent<Collider2D>();
     }
 }

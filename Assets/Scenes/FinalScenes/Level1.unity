@@ -294,6 +294,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4941920982836167869, guid: d58707c747603e8429185f8d3672564e, type: 3}
+      propertyPath: sceneNamesInOrder.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941920982836167869, guid: d58707c747603e8429185f8d3672564e, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[3]'
+      value: Level3
+      objectReference: {fileID: 0}
     - target: {fileID: 6928647008915104085, guid: d58707c747603e8429185f8d3672564e, type: 3}
       propertyPath: m_Name
       value: LevelManager

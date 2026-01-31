@@ -188,10 +188,6 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1223526152}
-    - target: {fileID: 2153080757942341553, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: _players.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2408503192649815972, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.84
