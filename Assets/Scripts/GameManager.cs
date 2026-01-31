@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -53,6 +52,12 @@ public class GameManager : MonoBehaviour
     {
         LevelManager.Instance.RestartLevel();
 
+    }
+
+    public void SaveGame()
+    {
+        //PlayerPrefs.SetInt("Level", _currentLevel);
+        //PlayerPrefs.Save();
     }
 
     private void Start()
