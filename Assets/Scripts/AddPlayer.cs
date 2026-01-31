@@ -45,21 +45,4 @@ public class AddPlayer : MonoBehaviour
         player2.gameObject.GetComponent<PlayerMovementComponent>()._player1 = false;
         GameManager.Instance.SetUpPlayers(player1.gameObject, player2.gameObject);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
-    static public void setActionMap()
-    {
-        GameObject pf;
-
-        //PlayerInputManager pim = getComponent
-
-       
-
-    }
 }

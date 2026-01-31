@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,6 +16,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool _gamepad;
     
     public TutorialComponent _tutorial;
+
+    public int _levels;
+    [HideInInspector] public int _currentLevel = 1;
 
     public void SetFirstMove(bool p1)
     {
@@ -49,20 +51,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        _currentLevel = PlayerPrefs.GetInt("Level", 1);
+    }
+
     public void OnRestart(InputAction.CallbackContext obj)
     {
         LevelManager.Instance.RestartLevel();
 
     }
 
-    private void Start()
+    public void SaveGame()
     {
+        PlayerPrefs.SetInt("Level", _currentLevel);
+        PlayerPrefs.Save();
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        _currentLevel++;
+        if (_currentLevel > _levels)
+        {
+            _currentLevel = 1;
+        }
     }
 }

@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class MusicManager : MonoBehaviour
 {
+    public static MusicManager Instance { get; private set; }
+
+
     public EventReference musicEventReference;
     private EventInstance musicInstance;
 
@@ -22,7 +25,15 @@ public class MusicManager : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        if(!Instance)
+        {
+            DontDestroyOnLoad(transform.gameObject);
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     void Start()
     {
@@ -49,9 +60,14 @@ public class MusicManager : MonoBehaviour
         SetParameter("GameState", (float)newState);
     }
 
-    public void SetPlayerState(PlayerState newState)
+    public void SetPlayer1State(PlayerState newState)
     {
         SetParameter("P1Movement", (float)newState);
+    }
+
+    public void SetPlayer2State(PlayerState newState)
+    {
+        SetParameter("P2Movement", (float)newState);
     }
 
     public void SetMusicStateByIndex(int index)
@@ -59,11 +75,15 @@ public class MusicManager : MonoBehaviour
         SetMusicState((MusicState)index);
     }
 
-    public void SetPlayerStateByIndex(int index)
+    public void SetPlayer1StateByIndex(int index)
     {
-        SetPlayerState((PlayerState)index);
+        SetPlayer1State((PlayerState)index);
     }
 
+    public void SetPlayer2StateByIndex(int index)
+    {
+        SetPlayer2State((PlayerState)index);
+    }
     void Update()
     {
         if (Keyboard.current == null) return;
@@ -72,27 +92,27 @@ public class MusicManager : MonoBehaviour
         if (Keyboard.current.cKey.wasPressedThisFrame)
         {
             SetMusicState(MusicState.MENU);
-            Debug.Log("Música cambiada a Menu");
+            Debug.Log("Mï¿½sica cambiada a Menu");
         }
 
         // Tecla C -> Cambia a Caminando
         if (Keyboard.current.gKey.wasPressedThisFrame)
         {
             SetMusicState(MusicState.GAME);
-            Debug.Log("Música cambiada a Game");
+            Debug.Log("Mï¿½sica cambiada a Game");
         }
         // Tecla Q -> Cambia a Quieto
         if (Keyboard.current.qKey.wasPressedThisFrame)
         {
-            SetPlayerState(PlayerState.QUIETO);
-            Debug.Log("Música cambiada a Quieto");
+            SetPlayer1State(PlayerState.QUIETO);
+            Debug.Log("Mï¿½sica cambiada a Quieto");
         }
 
         // Tecla C -> Cambia a Caminando
         if (Keyboard.current.cKey.wasPressedThisFrame)
         {
-            SetPlayerState(PlayerState.CAMINANDO);
-            Debug.Log("Música cambiada a Caminando");
+            SetPlayer1State(PlayerState.CAMINANDO);
+            Debug.Log("Mï¿½sica cambiada a Caminando");
         }
     }
 
