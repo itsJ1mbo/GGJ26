@@ -132,6 +132,11 @@ public class BasicEnemy : MonoBehaviour
             {
                 if (!isHidden)
                 {
+                    if (LevelManager.Instance != null)
+                    {
+                        Debug.Log("bye bye");
+                        LevelManager.Instance.RestartLevel();
+                    }
                     Destroy(collision.gameObject);
                 }
             }

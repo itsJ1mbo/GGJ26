@@ -139,7 +139,14 @@ public class SprintEnemyRaycast : MonoBehaviour
             if (playerAura != null) playerColor = playerAura.GetCurrentColor();
 
             if ((playerColor & enemyColor) == enemyColor) AbsorbEnemy();
-            else if (!isHidden) Destroy(collision.gameObject);
+            else if (!isHidden)
+            {
+                if (LevelManager.Instance != null)
+                {
+                    LevelManager.Instance.RestartLevel();
+                }
+                Destroy(collision.gameObject);
+            }
         }
     }
 
