@@ -2,6 +2,14 @@ using UnityEngine;
 
 public class GoalComponent : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer firstSpark;
+    [SerializeField] private SpriteRenderer secondSpark;
+    [SerializeField] private Color baseColor;
+    [SerializeField] private Color greenColor;
+    [SerializeField] private Color redColor;
+    [SerializeField] private Color blueColor;
+
+
     private int _playersInside = 0;
     private bool _levelDone = false;
 

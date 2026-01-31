@@ -13,6 +13,20 @@ public class LevelManager : MonoBehaviour
     /// ya est� en el final, vuelve a la primera.
     /// </summary>
     public string[] sceneNamesInOrder;
+
+
+    /// <summary>
+    /// Reinicia el nivel actual
+    /// </summary>
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
+    /// <summary>
+    /// Manda al siguiente nivel de la lista
+    /// </summary>
     public void NextLevel()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
