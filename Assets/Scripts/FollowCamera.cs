@@ -4,10 +4,15 @@ public class FollowCamera : MonoBehaviour
 {
     [Header("Configuración de Distancia")]
     public float _zOffset = -10f;
-    public float _threshHold = 11f; 
+    public float _minSize = 5f;     // Este será siempre el tamaño base original
     public float _maxSize = 8f;    
-    public float _padding = 3f;     
-    
+    public float _padding = 3f;
+
+    [Header("Movimiento Continuo")]
+    public float _zoomSpeed = 2f; 
+    [Tooltip("Margen antes de encoger. Si los jugadores están muy cerca, se ignorará para volver al MinSize")]
+    public float _shrinkThreshold = 1.0f; 
+
     [Header("Referencias")]
     private GameObject _p1;
     private GameObject _p2;
@@ -17,8 +22,8 @@ public class FollowCamera : MonoBehaviour
     public Camera _camera2;
     public Transform _texture; 
 
-    private bool _split = false;
-    public bool _isPlayer1; 
+    private float _targetSize;
+    private float _currentSize;
 
     public void SetPlayers(GameObject[] players)
     {
@@ -29,71 +34,59 @@ public class FollowCamera : MonoBehaviour
     void Awake()
     {
         _object = transform;
+        _currentSize = _minSize;
+        _targetSize = _minSize;
     }
 
     void LateUpdate()
     {
-        if (_p1 == null || _p2 == null) return;
+        if (!_p1 || !_p2) return;
 
+        // 1. Posicionamiento
         Vector3 pos1 = _p1.transform.position;
         Vector3 pos2 = _p2.transform.position;
         Vector3 midpoint = (pos1 + pos2) * 0.5f;
+        _object.position = new Vector3(midpoint.x, midpoint.y, _zOffset);
         
-        // 1. Posicionamiento
-        if(!_split)
-            _object.position = new Vector3(midpoint.x, midpoint.y, _zOffset);
-        else
-            _object.position = _isPlayer1 ? new Vector3(pos1.x, pos1.y, _zOffset) : new Vector3(pos2.x, pos2.y, _zOffset);
-        
-        // 2. Cálculo de Zoom (Mantener proporciones)
+        // 2. Cálculo del tamaño ideal
         float deltaX = Mathf.Abs(pos1.x - pos2.x) + _padding;
         float deltaY = Mathf.Abs(pos1.y - pos2.y) + _padding;
+        float calculatedSize = Mathf.Max(deltaY * 0.5f, (deltaX / _camera1.aspect) * 0.5f);
 
-        float sizeBasedOnY = deltaY * 0.5f;
-        float sizeBasedOnX = (deltaX / _camera1.aspect) * 0.5f;
-
-        float targetSize = Mathf.Max(sizeBasedOnY, sizeBasedOnX);
-        float finalSize = Mathf.Clamp(targetSize, _threshHold * 0.5f, _maxSize);
-
-        _camera1.orthographicSize = finalSize;
-        _camera2.orthographicSize = finalSize;
-
-        // 3. Lógica de Cambio de Estado
-        if (!_split && targetSize >= _maxSize)
+        // 3. Lógica de Thresholds con Retorno al Origen
+        if (calculatedSize > _targetSize)
         {
-            _split = true;
-            GameManager.Instance.SplitScreen(true);
+            // Expandir si superamos el tamaño actual
+            _targetSize = Mathf.Min(calculatedSize, _maxSize);
         }
-        else if (_split && targetSize < _maxSize - 1.5f) // Histéresis para evitar parpadeo
+        else if (calculatedSize < _minSize + 0.1f) 
         {
-            _split = false;
-            GameManager.Instance.SplitScreen(false);
+            // REGLA ESPECIAL: Si los jugadores están lo suficientemente cerca del mínimo,
+            // forzamos el target al _minSize original para que siempre vuelva a la base.
+            _targetSize = _minSize;
+        }
+        else if (calculatedSize < _targetSize - _shrinkThreshold)
+        {
+            // Encogimiento normal por umbral
+            _targetSize = Mathf.Max(calculatedSize, _minSize);
         }
 
-        // 4. Sincronizar escala de la textura (SIN aplastar)
-        UpdateTextureScale(finalSize);
-    }
+        // 4. Movimiento Continuo (MoveTowards)
+        // Esto asegura que la cámara siempre se mueva de forma fluida hacia el _targetSize
+        _currentSize = Mathf.MoveTowards(_currentSize, _targetSize, _zoomSpeed * Time.deltaTime);
 
-    public void AdjustViewPort(float x, float y, bool isSplit)
-    {
-        float width = isSplit ? 0.5f : 1f;
-        _camera1.rect = new Rect(x, y, width, 1f);
-        _camera2.rect = new Rect(x, y, width, 1f);
-        _split = isSplit;
+        // 5. Aplicar
+        _camera1.orthographicSize = _currentSize;
+        _camera2.orthographicSize = _currentSize;
+        
+        UpdateTextureScale(_currentSize);
     }
 
     void UpdateTextureScale(float currentSize)
     {
         if (_texture == null || _camera1 == null) return;
-
-        // LA CLAVE: La malla debe representar el área TOTAL que la cámara vería 
-        // a pantalla completa, incluso si el Viewport Rect está a 0.5f.
-        // Si usamos _camera1.rect.width aquí, la textura se aplasta. 
-        // Al NO usarlo, la textura mantiene su aspecto 16:9 y la cámara simplemente "recorta" los lados.
-        
         float height = currentSize * 2f;
-        float width = height * _camera1.aspect; // Usamos el aspect ratio total del monitor
-
+        float width = height * _camera1.aspect; 
         _texture.localScale = new Vector3(width, height, 1f);
     }
 }
