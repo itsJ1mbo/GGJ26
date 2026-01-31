@@ -11,6 +11,9 @@ public class PlayerMovementComponent : MonoBehaviour
     [SerializeField]
     int playerID = 1;
 
+    [SerializeField]
+    public bool interact = false;
+
     Rigidbody2D rb;
 
     void Awake()
@@ -44,5 +47,17 @@ public class PlayerMovementComponent : MonoBehaviour
     {
         direction = obj.ReadValue<Vector2>();
 
+    }
+
+
+    public void Interact()
+    {
+        interact = !interact;
+    }
+
+
+    public void InteractRelease()
+    {
+        //interact = false;
     }
 }

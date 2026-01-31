@@ -15,43 +15,47 @@ public class MovableObject : MonoBehaviour
     void Update()
     {
         
+
+
     }
 
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
 
         if (collision.gameObject.layer == 7)
         {
-
-            if (collision.gameObject.GetComponentInChildren<Rigidbody2D>() != null)
+            if (collision.gameObject.GetComponentInParent<Rigidbody2D>() != null)
             {
-                JoinToObj(collision.gameObject.GetComponentInChildren<Rigidbody2D>());
+                Debug.Log("BLESSED CURSED");
+                Debug.Log(collision.gameObject.GetComponentInParent<PlayerMovementComponent>().interact);
+
+                if (collision.gameObject.GetComponentInParent<PlayerMovementComponent>().interact && joint.connectedBody == null)
+                    JoinToObj(collision.gameObject.GetComponentInParent<Rigidbody2D>());
             }
-        }
-    }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 7)
-        {
-            Debug.Log("QUEEEE");
-           // Release();
+            if (!collision.gameObject.GetComponentInParent<PlayerMovementComponent>().interact && joint.connectedBody != null)
+                ReleaseObj();
+        }   
 
-        }
+        Debug.Log("no jodas eh");
+
+        
+
+
     }
 
     public void JoinToObj(Rigidbody2D rb) 
     {
-
         joint.connectedBody = rb;
-    
+
+        Rigidbody2D thisRb = GetComponentInParent<Rigidbody2D>();
+        thisRb.bodyType = RigidbodyType2D.Dynamic;
     }
 
-    public void Release()
+    public void ReleaseObj()
     {
         joint.connectedBody = null;
-
+        Rigidbody2D thisRb = GetComponentInParent<Rigidbody2D>();
+        thisRb.bodyType = RigidbodyType2D.Kinematic;
     }
 }
