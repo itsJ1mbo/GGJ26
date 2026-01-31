@@ -184,7 +184,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
---- !u!1001 &982342963
+--- !u!1001 &2034770315
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -198,15 +198,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5213005677081033512, guid: 259f51799c2e64c4f954f1d483957f5b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.0133405
+      value: 2.685796
       objectReference: {fileID: 0}
     - target: {fileID: 5213005677081033512, guid: 259f51799c2e64c4f954f1d483957f5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.66
+      value: 6.53
       objectReference: {fileID: 0}
     - target: {fileID: 5213005677081033512, guid: 259f51799c2e64c4f954f1d483957f5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.98
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 5213005677081033512, guid: 259f51799c2e64c4f954f1d483957f5b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -253,13 +253,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2678338928935940914, guid: 9bdd76792a2c5aa40b6914f7032fab87, type: 3}
+      propertyPath: muroCollider
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4019407019270980602, guid: 9bdd76792a2c5aa40b6914f7032fab87, type: 3}
       propertyPath: m_Name
       value: WallBlue
-      objectReference: {fileID: 0}
-    - target: {fileID: 5213005677081033512, guid: 9bdd76792a2c5aa40b6914f7032fab87, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.0338883
       objectReference: {fileID: 0}
     - target: {fileID: 5213005677081033512, guid: 9bdd76792a2c5aa40b6914f7032fab87, type: 3}
       propertyPath: m_LocalPosition.x
@@ -267,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5213005677081033512, guid: 9bdd76792a2c5aa40b6914f7032fab87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.81
+      value: -1.664
       objectReference: {fileID: 0}
     - target: {fileID: 5213005677081033512, guid: 9bdd76792a2c5aa40b6914f7032fab87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1441,5 +1441,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 768092509}
   - {fileID: 3351382057898896868}
-  - {fileID: 982342963}
   - {fileID: 2066578637}
+  - {fileID: 2034770315}
