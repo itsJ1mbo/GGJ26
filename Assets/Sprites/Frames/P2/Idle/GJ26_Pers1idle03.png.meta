@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f4c541bef9a566d42a4d260e3e928a0b
+guid: fc55b78dadb58c441a62b8f1a99118b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2338513734566103972
-    second: GJ26_Pers2foto03_0
+      213: -2952894784662683409
+    second: GJ26_Pers1idle03_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GJ26_Pers2foto03_0
+      name: GJ26_Pers1idle03_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 0
-        width: 644
-        height: 1330
+        x: 54
+        y: 38
+        width: 580
+        height: 1387
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c54b0dcf52eeb8fd0800000000000000
-      internalID: -2338513734566103972
+      spriteID: fe0c315a6d53507d0800000000000000
+      internalID: -2952894784662683409
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GJ26_Pers2foto03_0: -2338513734566103972
+      GJ26_Pers1idle03_0: -2952894784662683409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
