@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1810475854005842557}
   m_Layer: 0
   m_Name: Player Red
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080c4578940c2154aa34ff9dd7cbce88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AuraComponent
-  baseColor: 0
+  baseColor: 1
   isPlayer: 1
   PlayerCollider: {fileID: 0}
 --- !u!58 &3437463254185881183

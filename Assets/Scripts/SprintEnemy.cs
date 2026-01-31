@@ -2,12 +2,9 @@ using UnityEngine;
 
 public class SprintEnemyRaycast : MonoBehaviour
 {
-
     [SerializeField] AuraComponent.AuraColor enemyColor;
-
     [SerializeField] float detectionRange = 10f;
     [SerializeField] LayerMask visionMask;
-
 
     [SerializeField] float sprintSpeed = 15f;
     [SerializeField] float chargeTime = 0.5f;
@@ -22,22 +19,43 @@ public class SprintEnemyRaycast : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private bool isHidden = false;
+    private GameObject player;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
         {
             playerTransform = playerObj.transform;
-
         }
+ 
+
         UpdateEnemyColorVisuals();
     }
 
     void Update()
     {
-        if (playerTransform == null || isHidden) return;
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                playerTransform = player.transform;
+            }
+       
+        }
+
+        if (playerTransform == null)
+        {
+            return;
+        }
+
+        if (isHidden)
+        {
+            return;
+        }
 
         switch (currentState)
         {
@@ -48,24 +66,39 @@ public class SprintEnemyRaycast : MonoBehaviour
         }
     }
 
-
     void CheckForPlayer()
     {
-
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+
 
         if (distanceToPlayer <= detectionRange)
         {
             Vector3 direction = (playerTransform.position - transform.position).normalized;
+
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, detectionRange, visionMask);
 
-            if (hit.collider != null && hit.collider.CompareTag("Player"))
+
+            if (hit.collider != null)
             {
-                timer = chargeTime;
-                currentState = State.Charging;
+                if (hit.collider.CompareTag("Player"))
+                {
+                    Debug.DrawRay(transform.position, direction * distanceToPlayer, Color.green); 
+
+                    timer = chargeTime;
+                    currentState = State.Charging;
+                }
+                else
+                {
+                    Debug.DrawRay(transform.position, direction * distanceToPlayer, Color.red); 
+                }
+            }
+            else
+            {
+                Debug.DrawRay(transform.position, direction * detectionRange, Color.white);
             }
         }
     }
+
 
     void HandleCharging()
     {
@@ -80,7 +113,6 @@ public class SprintEnemyRaycast : MonoBehaviour
     void HandleSprinting()
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, sprintSpeed * Time.deltaTime);
-
         if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
         {
             timer = cooldownTime;
@@ -94,26 +126,15 @@ public class SprintEnemyRaycast : MonoBehaviour
         if (timer <= 0) currentState = State.Idle;
     }
 
-
-
     private void OnTriggerStay2D(Collider2D collision)
     {
-        AuraComponent lightSource = collision.GetComponent<AuraComponent>();
-        if (lightSource != null)
-        {
-
-            AuraComponent.AuraColor lightColor = lightSource.GetCurrentColor();
-
-
-            if ((lightColor & enemyColor) == enemyColor)
-            {
-                SetEnemyHidden(true);
-            }
-            else
-            {
-                SetEnemyHidden(false);
-            }
-        }
+        //AuraComponent lightSource = collision.GetComponent<AuraComponent>();
+        //if (lightSource != null)
+        //{
+        //    AuraComponent.AuraColor lightColor = lightSource.GetCurrentColor();
+        //    if ((lightColor & enemyColor) == enemyColor) SetEnemyHidden(true);
+        //    else SetEnemyHidden(false);
+        //}
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -126,11 +147,9 @@ public class SprintEnemyRaycast : MonoBehaviour
         if (isHidden == hidden) return;
         isHidden = hidden;
         Color c = spriteRenderer.color;
-        c.a = isHidden ? 0.2f : 1f;
+        c.a = isHidden ? 0.05f : 1f;
         spriteRenderer.color = c;
     }
-
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -140,35 +159,18 @@ public class SprintEnemyRaycast : MonoBehaviour
         if (player != null || playerAura != null)
         {
             AuraComponent.AuraColor playerColor = AuraComponent.AuraColor.NONE;
-            if (playerAura != null)
-            {
-                playerColor = playerAura.GetCurrentColor();
-            }
+            if (playerAura != null) playerColor = playerAura.GetCurrentColor();
 
-
-            if ((playerColor & enemyColor) == enemyColor)
-            {
-                AbsorbEnemy();
-            }
-            else
-            {
-                if (!isHidden)
-                {
-                    Destroy(collision.gameObject);
-                }
-            }
+            if ((playerColor & enemyColor) == enemyColor) AbsorbEnemy();
+            else if (!isHidden) Destroy(collision.gameObject);
         }
     }
 
-    void AbsorbEnemy()
-    {
-        Destroy(this.gameObject);
-    }
+    void AbsorbEnemy() { Destroy(this.gameObject); }
 
     void UpdateEnemyColorVisuals()
     {
         if (spriteRenderer == null) return;
-
         switch (enemyColor)
         {
             case AuraComponent.AuraColor.RED: spriteRenderer.color = Color.red; break;
