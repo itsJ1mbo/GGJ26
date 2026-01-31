@@ -16,7 +16,7 @@ public class WallComponent : MonoBehaviour
             if (playerAura.GetColorID() == wallColorID)
             {
                 Physics2D.IgnoreCollision(collision, muroCollider, true);
-                Debug.Log("Pared " + wallColorID + " dejando pasar al jugador.");
+                //Debug.Log("Pared " + wallColorID + " dejando pasar al jugador.");
             }
         }
     }
@@ -24,7 +24,7 @@ public class WallComponent : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Physics2D.IgnoreCollision(collision, muroCollider, false);
-        Debug.Log("Pared " + wallColorID + " bloqueando al jugador.");
+        //Debug.Log("Pared " + wallColorID + " bloqueando al jugador.");
     }
 
     public int getWallColorID()
