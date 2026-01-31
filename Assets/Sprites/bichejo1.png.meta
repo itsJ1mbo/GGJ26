@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d5397f3987c447946a6017bf6ab25e45
+guid: 6ce09da6f63f76f47ade51ec3e58f3cc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1998321266609627104
-    second: EnemigoProvisional_0
+      213: 3363012050994792874
+    second: bichejo1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnemigoProvisional_0
+      name: bichejo1_0
       rect:
         serializedVersion: 2
-        x: 800
-        y: 263
-        width: 393
-        height: 508
+        x: 799
+        y: 262
+        width: 395
+        height: 510
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 020ef9445698444e0800000000000000
-      internalID: -1998321266609627104
+      spriteID: aa907e274a1dbae20800000000000000
+      internalID: 3363012050994792874
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3024706781912fb42aee45b4bab50f2c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -133,11 +133,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      EnemigoProvisional_0: -1998321266609627104
+      bichejo1_0: 3363012050994792874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
