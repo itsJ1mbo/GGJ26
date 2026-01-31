@@ -10,6 +10,7 @@ public class GoalComponent : MonoBehaviour
     [SerializeField] private Color greenColor;
     [SerializeField] private Color redColor;
     [SerializeField] private Color blueColor;
+    [SerializeField] private GameObject finalParticleSystem;
 
 
     private Animator firstSparkAnimator;
@@ -48,6 +49,7 @@ public class GoalComponent : MonoBehaviour
 
 
         timer = 0;
+        finalParticleSystem.SetActive(true);
         while (timer < 1f)
         {
             timer += Time.deltaTime;
