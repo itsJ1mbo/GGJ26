@@ -1,16 +1,43 @@
 using UnityEngine;
+using FMOD;
+using FMOD.Studio;
+using FMODUnity;
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public EventReference endLevelEventReference;
+    public EventReference botonEventReference;
+    public EventReference abrirCerrarPuertaEventReference;
+    public EventReference botePinturaEventReference;
+    public EventReference cambioParedColorEventReference;
+
+    public void PlayEventReference(EventReference eventReference)
     {
-        
+        RuntimeManager.PlayOneShot(eventReference);
+    }
+    public void EndLevel()
+    {
+        PlayEventReference(endLevelEventReference);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Boton()
     {
-        
+        PlayEventReference(botonEventReference);
+    }
+    
+
+    public void AbrirCerrarPuerta()
+    {
+        PlayEventReference(abrirCerrarPuertaEventReference);
+    }
+
+    public void BotePintura()
+    {
+        PlayEventReference(botePinturaEventReference);
+    }
+
+    public void CambioParedColor()
+    {
+        PlayEventReference(cambioParedColorEventReference);
     }
 }
