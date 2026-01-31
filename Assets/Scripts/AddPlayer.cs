@@ -33,6 +33,8 @@ public class AddPlayer : MonoBehaviour
             player2.transform.parent.position = spawn[1].position;
         }
         
+        player1.gameObject.GetComponent<PlayerMovementComponent>()._player1 = true;
+        player2.gameObject.GetComponent<PlayerMovementComponent>()._player1 = false;
         GameManager.Instance.SetUpPlayers(player1.gameObject, player2.gameObject);
     }
 

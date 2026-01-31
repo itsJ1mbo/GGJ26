@@ -17,6 +17,10 @@ public class PlayerMovementComponent : MonoBehaviour
     Rigidbody2D rb;
     public HingeJoint2D joint;
 
+    [HideInInspector] public bool _player1;
+
+    private bool _firstMove = true;
+
 
     void Awake()
     {
@@ -51,6 +55,11 @@ public class PlayerMovementComponent : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext obj)
     {
+        if (_firstMove)
+        {
+            GameManager.Instance.SetFirstMove(_player1);
+            _firstMove = false;
+        }
         direction = obj.ReadValue<Vector2>();
     }
 

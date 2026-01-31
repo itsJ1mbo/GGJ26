@@ -14,7 +14,19 @@ public class GameManager : MonoBehaviour
 
     public GameObject _camera;
     private GameObject[] _players = new GameObject[2];
+    
+    public TutorialComponent _tutorial;
 
+    public void SetFirstMove(bool p1)
+    {
+        if (!_tutorial) return; 
+        
+        if(p1)
+            _tutorial._p1Move = true;
+        else
+            _tutorial._p2Move = true;
+    }
+    
     public void SetUpPlayers(GameObject player1, GameObject player2)
     {
         _players[(int)Player.ONE] = player1;
