@@ -716,6 +716,7 @@ MonoBehaviour:
   canInteract: 0
   joint: {fileID: 0}
   _player1: 0
+  stopDelay: 1
 --- !u!114 &5536611702647663622
 MonoBehaviour:
   m_ObjectHideFlags: 0
