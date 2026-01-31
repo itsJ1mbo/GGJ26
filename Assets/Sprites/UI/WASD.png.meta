@@ -103,12 +103,12 @@ TextureImporter:
       name: WASD_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 578
-        width: 545
-        height: 502
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 112
+        y: 675
+        width: 443
+        height: 338
+      alignment: 9
+      pivot: {x: 0.51448095, y: 0.47018126}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

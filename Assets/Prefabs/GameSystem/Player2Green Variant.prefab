@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2Green Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6793147941236308580, guid: 683ba50d93050e04d980b24a4e05cd4f, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7377946238477963551, guid: 683ba50d93050e04d980b24a4e05cd4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 454.90094
