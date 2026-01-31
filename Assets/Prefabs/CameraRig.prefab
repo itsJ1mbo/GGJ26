@@ -49,8 +49,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
   _zOffset: -10
   _threshHold: 11
+  _maxSize: 8
+  _padding: 3
   _camera1: {fileID: 2177428108839743369}
   _camera2: {fileID: 1997178534649205169}
+  _texture: {fileID: 8461424038449171459}
 --- !u!1 &6069741029052305966
 GameObject:
   m_ObjectHideFlags: 0

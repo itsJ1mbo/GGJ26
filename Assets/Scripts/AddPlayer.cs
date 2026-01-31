@@ -38,7 +38,7 @@ public class AddPlayer : MonoBehaviour
             player2.GetComponent<AuraComponent>().SetInitialColor(2);
         }
         
-        GameManager.Instance.AddPlayers(player1.gameObject, player2.gameObject);
+        GameManager.Instance.SetUpPlayers(player1.gameObject, player2.gameObject);
     }
 
     // Update is called once per frame

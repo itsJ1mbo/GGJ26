@@ -7,22 +7,12 @@ public class AuraComponent : MonoBehaviour
     int startingColorID;
 
     CircleCollider2D AuraCollider;
-    [SerializeField] CircleCollider2D PlayerCollider;
+    [SerializeField] CapsuleCollider2D PlayerCollider;
 
     public void SetInitialColor(int id)
     {
         colorID = id;
         startingColorID = id;
-
-        //mientras q no tengamos sprites lo pongo aqui manual:
-        if(id == 1)
-        {
-            GetComponent<SpriteRenderer>().color = Color.blue;
-        }
-        else if(id == 2)
-        {
-            GetComponent<SpriteRenderer>().color = Color.red;
-        }
     }
 
     // cuando otro jugador entra en el aura, cambia el color a morado
