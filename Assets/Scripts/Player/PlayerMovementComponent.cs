@@ -124,8 +124,8 @@ public class PlayerMovementComponent : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext value)
     {
-
-        if(joint.connectedBody != null)
+       
+        if(joint != null && joint.connectedBody != null)
         {
             canInteract = true;
         }

@@ -25,9 +25,8 @@ public class MovableObject : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
-            if (collision.gameObject.GetComponentInParent<Rigidbody2D>() != null)
+            if (collision.gameObject.GetComponentInParent<PlayerMovementComponent>() != null)
             {
-
                 collision.gameObject.GetComponentInParent<PlayerMovementComponent>().canInteract = true;
                 collision.gameObject.GetComponentInParent<PlayerMovementComponent>().joint = joint;
 
@@ -44,16 +43,11 @@ public class MovableObject : MonoBehaviour
             {
 
                 collision.gameObject.GetComponentInParent<PlayerMovementComponent>().canInteract = false;
-                //collision.gameObject.GetComponentInParent<PlayerMovementComponent>().joint = null;
             }
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-
-
-    }
+ 
 
     public void JoinToObj(Rigidbody2D rb) 
     {
