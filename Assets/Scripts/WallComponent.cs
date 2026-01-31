@@ -4,9 +4,9 @@ public class WallComponent : MonoBehaviour
 {
     [SerializeField] int colorID;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        ColorCollision other = collision.GetComponent<ColorCollision>();
+        AuraComponent other = collision.GetComponent<AuraComponent>();
         if (other != null)
         {
             if (other.GetColorID() == colorID)
@@ -21,7 +21,7 @@ public class WallComponent : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        ColorCollision other = collision.GetComponent<ColorCollision>();
+        AuraComponent other = collision.GetComponent<AuraComponent>();
         if (other != null)
         {
             // reactivar el collider del player al salir del trigger
