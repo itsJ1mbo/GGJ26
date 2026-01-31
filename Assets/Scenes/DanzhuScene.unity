@@ -293,11 +293,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc8d2d0ede2879419c3119e0e83725f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SprintEnemy
-  colorID: 0
-  detectionRange: 5
+  enemyColor: 1
+  detectionRange: 10
   visionMask:
     serializedVersion: 2
-    m_Bits: 1152
+    m_Bits: 129
   sprintSpeed: 3
   chargeTime: 1
   cooldownTime: 2
@@ -412,7 +412,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -433,7 +433,7 @@ Transform:
   m_GameObject: {fileID: 371530505}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.62, y: 7.04, z: 0}
+  m_LocalPosition: {x: 4.92, y: 5.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -455,7 +455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &374031650
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 442654881}
   - component: {fileID: 442654880}
   - component: {fileID: 442654879}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Muro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +641,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1303,6 +1303,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37eb8bd104925f54eaf98d5ad320cf10, type: 3}
+--- !u!1 &2043370323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2043370324}
+  m_Layer: 0
+  m_Name: Punto3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2043370324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043370323}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 24.94, y: -4.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6656284058564631888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1363,6 +1394,26 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 1361100081}
+    - target: {fileID: 7959614000604285851, guid: f5971db75349b0a4d9190ab757928261, type: 3}
+      propertyPath: enemyColor
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959614000604285851, guid: f5971db75349b0a4d9190ab757928261, type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959614000604285851, guid: f5971db75349b0a4d9190ab757928261, type: 3}
+      propertyPath: 'patrolPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 945506242}
+    - target: {fileID: 7959614000604285851, guid: f5971db75349b0a4d9190ab757928261, type: 3}
+      propertyPath: 'patrolPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1361100081}
+    - target: {fileID: 7959614000604285851, guid: f5971db75349b0a4d9190ab757928261, type: 3}
+      propertyPath: 'patrolPoints.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2043370324}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1446,5 +1497,6 @@ SceneRoots:
   - {fileID: 6656284058564631888}
   - {fileID: 945506242}
   - {fileID: 1361100081}
+  - {fileID: 2043370324}
   - {fileID: 371530510}
   - {fileID: 442654881}
