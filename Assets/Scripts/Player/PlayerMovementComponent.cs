@@ -21,10 +21,13 @@ public class PlayerMovementComponent : MonoBehaviour
 
     private bool _firstMove = true;
 
+    Animator animator;
+
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         rb.gravityScale = 0;
         rb.freezeRotation = true;
@@ -61,18 +64,18 @@ public class PlayerMovementComponent : MonoBehaviour
             _firstMove = false;
         }
         direction = obj.ReadValue<Vector2>();
+
+
+
+        if(obj.canceled)
+            animator.SetBool("walking", false);
+        else
+            animator.SetBool("walking", true);
     }
 
 
     public void Interact(InputAction.CallbackContext value)
     {
-        if (value.started)
-            Debug.Log("started");
-        else if (value.performed)
-            Debug.Log("performed");
-        else if (value.canceled)
-            Debug.Log("canceled");
-
 
         if(joint.connectedBody != null)
         {
