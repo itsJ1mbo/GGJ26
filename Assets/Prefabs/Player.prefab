@@ -147,7 +147,7 @@ MonoBehaviour:
       - m_Target: {fileID: 4455938727953383402}
         m_TargetAssemblyTypeName: PlayerMovementComponent, Assembly-CSharp
         m_MethodName: Interact
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -186,22 +186,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: d1bea08f-c2d8-4d28-8acf-ee4d1a3f64d8
     m_ActionName: 'Credits/Restart[/Keyboard/space,/Keyboard/enter]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4455938727953383402}
-        m_TargetAssemblyTypeName: PlayerMovementComponent, Assembly-CSharp
-        m_MethodName: InteractRelease
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 0edcd7ad-8515-4436-b300-380397291948
-    m_ActionName: 'Player/Release Interact[/Keyboard/e,/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -221,7 +205,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementComponent
   speed: 4
   playerID: 1
-  interact: 0
+  canInteract: 0
+  joint: {fileID: 0}
 --- !u!114 &7702446373479798959
 MonoBehaviour:
   m_ObjectHideFlags: 0

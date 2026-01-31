@@ -19,27 +19,38 @@ public class MovableObject : MonoBehaviour
 
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.layer == 7)
         {
             if (collision.gameObject.GetComponentInParent<Rigidbody2D>() != null)
             {
-                Debug.Log("BLESSED CURSED");
-                Debug.Log(collision.gameObject.GetComponentInParent<PlayerMovementComponent>().interact);
 
-                if (collision.gameObject.GetComponentInParent<PlayerMovementComponent>().interact && joint.connectedBody == null)
-                    JoinToObj(collision.gameObject.GetComponentInParent<Rigidbody2D>());
+                collision.gameObject.GetComponentInParent<PlayerMovementComponent>().canInteract = true;
+                collision.gameObject.GetComponentInParent<PlayerMovementComponent>().joint = joint;
+
+
             }
+        }
+    }
 
-            if (!collision.gameObject.GetComponentInParent<PlayerMovementComponent>().interact && joint.connectedBody != null)
-                ReleaseObj();
-        }   
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 7)
+        {
+            if (collision.gameObject.GetComponentInParent<Rigidbody2D>() != null)
+            {
 
-        Debug.Log("no jodas eh");
+                collision.gameObject.GetComponentInParent<PlayerMovementComponent>().canInteract = false;
+                //collision.gameObject.GetComponentInParent<PlayerMovementComponent>().joint = null;
+            }
+        }
+    }
 
-        
+    private void OnTriggerStay2D(Collider2D collision)
+    {
 
 
     }

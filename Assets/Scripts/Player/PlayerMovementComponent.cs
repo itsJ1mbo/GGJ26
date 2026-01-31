@@ -12,9 +12,11 @@ public class PlayerMovementComponent : MonoBehaviour
     int playerID = 1;
 
     [SerializeField]
-    public bool interact = false;
+    public bool canInteract = false;
 
     Rigidbody2D rb;
+    public HingeJoint2D joint;
+
 
     void Awake()
     {
@@ -22,6 +24,10 @@ public class PlayerMovementComponent : MonoBehaviour
 
         rb.gravityScale = 0;
         rb.freezeRotation = true;
+
+        canInteract = false;
+
+        joint = null;
     }
 
     void FixedUpdate()
@@ -50,14 +56,60 @@ public class PlayerMovementComponent : MonoBehaviour
     }
 
 
-    public void Interact()
+    public void Interact(InputAction.CallbackContext value)
     {
-        interact = !interact;
+        if (value.started)
+            Debug.Log("started");
+        else if (value.performed)
+            Debug.Log("performed");
+        else if (value.canceled)
+            Debug.Log("canceled");
+
+
+        if(joint.connectedBody != null)
+        {
+            canInteract = true;
+        }
+
+        if (value.canceled && canInteract)
+        {
+            if (joint.connectedBody == null)
+            {
+                joint.connectedBody = rb;
+                Rigidbody2D thisRb = joint.gameObject.GetComponent<Rigidbody2D>();
+                thisRb.bodyType = RigidbodyType2D.Dynamic;
+            }
+            else
+            {
+                Rigidbody2D thisRb = joint.gameObject.GetComponent<Rigidbody2D>();
+                thisRb.bodyType = RigidbodyType2D.Kinematic;
+                joint.connectedBody = null;
+            }
+        }
+
+        //// se lo settea como bien pueda
+        //if (joint.connectedBody == null)
+        //{
+        //    Debug.Log("se conecta???");
+        //    joint.connectedBody = rb;
+        //    Rigidbody2D thisRb = joint.gameObject.GetComponent<Rigidbody2D>();
+        //    thisRb.bodyType = RigidbodyType2D.Dynamic;
+
+        //}
+        //else
+        //{
+        //    Debug.Log("se desconecta :)");
+
+        //    Rigidbody2D thisRb = joint.gameObject.GetComponent<Rigidbody2D>();
+        //    thisRb.bodyType = RigidbodyType2D.Kinematic;
+        //    joint.connectedBody = null;
+        //}
+
     }
 
 
     public void InteractRelease()
     {
-        //interact = false;
+
     }
 }
