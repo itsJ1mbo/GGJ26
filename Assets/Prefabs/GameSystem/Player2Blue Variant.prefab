@@ -32,10 +32,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.745283
       objectReference: {fileID: 0}
-    - target: {fileID: 4131127234752996040, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7467129856190224180, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
       propertyPath: baseColor
       value: 4
