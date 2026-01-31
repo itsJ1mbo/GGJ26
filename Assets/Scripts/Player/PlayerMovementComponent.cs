@@ -1,8 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
-using UnityEngine.Windows;
-using FMOD;
 
 public class PlayerMovementComponent : MonoBehaviour
 {
