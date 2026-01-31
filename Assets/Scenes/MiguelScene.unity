@@ -319,6 +319,18 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.size
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 3586489008071549592, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586489008071549592, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586489008071549592, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9128651725517641673, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.62379

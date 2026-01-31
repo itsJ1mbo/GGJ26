@@ -30,6 +30,8 @@ public class AddPlayer : MonoBehaviour
 
         if (spawn.Length > 1)
             player2.transform.position = spawn[1].position;
+        
+        GameManager.Instance.AddPlayers(player1.gameObject, player2.gameObject);
     }
 
     // Update is called once per frame
