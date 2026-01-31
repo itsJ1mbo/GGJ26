@@ -278,8 +278,30 @@
                 },
                 {
                     "name": "",
+                    "id": "086f1a5b-3ba0-432f-a776-dc5e38b34d05",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "WASD",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c8efdc59-7223-42ca-8b81-50c9dfa9aa44",
                     "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";ARROW",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "69699fdd-07c4-4e6a-9dcf-32f8efa56e3c",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": ";ARROW",
