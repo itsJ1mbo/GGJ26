@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 using UnityEngine.Windows;
 
 public class PlayerMovementComponent : MonoBehaviour
@@ -22,12 +23,14 @@ public class PlayerMovementComponent : MonoBehaviour
     private bool _firstMove = true;
 
     Animator animator;
+    SpriteRenderer spriteRenderer;
 
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         rb.gravityScale = 0;
         rb.freezeRotation = true;
@@ -67,10 +70,25 @@ public class PlayerMovementComponent : MonoBehaviour
 
 
 
-        if(obj.canceled)
-            animator.SetBool("walking", false);
-        else
-            animator.SetBool("walking", true);
+        if(animator != null)
+        {
+            if (obj.canceled)
+                animator.SetBool("walking", false);
+            else
+                animator.SetBool("walking", true);
+        }
+ 
+
+        if (direction.x < 0)
+            spriteRenderer.flipX = true;
+        else if(direction.x > 0)
+            spriteRenderer.flipX = false;
+
+    }
+
+    void Flip()
+    {
+        transform.localScale *= -1;
     }
 
 
