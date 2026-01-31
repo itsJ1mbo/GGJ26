@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 using UnityEngine.Windows;
 
 public class PlayerMovementComponent : MonoBehaviour
@@ -22,6 +23,7 @@ public class PlayerMovementComponent : MonoBehaviour
     private bool _firstMove = true;
 
     Animator animator;
+    SpriteRenderer spriteRenderer;
 
     SpriteRenderer spriteRenderer;
 
@@ -82,6 +84,20 @@ public class PlayerMovementComponent : MonoBehaviour
             animator.SetBool("walking", false);
         else
             animator.SetBool("walking", true);
+
+        if(animator != null)
+        {
+            if (obj.canceled)
+                animator.SetBool("walking", false);
+            else
+                animator.SetBool("walking", true);
+        }
+
+    }
+
+    void Flip()
+    {
+        transform.localScale *= -1;
     }
 
 
