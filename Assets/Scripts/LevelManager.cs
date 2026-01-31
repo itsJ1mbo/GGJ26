@@ -1,10 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
 
+
+    [SerializeField] private Image fadeImage;
+    [SerializeField] private float fadeDuration = 2.0f;
+    [SerializeField] private Color transitionColor = new Color(0.2f, 0.6f, 1f);
 
     /// <summary>
     /// Poner el nombre de las escenas en orden como queramos que se vayan mostrando.
@@ -15,13 +21,56 @@ public class LevelManager : MonoBehaviour
     public string[] sceneNamesInOrder;
 
 
+
     /// <summary>
     /// Reinicia el nivel actual
     /// </summary>
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StartCoroutine(FadeAndRestart());
     }
+
+    private IEnumerator FadeAndRestart()
+    {
+        if (fadeImage != null)
+        {
+            float elapsed = 0;
+            float stepDuration = fadeDuration / 2; // Dividimos los 2 segundos
+
+            // 1. Barrida hacia ABAJO (Cerrar)
+            fadeImage.fillOrigin = (int)Image.OriginVertical.Top;
+            while (elapsed < stepDuration)
+            {
+                elapsed += Time.deltaTime;
+                fadeImage.fillAmount = Mathf.Lerp(0, 1, elapsed / stepDuration);
+                yield return null;
+            }
+            fadeImage.fillAmount = 1;
+        }
+
+        // 2. Cargar escena
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        // Espera un frame para que la nueva escena se asiente
+        yield return new WaitForEndOfFrame();
+
+        if (fadeImage != null)
+        {
+            float elapsed = 0;
+            float stepDuration = fadeDuration / 2;
+
+            // 3. Barrida hacia ABAJO (Se va por el fondo)
+            fadeImage.fillOrigin = (int)Image.OriginVertical.Bottom;
+            while (elapsed < stepDuration)
+            {
+                elapsed += Time.deltaTime;
+                fadeImage.fillAmount = Mathf.Lerp(1, 0, elapsed / stepDuration);
+                yield return null;
+            }
+            fadeImage.fillAmount = 0;
+        }
+    }
+
 
     /// <summary>
     /// Manda al siguiente nivel de la lista
@@ -63,5 +112,11 @@ public class LevelManager : MonoBehaviour
         Instance = this;
 
         DontDestroyOnLoad(gameObject);
+
+        if (fadeImage != null)
+        {
+            fadeImage.color = transitionColor;
+            fadeImage.fillAmount = 0;
+        }
     }
 }
