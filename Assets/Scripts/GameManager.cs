@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public void AddPlayers(GameObject player1, GameObject player2)
     {
+        Debug.Log("tengo sueño");
+
         _players[(int)Player.ONE] = player1;
         _players[(int)Player.TWO] = player2;
         _camera.GetComponent<FollowCamera>().SetPlayers(_players);
