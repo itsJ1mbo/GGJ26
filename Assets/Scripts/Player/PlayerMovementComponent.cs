@@ -1,8 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
-using UnityEngine.Windows;
-using FMOD;
 
 public class PlayerMovementComponent : MonoBehaviour
 {
@@ -10,8 +7,8 @@ public class PlayerMovementComponent : MonoBehaviour
     [SerializeField]
     float speed = 1;
 
-    [SerializeField]
-    int playerID = 1;
+    //[SerializeField]
+    //int playerID = 1;
 
     [SerializeField]
     public bool canInteract = false;
@@ -67,7 +64,7 @@ public class PlayerMovementComponent : MonoBehaviour
             // SI ESTOY QUIETO: Empiezo a contar tiempo
             stopTimer += Time.fixedDeltaTime;
 
-            // Solo cambio la música si ha pasado más de 1 segundo
+            // Solo cambio la mï¿½sica si ha pasado mï¿½s de 1 segundo
             if (stopTimer >= stopDelay)
             {
                 if (_player1)
