@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     
     public TutorialComponent _tutorial;
 
+    public int _levels;
+    [HideInInspector] public int _currentLevel = 1;
+
     public void SetFirstMove(bool p1)
     {
         if (!_tutorial) return; 
@@ -48,6 +51,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        _currentLevel = PlayerPrefs.GetInt("Level", 1);
+    }
+
     public void OnRestart(InputAction.CallbackContext obj)
     {
         LevelManager.Instance.RestartLevel();
@@ -56,18 +64,13 @@ public class GameManager : MonoBehaviour
 
     public void SaveGame()
     {
-        //PlayerPrefs.SetInt("Level", _currentLevel);
-        //PlayerPrefs.Save();
-    }
-
-    private void Start()
-    {
+        PlayerPrefs.SetInt("Level", _currentLevel);
+        PlayerPrefs.Save();
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        _currentLevel++;
+        if (_currentLevel > _levels)
+        {
+            _currentLevel = 1;
+        }
     }
 }

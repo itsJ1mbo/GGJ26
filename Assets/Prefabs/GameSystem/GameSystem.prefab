@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   _camera: {fileID: 4829888098484527891}
+  _gamepad: 0
   _tutorial: {fileID: 0}
+  _levels: 3
+  _currentLevel: 1
 --- !u!1 &2619024690887690912
 GameObject:
   m_ObjectHideFlags: 0
