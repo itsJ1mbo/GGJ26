@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: baseColor
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3704052382757988313, guid: 9f9720eb7a2f03b4788c0283a7be19a4, type: 3}
+      propertyPath: colorObject
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6439918313719385578, guid: 9f9720eb7a2f03b4788c0283a7be19a4, type: 3}
       propertyPath: m_Color.b
       value: 0

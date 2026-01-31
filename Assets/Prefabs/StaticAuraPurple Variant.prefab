@@ -40,6 +40,10 @@ PrefabInstance:
       propertyPath: baseColor
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5072980365419020123, guid: 9a45c34283c6be04194ce7e8488e2864, type: 3}
+      propertyPath: colorObject
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6948034439797320668, guid: 9a45c34283c6be04194ce7e8488e2864, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.55
