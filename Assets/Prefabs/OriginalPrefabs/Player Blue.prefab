@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3437463254185881183}
   - component: {fileID: 1810475854005842557}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,7 +366,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 6878670807541659053, guid: 6003183e905c58946b4def5ee8c2b5dc, type: 3}
-  m_Color: {r: 1, g: 0.76792455, b: 0.78686947, a: 1}
+  m_Color: {r: 0.76862746, g: 0.8183154, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -513,7 +513,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5713647509168355476, guid: 7df08f5dc4e4ebf42814b4624424e284, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -708,7 +708,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 6878670807541659053, guid: 6003183e905c58946b4def5ee8c2b5dc, type: 3}
-  m_Color: {r: 1, g: 0.76792455, b: 0.78686947, a: 1}
+  m_Color: {r: 0.76862746, g: 0.7938886, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

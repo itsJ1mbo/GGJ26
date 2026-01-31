@@ -2,6 +2,15 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+
+# FMOD Studio Project Folders
+.user/
+.cache/
+.unsaved/
+
+/Banks/*.bank
+/Banks/*.string
+
 .utmp/
 /[Ll]ibrary/
 /[Tt]emp/
