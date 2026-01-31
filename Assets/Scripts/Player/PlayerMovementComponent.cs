@@ -25,6 +25,8 @@ public class PlayerMovementComponent : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
 
+    SpriteRenderer spriteRenderer;
+
 
     void Awake()
     {
@@ -66,9 +68,22 @@ public class PlayerMovementComponent : MonoBehaviour
             GameManager.Instance.SetFirstMove(_player1);
             _firstMove = false;
         }
+
         direction = obj.ReadValue<Vector2>();
 
+        if (direction.x > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (direction.x < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
 
+        if (obj.canceled)
+            animator.SetBool("walking", false);
+        else
+            animator.SetBool("walking", true);
 
         if(animator != null)
         {
@@ -77,12 +92,6 @@ public class PlayerMovementComponent : MonoBehaviour
             else
                 animator.SetBool("walking", true);
         }
- 
-
-        if (direction.x < 0)
-            spriteRenderer.flipX = true;
-        else if(direction.x > 0)
-            spriteRenderer.flipX = false;
 
     }
 
