@@ -5374,9 +5374,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52737fb83c5f6f142a70c46a982a243a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AddPlayer
-  playerPrefabRed: {fileID: 1023215893649856145, guid: 32a1b5302872e5c44aa21b0f7a557271, type: 3}
-  playerPrefabBlue: {fileID: 4755868958795502306, guid: 1f899f38630dcae43aeb7e9b2882f080, type: 3}
-  playerPrefabGreen: {fileID: 2491003030347776628, guid: 32bbedf3254b7934da1e9f78b7ba9c13, type: 3}
+  playerPrefabRed: {fileID: 3395120978603791010, guid: 4feec21ea89940746a926d574e2b6712, type: 3}
+  playerPrefabBlue: {fileID: 3395120978603791010, guid: 7c82800e06ffd754498889d374235e44, type: 3}
+  playerPrefabGreen: {fileID: 3395120978603791010, guid: cb112f2217b8cb14e855ac7987082004, type: 3}
   spawn:
   - {fileID: 8223764501586281789}
   - {fileID: 8200054898376354834}
