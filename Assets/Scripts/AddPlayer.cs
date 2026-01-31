@@ -4,7 +4,9 @@ using UnityEngine.InputSystem;
 public class AddPlayer : MonoBehaviour
 {
 
-    [SerializeField] GameObject playerPrefab;
+    [SerializeField] GameObject playerPrefabRed;
+    [SerializeField] GameObject playerPrefabBlue;
+    [SerializeField] GameObject playerPrefabGreen;
     [SerializeField] Transform[] spawn;
 
 
@@ -16,7 +18,7 @@ public class AddPlayer : MonoBehaviour
 
         // mete al player1
 
-        var player1 = PlayerInput.Instantiate(playerPrefab,
+        var player1 = PlayerInput.Instantiate(playerPrefabRed,
             controlScheme: "WASD",
             pairWithDevice: Keyboard.current);
 
@@ -26,10 +28,7 @@ public class AddPlayer : MonoBehaviour
             player1.GetComponent<AuraComponent>().SetInitialColor(1);
         }
 
-
-
-
-        var player2 = PlayerInput.Instantiate(playerPrefab,
+        var player2 = PlayerInput.Instantiate(playerPrefabBlue,
             controlScheme: "ARROW",
             pairWithDevice: Keyboard.current);
 
