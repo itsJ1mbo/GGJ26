@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9be1c8e9c236eef459a7428441790273
+guid: 903271db960f0554491f18155b054ff1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7126307599723041294
-    second: JR_0
+      213: -1676479940091735870
+    second: Flechas_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JR_0
+      name: Flechas_0
       rect:
         serializedVersion: 2
-        x: 167
-        y: 178
-        width: 252
-        height: 244
+        x: 469
+        y: 578
+        width: 545
+        height: 502
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0298a1510bb5e260800000000000000
-      internalID: 7126307599723041294
+      spriteID: 2c093c97062fbb8e0800000000000000
+      internalID: -1676479940091735870
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 72948d0cba38fe9448c2b60be40dd96f
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JR_0: 7126307599723041294
+      Flechas_0: -1676479940091735870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
