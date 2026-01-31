@@ -27,6 +27,8 @@ public class AddPlayer : MonoBehaviour
         }
 
 
+
+
         var player2 = PlayerInput.Instantiate(playerPrefab,
             controlScheme: "ARROW",
             pairWithDevice: Keyboard.current);
