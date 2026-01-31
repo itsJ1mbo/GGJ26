@@ -1,10 +1,8 @@
 using UnityEngine;
 
-public class InteractorComponent : MonoBehaviour
+public class InteractorComponent : ColorObject
 {
-    [SerializeField] AuraComponent.AuraColor interactorColor;
-
-    AuraComponent.AuraColor oldColor;
+    private AuraComponent.AuraColor oldColor;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,16 +12,20 @@ public class InteractorComponent : MonoBehaviour
             AuraComponent playerAura = collision.GetComponentInParent<AuraComponent>();
             if (playerAura != null)
             {
-                if (playerAura.GetBaseColor() != interactorColor)
+                if (playerAura.GetBaseColor() != colorObject)
                 {
-                    Debug.Log("Color diferente, player: " + playerAura.GetBaseColor() + ", objeto: " + interactorColor);
+                    Debug.Log("Color diferente, player: " + playerAura.GetBaseColor() + ", objeto: " + colorObject);
 
-                    interactorColor = playerAura.GetBaseColor();
+                    colorObject = playerAura.GetBaseColor();
 
                     // cambiar color del player al del objeto
                     playerAura.ForceChangeColor(oldColor);
+                    playerAura.ChangeColor(oldColor);
 
-                    oldColor = interactorColor;
+
+                    oldColor = colorObject;
+
+                    ChangeColor(colorObject);
                 }
             }
         }
@@ -32,44 +34,12 @@ public class InteractorComponent : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        oldColor = interactorColor;
-        Debug.Log("Coso ID al principio: " + interactorColor);
+        oldColor = colorObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // el switch mas guarro de mi vida
-        switch(interactorColor)
-        {
-            case AuraComponent.AuraColor.NONE:
-                GetComponent<SpriteRenderer>().color = Color.black;
-                break;
-            case AuraComponent.AuraColor.BLUE:
-                GetComponent<SpriteRenderer>().color = Color.blue;
-                break;
-            case AuraComponent.AuraColor.RED:
-                GetComponent<SpriteRenderer>().color = Color.red;
-                break;
-            case AuraComponent.AuraColor.PURPLE:
-                GetComponent<SpriteRenderer>().color = Color.magenta;
-                break;
-            case AuraComponent.AuraColor.GREEN:
-                GetComponent<SpriteRenderer>().color = Color.green;
-                break;
-            case AuraComponent.AuraColor.CYAN:
-                GetComponent<SpriteRenderer>().color = Color.cyan;
-                break;
-            case AuraComponent.AuraColor.YELLOW:
-                GetComponent<SpriteRenderer>().color = Color.yellow;
-                break;
-            case AuraComponent.AuraColor.WHITE:
-                GetComponent<SpriteRenderer>().color = Color.white;
-                break;
-            default:
-                GetComponent<SpriteRenderer>().color = Color.black;
-                break;
-        }
 
     }
 

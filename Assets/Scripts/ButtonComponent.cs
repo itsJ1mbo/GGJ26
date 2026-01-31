@@ -2,53 +2,58 @@ using UnityEngine;
 
 public class ButtonComponent : MonoBehaviour
 {
-    [SerializeField] private GameObject _door;
-    [SerializeField] private Color _colorOpen = Color.white;
+    [SerializeField] private ColorObject activable;
+    [SerializeField] private AuraComponent.AuraColor _openColor;
+    [SerializeField] private Sprite pushedSprite;
+    [SerializeField] private Sprite unpushedSprite;
 
-    private SpriteRenderer _doorSprite;
-    private Color _colorOriginal; 
+    private SpriteRenderer _spriteRenderer;
 
-    void Start()
-    {
-   
-        if (_door != null)
-        {
-            _doorSprite = _door.GetComponent<SpriteRenderer>();
-
-            if (_doorSprite != null)
-            {
-                _colorOriginal = _doorSprite.color;
-            }
-        }
-    }
+    private AuraComponent.AuraColor _colorOriginal;
+    private bool _isOpen = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            OpenDoor();
+            Activate();
         }
     }
-
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-
         if (collision.CompareTag("Player"))
         {
-            CloseDoor();
+            Deactivate();
         }
     }
 
-    void OpenDoor()
+    void Activate()
     {
-        if (_doorSprite != null) _doorSprite.color = _colorOpen;
+        _isOpen = true;
 
+        activable.ChangeColor(_openColor);
+        _spriteRenderer.sprite = pushedSprite;
     }
 
-    void CloseDoor()
+    void Deactivate()
     {
-        if (_doorSprite != null) _doorSprite.color = _colorOriginal;
+        _isOpen = false;
 
+        activable.ChangeColor(_colorOriginal);
+        _spriteRenderer.sprite = unpushedSprite;
+    }
+
+
+
+    private void Awake()
+    {
+        _colorOriginal = _openColor;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        _colorOriginal = activable.colorObject;
     }
 }

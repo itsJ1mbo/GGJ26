@@ -2,45 +2,49 @@ using UnityEngine;
 
 public class PalancaComponent : MonoBehaviour
 {
-    [SerializeField] private GameObject _door;
-    [SerializeField] private GameObject _player;
-    [SerializeField] private Color _openColor = Color.white;
+    [SerializeField] private ColorObject activable;
+    [SerializeField] private AuraComponent.AuraColor _openColor;
 
-    private SpriteRenderer _doorSpriteComp;
-    private Color _colorOriginal;
+    private SpriteRenderer _spriteRenderer;
+
+    private AuraComponent.AuraColor _colorOriginal;
     private bool _isOpen = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            OpenDoor();
+            Activate();
         }
     }
 
-    void OpenDoor()
+    void Activate()
     {
-        _isOpen = !_isOpen; 
+        _isOpen = !_isOpen;
+
+        activable.ChangeColor(_openColor);
 
         if (_isOpen)
         {
-             _doorSpriteComp.color = _openColor;
+            activable.ChangeColor(_openColor);
+            _spriteRenderer.flipX = false;
         }
         else
         {
-             _doorSpriteComp.color = _colorOriginal;
-
+            activable.ChangeColor(_colorOriginal);
+            _spriteRenderer.flipX = true;
         }
-
     }
 
-    void Start()
+
+    private void Awake()
     {
-        _doorSpriteComp = _door.GetComponent<SpriteRenderer>();
-        _colorOriginal = _doorSpriteComp.color;
-        
-
+        _colorOriginal = _openColor;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-
+    private void Start()
+    {
+        _colorOriginal = activable.colorObject;
+    }
 }

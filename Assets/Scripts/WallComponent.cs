@@ -2,10 +2,9 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Collider2D))]
-public class WallComponent : MonoBehaviour
+public class WallComponent : ColorObject
 {
     // ID: 0=NEGRO 1=AZUL 2=ROJO 3=VERDE
-    [SerializeField] AuraComponent.AuraColor wallColorID;
     private Collider2D muroCollider;
 
     // area de deteccion (trigger)
@@ -18,10 +17,10 @@ public class WallComponent : MonoBehaviour
             {
 
                 //comprobamos si los colores coinciden
-                if (playerAura.GetCurrentColor() == wallColorID)
+                if (playerAura.GetCurrentColor() == colorObject)
                 {
                     Physics2D.IgnoreCollision(collision, muroCollider, true);
-                    Debug.Log("Pared " + wallColorID + " dejando pasar al jugador.");
+                    Debug.Log("Pared " + colorObject + " dejando pasar al jugador.");
                 }
             }
         }
@@ -30,7 +29,7 @@ public class WallComponent : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Physics2D.IgnoreCollision(collision, muroCollider, false);
-        Debug.Log("Pared " + wallColorID + " bloqueando al jugador.");
+        Debug.Log("Pared " + colorObject + " bloqueando al jugador.");
     }
 
 
