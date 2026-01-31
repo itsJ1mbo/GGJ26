@@ -5,6 +5,18 @@ using UnityEngine.InputSystem;
 
 public class MusicManager : MonoBehaviour
 {
+    private static MusicManager _instance;
+    public static MusicManager Instance
+    {
+        get
+        {
+            if(_instance == null)
+                _instance = new MusicManager();
+            return _instance;
+        }
+    }
+
+
     public EventReference musicEventReference;
     private EventInstance musicInstance;
 
@@ -23,6 +35,7 @@ public class MusicManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
+        _instance = this;
     }
     void Start()
     {
@@ -49,9 +62,14 @@ public class MusicManager : MonoBehaviour
         SetParameter("GameState", (float)newState);
     }
 
-    public void SetPlayerState(PlayerState newState)
+    public void SetPlayer1State(PlayerState newState)
     {
         SetParameter("P1Movement", (float)newState);
+    }
+
+    public void SetPlayer2State(PlayerState newState)
+    {
+        SetParameter("P2Movement", (float)newState);
     }
 
     public void SetMusicStateByIndex(int index)
@@ -59,11 +77,15 @@ public class MusicManager : MonoBehaviour
         SetMusicState((MusicState)index);
     }
 
-    public void SetPlayerStateByIndex(int index)
+    public void SetPlayer1StateByIndex(int index)
     {
-        SetPlayerState((PlayerState)index);
+        SetPlayer1State((PlayerState)index);
     }
 
+    public void SetPlayer2StateByIndex(int index)
+    {
+        SetPlayer2State((PlayerState)index);
+    }
     void Update()
     {
         if (Keyboard.current == null) return;
@@ -84,14 +106,14 @@ public class MusicManager : MonoBehaviour
         // Tecla Q -> Cambia a Quieto
         if (Keyboard.current.qKey.wasPressedThisFrame)
         {
-            SetPlayerState(PlayerState.QUIETO);
+            SetPlayer1State(PlayerState.QUIETO);
             Debug.Log("Música cambiada a Quieto");
         }
 
         // Tecla C -> Cambia a Caminando
         if (Keyboard.current.cKey.wasPressedThisFrame)
         {
-            SetPlayerState(PlayerState.CAMINANDO);
+            SetPlayer1State(PlayerState.CAMINANDO);
             Debug.Log("Música cambiada a Caminando");
         }
     }
