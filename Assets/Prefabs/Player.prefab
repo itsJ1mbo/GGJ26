@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1810475854005842557}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,7 +256,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 4
+  m_Radius: 3.8
 --- !u!50 &1810475854005842557
 Rigidbody2D:
   serializedVersion: 5
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 5578286121162340955}
   m_Layer: 7
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

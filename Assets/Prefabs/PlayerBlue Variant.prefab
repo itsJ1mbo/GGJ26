@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerBlue Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3437463254185881183, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3583620768475025403, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 10
