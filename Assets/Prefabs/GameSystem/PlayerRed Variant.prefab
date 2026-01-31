@@ -8,21 +8,61 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1850061916823915659, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850061916823915659, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850061916823915659, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129450742676622872, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129450742676622872, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129450742676622872, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3395120978603791010, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: m_Name
       value: PlayerRed Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437463254185881183, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437463254185881183, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437463254185881183, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 3437463254185881183, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3586489008071549592, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8816880639238081600, guid: 231e80337a96bfb4189670b1e2f61c04, type: 3}
+    - target: {fileID: 3586489008071549592, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3586489008071549592, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3586489008071549592, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: m_Color.r
@@ -42,11 +82,11 @@ PrefabInstance:
       objectReference: {fileID: 7801598265609174632}
     - target: {fileID: 9128651725517641673, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.60203
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9128651725517641673, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0765
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9128651725517641673, guid: f3bcc91ef8d0e804295756e7d8e49820, type: 3}
       propertyPath: m_LocalPosition.z
