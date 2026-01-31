@@ -103,12 +103,12 @@ TextureImporter:
       name: JL_0
       rect:
         serializedVersion: 2
-        x: 167
-        y: 177
+        x: 209
+        y: 526
         width: 251
         height: 238
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b0e0f0cb27b603d48a01e625991e4514
     internalID: 0
     vertices: []
     indices: 
