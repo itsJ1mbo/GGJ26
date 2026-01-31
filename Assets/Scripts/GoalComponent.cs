@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class GoalComponent : MonoBehaviour
@@ -22,8 +21,8 @@ public class GoalComponent : MonoBehaviour
 
     private void Start()
     {
-        firstSpark.sharedMaterial.SetFloat("_Progress", 0f);
-        secondSpark.sharedMaterial.SetFloat("_Progress", 0f);
+        firstSpark.material.SetFloat("_Progress", 0f);
+        secondSpark.material.SetFloat("_Progress", 0f);
 
         firstSparkAnimator = firstSpark.GetComponent<Animator>();
         secondSparkAnimator = secondSpark.GetComponent<Animator>();
