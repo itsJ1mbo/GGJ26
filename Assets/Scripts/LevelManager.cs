@@ -23,7 +23,6 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-
     /// <summary>
     /// Manda al siguiente nivel de la lista
     /// </summary>

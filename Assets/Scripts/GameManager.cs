@@ -1,8 +1,10 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] LevelManager levelManager;
     public enum Player
     {
         ONE,
@@ -35,9 +37,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        // provisionallll
+        if (Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame)
+        {
+            levelManager.RestartLevel();
+        }
+
     }
 }
