@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3772686663392219072
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 260236721038494778, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Name
+      value: WallGreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256532439263313138, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: wallColorID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256532439263313138, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: muroCollider
+      value: 
+      objectReference: {fileID: 651307593446678762}
+    - target: {fileID: 2717099908744366669, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717099908744366669, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717099908744366669, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892686473253628195, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Name
+      value: OnlyDrawsOnAuraIntersection
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892686473253628195, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057571602585492595, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057571602585492595, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057571602585492595, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.15153348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6205010334470255577, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637723487729551058, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637723487729551058, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637723487729551058, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637723487729551058, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766500891180047925, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Name
+      value: MuroPaint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766500891180047925, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5829760105113437246, guid: eb808d60333320845abb87042657963d, type: 3}
+    - {fileID: 2892534097720362878, guid: eb808d60333320845abb87042657963d, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7766500891180047925, guid: eb808d60333320845abb87042657963d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 651307593446678762}
+  m_SourcePrefab: {fileID: 100100000, guid: eb808d60333320845abb87042657963d, type: 3}
+--- !u!1 &6886955875430453749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7766500891180047925, guid: eb808d60333320845abb87042657963d, type: 3}
+  m_PrefabInstance: {fileID: 3772686663392219072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &651307593446678762
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6886955875430453749}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

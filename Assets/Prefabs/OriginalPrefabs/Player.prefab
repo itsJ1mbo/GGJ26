@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AuraComponent
   colorID: 0
+  isPlayer: 1
   PlayerCollider: {fileID: 0}
 --- !u!58 &3437463254185881183
 CircleCollider2D:

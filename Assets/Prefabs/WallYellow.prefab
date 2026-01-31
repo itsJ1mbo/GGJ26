@@ -10,16 +10,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 260236721038494778, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_Name
-      value: BlueWall
+      value: WallYellow
       objectReference: {fileID: 0}
     - target: {fileID: 1256532439263313138, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: wallColorID
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1256532439263313138, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: muroCollider
       value: 
       objectReference: {fileID: 651307593446678762}
+    - target: {fileID: 2717099908744366669, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717099908744366669, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717099908744366669, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2892686473253628195, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_Name
       value: OnlyDrawsOnAuraIntersection
@@ -28,13 +40,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2892686473253628195, guid: eb808d60333320845abb87042657963d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3057571602585492595, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_Color.b
-      value: 0.91380405
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3057571602585492595, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.93061936
       objectReference: {fileID: 0}
     - target: {fileID: 3057571602585492595, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_Color.r
@@ -70,11 +86,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.89
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24
+      value: -2.17
       objectReference: {fileID: 0}
     - target: {fileID: 8936011937290564840, guid: eb808d60333320845abb87042657963d, type: 3}
       propertyPath: m_LocalPosition.z
