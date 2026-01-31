@@ -222,9 +222,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080c4578940c2154aa34ff9dd7cbce88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AuraComponent
+  colorObject: 0
+  coloredSprite: {fileID: 7112203636779127393}
   baseColor: 0
   isPlayer: 1
-  PlayerCollider: {fileID: 0}
 --- !u!58 &8275090433692422367
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -482,7 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowLerp
   target: {fileID: 6374041802775862857}
-  smoothness: 0.075
+  smoothness: 0.025
   offset: {x: 0, y: 0, z: 0}
 --- !u!1 &3982913713727300235
 GameObject:
