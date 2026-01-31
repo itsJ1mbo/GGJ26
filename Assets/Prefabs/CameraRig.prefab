@@ -48,9 +48,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
   _zOffset: -10
-  _threshHold: 11
-  _maxSize: 8
+  _minSize: 5
+  _maxSize: 3000
   _padding: 3
+  _zoomSpeed: 2
+  _shrinkThreshold: 5
   _camera1: {fileID: 2177428108839743369}
   _camera2: {fileID: 1997178534649205169}
   _texture: {fileID: 8461424038449171459}
