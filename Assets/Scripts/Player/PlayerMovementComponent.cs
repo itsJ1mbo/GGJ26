@@ -52,11 +52,11 @@ public class PlayerMovementComponent : MonoBehaviour
             // Actualizo musica a movimiento inmediatamente
             if (_player1)
             {
-                MusicManager.Instance.SetPlayer1State(MusicManager.PlayerState.CAMINANDO);
+                //MusicManager.Instance.SetPlayer1State(MusicManager.PlayerState.CAMINANDO);
             }
             else
             {
-                MusicManager.Instance.SetPlayer2State(MusicManager.PlayerState.CAMINANDO);
+                //MusicManager.Instance.SetPlayer2State(MusicManager.PlayerState.CAMINANDO);
             }
         }
         else
@@ -69,11 +69,11 @@ public class PlayerMovementComponent : MonoBehaviour
             {
                 if (_player1)
                 {
-                    MusicManager.Instance.SetPlayer1State(MusicManager.PlayerState.QUIETO);
+                    //MusicManager.Instance.SetPlayer1State(MusicManager.PlayerState.QUIETO);
                 }
                 else
                 {
-                    MusicManager.Instance.SetPlayer2State(MusicManager.PlayerState.QUIETO);
+                    //MusicManager.Instance.SetPlayer2State(MusicManager.PlayerState.QUIETO);
                 }
             }
         }
@@ -124,8 +124,7 @@ public class PlayerMovementComponent : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext value)
     {
-        
-
+       
         if(joint != null && joint.connectedBody != null)
         {
             canInteract = true;
