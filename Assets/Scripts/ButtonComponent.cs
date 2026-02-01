@@ -30,6 +30,7 @@ public class ButtonComponent : MonoBehaviour
 
     void Activate()
     {
+        AudioManager.Instance.PalancaoBoton();
         _isOpen = true;
 
         activable.ChangeColor(_openColor);

@@ -347,7 +347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1085}
+  m_AnchoredPosition: {x: 0, y: -1662}
   m_SizeDelta: {x: 300, y: 36.3357}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1213950786
@@ -483,8 +483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.8371, y: 197.319}
-  m_SizeDelta: {x: 1115.4639, y: 1254.6382}
+  m_AnchoredPosition: {x: 7.8371, y: -472.06134}
+  m_SizeDelta: {x: 1115.4639, y: 3251.3152}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1291999753
 MonoBehaviour:
@@ -550,7 +550,7 @@ RectTransform:
   m_GameObject: {fileID: 1508463323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.834, y: 1.834, z: 1.834}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1291999752}
@@ -561,7 +561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -500}
+  m_AnchoredPosition: {x: -6.5362, y: -912}
   m_SizeDelta: {x: 100, y: -92.3241}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1508463325
@@ -725,25 +725,36 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Fran
 
+
     Jimbo
+
 
     Dayuyi
 
+
     Danzhu
+
 
     Bucero
 
+
     Lautaro
+
 
     Quechu
 
+
     Okoli
+
 
     Javivu
 
+
     Fifi
 
+
     Miguel
+
 
     EvaFerrer
 
@@ -823,7 +834,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -0.761076, z: 0, w: -38.053455}
+  m_margin: {x: 0, y: -0.761076, z: 0, w: -149.72072}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -887,14 +898,14 @@ RectTransform:
   m_GameObject: {fileID: 1741356147}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4.206, y: 4.206, z: 4.206}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1508463324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 497.1}
+  m_AnchoredPosition: {x: -0.00003328, y: 497.1}
   m_SizeDelta: {x: 140, y: 78.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1741356149
@@ -1010,10 +1021,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
