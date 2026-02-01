@@ -20,6 +20,8 @@ public class AudioManager : MonoBehaviour
     public EventReference sfxPapelArrugaoEvent;
     public EventReference sfxTizaEvent;
 
+    private EventInstance musicInstance;
+
     void Awake()
     {
         if (!Instance)
@@ -37,9 +39,18 @@ public class AudioManager : MonoBehaviour
     {
         RuntimeManager.PlayOneShot(eventReference);
     }
+    
+
     public void CantoGregoriano()
     {
-        PlayEventReference(ostCantoGregorianoEvent);
+        musicInstance = RuntimeManager.CreateInstance(ostCantoGregorianoEvent);
+        musicInstance.start();
+    }
+
+    public void StopCanto()
+    {
+        musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        musicInstance.release();
     }
 
     public void ApagarLlama()
@@ -86,5 +97,10 @@ public class AudioManager : MonoBehaviour
     public void Tiza()
     {
         PlayEventReference(sfxTizaEvent);
+    }
+    public void StopAllSounds()
+    {
+        FMOD.Studio.Bus masterBus = RuntimeManager.GetBus("bus:/");
+        masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }
