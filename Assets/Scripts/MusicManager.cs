@@ -7,7 +7,6 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance { get; private set; }
 
-
     public EventReference musicEventReference;
     private EventInstance musicInstance;
 

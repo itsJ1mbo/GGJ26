@@ -1,4 +1,5 @@
 using UnityEngine;
+using static GameManager;
 
 public class SprintEnemy : MonoBehaviour
 {
@@ -139,24 +140,39 @@ public class SprintEnemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
+        
+
+            Debug.Log("holaaaa");
             PlayerComponent playerComp = collision.gameObject.GetComponent<PlayerComponent>();
             AuraComponent playerAura = collision.gameObject.GetComponentInChildren<AuraComponent>();
 
-            AuraComponent.AuraColor playerColor = AuraComponent.AuraColor.NONE;
-            if (playerAura != null) playerColor = playerAura.GetCurrentColor();
+            if (playerComp != null || playerAura != null)
+            {
+                AuraComponent.AuraColor playerColor = AuraComponent.AuraColor.NONE;
 
-            if ((playerColor & enemyColor) == enemyColor)
-            {
-                AbsorbEnemy();
+                if (playerAura != null)
+                {
+                    playerColor = playerAura.GetCurrentColor();
+                }
+
+                if ((playerColor & enemyColor) == enemyColor)
+                {
+                    AbsorbEnemy();
+                }
+                else
+                {
+                    if (!isHidden)
+                    {
+                        if (LevelManager.Instance != null)
+                        {
+                            Debug.Log("bye bye");
+                            LevelManager.Instance.RestartLevel();
+                        }
+                        Destroy(collision.gameObject);
+                    }
+                }
             }
-            else if (!isHidden)
-            {
-                if (LevelManager.Instance != null) LevelManager.Instance.RestartLevel();
-                Destroy(collision.gameObject);
-            }
-        }
+        
     }
 
     void AbsorbEnemy() { Destroy(this.gameObject); }
