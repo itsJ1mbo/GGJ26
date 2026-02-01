@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalScenes/Level3.unity
     guid: 687d17c3b39450440832c698085d0370
   - enabled: 1
-    path: Assets/Scenes/Level4.unity
+    path: Assets/Scenes/FinalScenes/Level4.unity
     guid: 1d1d4f41289fc1a47b11b99af6284ce6
   - enabled: 1
     path: Assets/Scenes/FinalScenes/Credits.unity
