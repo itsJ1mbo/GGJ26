@@ -1227,6 +1227,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d1bea08f-c2d8-4d28-8acf-ee4d1a3f64d8
     m_ActionName: 'Credits/Restart[/Keyboard/space,/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 41ecd90f-08df-414f-aee4-e14265c27fdd
+    m_ActionName: 'Player/Restart[/Keyboard/r]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: MainMenu

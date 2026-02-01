@@ -130,24 +130,15 @@ public class BasicEnemy : MonoBehaviour
             {
                 playerColor = playerAura.GetCurrentColor();
             }
+       
+            if (LevelManager.Instance != null)
+            {
+                Debug.Log("bye bye");
+                AudioManager.Instance.ApagarLlama();
+                LevelManager.Instance.RestartLevel();
+            }
+            Destroy(collision.gameObject);
 
-            if ((playerColor & enemyColor) == enemyColor)
-            {
-                AbsorbEnemy();
-            }
-            else
-            {
-                if (!isHidden)
-                {
-                    if (LevelManager.Instance != null)
-                    {
-                        Debug.Log("bye bye");
-                        AudioManager.Instance.ApagarLlama();
-                        LevelManager.Instance.RestartLevel();
-                    }
-                    Destroy(collision.gameObject);
-                }
-            }
         }
     }
 

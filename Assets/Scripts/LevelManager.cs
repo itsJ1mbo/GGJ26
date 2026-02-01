@@ -62,7 +62,6 @@ public class LevelManager : MonoBehaviour
         string currentSceneName = SceneManager.GetActiveScene().name;
         int currentIndex = System.Array.IndexOf(sceneNamesInOrder, currentSceneName);
 
-        SaveManager.Instance.SaveGame();
         string nextSceneName = (currentIndex != -1 && currentIndex + 1 < sceneNamesInOrder.Length)
             ? sceneNamesInOrder[currentIndex + 1]
             : sceneNamesInOrder[0];
@@ -72,6 +71,7 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator TransitionSequence(string sceneToLoad)
     {
+        AudioManager.Instance.PapelArrugao();
 
         if (meltCanvasPrefab != null)
         {
@@ -93,7 +93,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
+        AudioManager.Instance.PapelArrugao();
         SceneManager.sceneLoaded -= OnSceneLoaded;
 
         if (this != null && currentEffect != null)

@@ -4,43 +4,63 @@ public class InteractorComponent : ColorObject
 {
     private AuraComponent.AuraColor oldColor;
 
+    private GameObject activePlayer = null;
+    private bool colorExchanged = false; // El "seguro" para no repetir
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // si te acercas recoges tu color y dejas el tuyo
-        if (collision.CompareTag("Player"))
+        // 1. Validar que es un jugador
+        if (!collision.CompareTag("Player")) return;
+
+        // 2. Validar que el objeto esté libre y no hayamos intercambiado ya
+        if (activePlayer == null && !colorExchanged)
         {
-            AuraComponent playerAura = collision.GetComponentInParent<AuraComponent>();
-            if (playerAura != null)
+            activePlayer = collision.gameObject;
+            TryExchangeColor(collision);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // Al salir el jugador que tenía el control, reseteamos todo
+        if (collision.gameObject == activePlayer)
+        {
+            activePlayer = null;
+            colorExchanged = false; // Permitimos un nuevo intercambio para el siguiente
+            Debug.Log("Reset: Listo para el próximo jugador");
+        }
+    }
+
+    private void TryExchangeColor(Collider2D collision)
+    {
+        AuraComponent playerAura = collision.GetComponentInParent<AuraComponent>();
+
+        if (playerAura != null && !colorExchanged)
+        {
+            AuraComponent.AuraColor playerColor = playerAura.GetBaseColor();
+
+            // Solo si los colores son distintos, hacemos el cambio
+            if (playerColor != colorObject)
             {
-                if (playerAura.GetBaseColor() != colorObject)
-                {
-                    Debug.Log("Color diferente, player: " + playerAura.GetBaseColor() + ", objeto: " + colorObject);
+                // Marcamos como intercambiado ANTES de cambiar los datos para evitar re-entrada
+                colorExchanged = true;
 
-                    colorObject = playerAura.GetBaseColor();
+                AuraComponent.AuraColor tempColor = colorObject;
 
-                    // cambiar color del player al del objeto
-                    playerAura.ForceChangeColor(oldColor);
-                    playerAura.ChangeColor(oldColor);
+                // Aplicar cambios
+                colorObject = playerColor;
+                ChangeColor(colorObject);
 
+                playerAura.ForceChangeColor(tempColor);
+                playerAura.ChangeColor(tempColor);
 
-                    oldColor = colorObject;
-
-                    ChangeColor(colorObject);
-                }
+                Debug.Log($"Intercambio exitoso con {collision.name}. Objeto ahora es {colorObject}");
             }
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         oldColor = colorObject;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
 }

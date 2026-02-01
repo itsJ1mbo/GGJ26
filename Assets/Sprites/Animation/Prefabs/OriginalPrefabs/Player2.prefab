@@ -191,6 +191,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 41ecd90f-08df-414f-aee4-e14265c27fdd
     m_ActionName: 'Player/Restart[/Keyboard/r]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5564a34e-ca90-498c-b3aa-1d436ac571cc
+    m_ActionName: 'MainMenu/Restart[/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -211,6 +215,7 @@ MonoBehaviour:
   speed: 8
   canInteract: 0
   joint: {fileID: 0}
+  palancaReference: {fileID: 0}
   _player1: 0
   stopDelay: 1
 --- !u!114 &1293437713311519602
@@ -320,7 +325,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252369542853508880}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 805c5d7e95d51a54b9dc997ef4fa2831, type: 3}
   m_Name: 
@@ -716,8 +721,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.83687353, y: -1.8841691}
-  m_Size: {x: 2.291585, y: 2.291585}
+  m_Offset: {x: -0.7160952, y: -1.6975117}
+  m_Size: {x: 1.6547527, y: 2.071988}
   m_Direction: 0
 --- !u!1 &6493973420509566376
 GameObject:
