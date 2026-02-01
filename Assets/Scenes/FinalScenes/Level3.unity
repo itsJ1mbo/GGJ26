@@ -3999,6 +3999,10 @@ PrefabInstance:
       value: GameSystem
       objectReference: {fileID: 0}
     - target: {fileID: 5088201002177669944, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.007843138
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088201002177669944, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
@@ -4045,6 +4049,22 @@ PrefabInstance:
     - target: {fileID: 8223764501586281789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[1]'
+      value: Level1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[2]'
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[3]'
+      value: Level3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[4]'
+      value: Level4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4589,8 +4609,8 @@ SceneRoots:
   - {fileID: 1074997454}
   - {fileID: 1941337304}
   - {fileID: 1479658036}
-  - {fileID: 1696238169}
   - {fileID: 1384621025}
+  - {fileID: 1696238169}
   - {fileID: 786711717}
   - {fileID: 1864739247}
   - {fileID: 1022768629}

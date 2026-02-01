@@ -153,6 +153,7 @@ public class BasicEnemy : MonoBehaviour
 
     void AbsorbEnemy()
     {
+        //AudioManager.Instance.Monstruo();
         Destroy(this.gameObject);
     }
 
