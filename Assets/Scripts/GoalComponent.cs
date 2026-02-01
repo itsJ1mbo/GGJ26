@@ -72,7 +72,7 @@ public class GoalComponent : MonoBehaviour
             if (_playersInside == 2)
             {
                 _levelDone = true;
-
+                AudioManager.Instance.Claps();
                 Color newColor = Color.white;
                 switch (other.GetComponentInParent<AuraComponent>().GetBaseColor())
                 {
@@ -90,6 +90,7 @@ public class GoalComponent : MonoBehaviour
             }
             else
             {
+                AudioManager.Instance.Clinclinclin();
                 firstSparkAnimator.Play("GoalAppear");
                 secondSparkAnimator.Play("GoalAppear");
 

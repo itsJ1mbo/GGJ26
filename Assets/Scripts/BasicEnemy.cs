@@ -142,6 +142,7 @@ public class BasicEnemy : MonoBehaviour
                     if (LevelManager.Instance != null)
                     {
                         Debug.Log("bye bye");
+                        AudioManager.Instance.ApagarLlama();
                         LevelManager.Instance.RestartLevel();
                     }
                     Destroy(collision.gameObject);

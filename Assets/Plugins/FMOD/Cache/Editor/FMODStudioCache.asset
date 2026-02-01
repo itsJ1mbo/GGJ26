@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8572580516358699899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_muerte_vela
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_muerte_vela
+  Guid:
+    Data1: 744419372
+    Data2: 1294936511
+    Data3: 456513179
+    Data4: -891424504
+  Banks:
+  - {fileID: 6748151734440654471}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &-7758345335677190075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,6 +57,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 95059
+--- !u!114 &-7187010601328002578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_tiza
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_tiza
+  Guid:
+    Data1: -438172400
+    Data2: 1260378064
+    Data3: -913619013
+    Data4: -1278840627
+  Banks:
+  - {fileID: 6748151734440654471}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &-7081673283638836184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,11 +99,38 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639054909905951109
+  lastModified: 639054853268561409
   FileSizes:
   - Name: Desktop
     Value: 1378
   Exists: 1
+--- !u!114 &-6791060873305638722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_monstruo1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_monstruo1
+  Guid:
+    Data1: -1754003550
+    Data2: 1101639382
+    Data3: -2104699490
+    Data4: -1313014206
+  Banks:
+  - {fileID: 6748151734440654471}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 18000
 --- !u!114 &-6274588524207127740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +157,87 @@ MonoBehaviour:
   - Quieto
   - Movimiento
   Exists: 1
+--- !u!114 &-6121908680691253791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_palanca_boton
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_palanca_boton
+  Guid:
+    Data1: -2031785747
+    Data2: 1094340512
+    Data3: -838080372
+    Data4: 637622824
+  Banks:
+  - {fileID: 6748151734440654471}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1253
+--- !u!114 &-5140578396163936042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_apagar_llama
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_apagar_llama
+  Guid:
+    Data1: 401014466
+    Data2: 1334021727
+    Data3: -502454643
+    Data4: -771757456
+  Banks:
+  - {fileID: 6748151734440654471}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 863
+--- !u!114 &-1751697813711819376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_mechero
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_mechero
+  Guid:
+    Data1: 1813574823
+    Data2: 1194980646
+    Data3: -1405841484
+    Data4: -619930050
+  Banks:
+  - {fileID: 6748151734440654471}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1410
 --- !u!114 &-754445781111388672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,16 +282,81 @@ MonoBehaviour:
   - {fileID: 6748151734440654471}
   EditorEvents:
   - {fileID: -7758345335677190075}
+  - {fileID: -7187010601328002578}
+  - {fileID: -8572580516358699899}
+  - {fileID: 9151673791855448863}
+  - {fileID: -6791060873305638722}
+  - {fileID: -1751697813711819376}
+  - {fileID: 2683182049266160924}
+  - {fileID: -5140578396163936042}
+  - {fileID: 8675161330061271221}
+  - {fileID: -6121908680691253791}
+  - {fileID: 1594692474741689187}
+  - {fileID: 6852518272794287320}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7081673283638836184}
   StringsBanks:
   - {fileID: 7157888826486579222}
   cacheVersion: 131858
-  cacheTime: 639054909906124661
+  cacheTime: 639055113236082748
   SerializableEventsDict:
   - key: event:/PruebaEvento
     index: 0
+--- !u!114 &1594692474741689187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_papel_arrugao
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_papel_arrugao
+  Guid:
+    Data1: 816917743
+    Data2: 1092435556
+    Data3: 495926151
+    Data4: 1345238217
+  Banks:
+  - {fileID: 6748151734440654471}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
+--- !u!114 &2683182049266160924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_clinclinclin
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_clinclinclin
+  Guid:
+    Data1: -1101451850
+    Data2: 1202270617
+    Data3: -1750749559
+    Data4: -1448966876
+  Banks:
+  - {fileID: 6748151734440654471}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6217
 --- !u!114 &6346007953626634368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,11 +398,38 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/PruebaBank.bank
   Name: PruebaBank
   StudioPath: bank:/PruebaBank
-  lastModified: 639054909906124661
+  lastModified: 639055113236082748
   FileSizes:
   - Name: Desktop
-    Value: 2969728
+    Value: 3865856
   Exists: 1
+--- !u!114 &6852518272794287320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ost_canto_gregoriano
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ost_canto_gregoriano
+  Guid:
+    Data1: 413978618
+    Data2: 1137229739
+    Data3: -1340633948
+    Data4: 1892802251
+  Banks:
+  - {fileID: 6748151734440654471}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 38500
 --- !u!114 &7157888826486579222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,8 +445,62 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639054909905951109
+  lastModified: 639055068078681231
   FileSizes:
   - Name: Desktop
-    Value: 1050
+    Value: 1588
   Exists: 1
+--- !u!114 &8675161330061271221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_monstruo2-SOLOUSAMOSELPRIMERO
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_monstruo2-SOLOUSAMOSELPRIMERO
+  Guid:
+    Data1: 861094085
+    Data2: 1094146663
+    Data3: -2080891754
+    Data4: -769896266
+  Banks:
+  - {fileID: 6748151734440654471}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &9151673791855448863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_claps
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_claps
+  Guid:
+    Data1: -1837176204
+    Data2: 1276576647
+    Data3: -1298483282
+    Data4: -1447054694
+  Banks:
+  - {fileID: 6748151734440654471}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
