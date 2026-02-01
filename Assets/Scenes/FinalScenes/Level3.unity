@@ -3999,6 +3999,10 @@ PrefabInstance:
       value: GameSystem
       objectReference: {fileID: 0}
     - target: {fileID: 5088201002177669944, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.007843138
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088201002177669944, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
@@ -4589,8 +4593,8 @@ SceneRoots:
   - {fileID: 1074997454}
   - {fileID: 1941337304}
   - {fileID: 1479658036}
-  - {fileID: 1696238169}
   - {fileID: 1384621025}
+  - {fileID: 1696238169}
   - {fileID: 786711717}
   - {fileID: 1864739247}
   - {fileID: 1022768629}
