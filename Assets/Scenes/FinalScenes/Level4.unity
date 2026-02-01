@@ -308,7 +308,7 @@ PrefabInstance:
     - target: {fileID: 1477239869373154253, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: splineContainer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1668252476}
     - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.49
@@ -352,7 +352,7 @@ PrefabInstance:
     - target: {fileID: 3179031424623221305, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: splineContainer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1668252476}
     - target: {fileID: 3592972660828267305, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.93
@@ -364,7 +364,7 @@ PrefabInstance:
     - target: {fileID: 4611620573400276618, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: splineContainer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1668252476}
     - target: {fileID: 6388284881393835478, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: m_Radius
       value: 1.6
@@ -372,7 +372,7 @@ PrefabInstance:
     - target: {fileID: 7253393269218774221, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: splineContainer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1668252476}
     - target: {fileID: 8584975709201881710, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: m_Name
       value: FeedbackPalancasBotones (4)
@@ -392,9 +392,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2327881181090135208, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1668252477}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
+--- !u!4 &133392569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
+  m_PrefabInstance: {fileID: 133392568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &147245947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2916,104 +2924,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &978799426
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1477239869373154253, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: splineContainer
-      value: 
-      objectReference: {fileID: 1174947707}
-    - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 1.2312112e+13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3179031424623221305, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: splineContainer
-      value: 
-      objectReference: {fileID: 1174947707}
-    - target: {fileID: 4611620573400276618, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: splineContainer
-      value: 
-      objectReference: {fileID: 1174947707}
-    - target: {fileID: 6388284881393835478, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_Radius
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7253393269218774221, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: splineContainer
-      value: 
-      objectReference: {fileID: 1174947707}
-    - target: {fileID: 8584975709201881710, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: m_Name
-      value: FeedbackPalancasBotones (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784593245389724452, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784593245389724452, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784593245389724452, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      propertyPath: color.r
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2327881181090135208, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1174947706}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
---- !u!4 &978799427 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
-  m_PrefabInstance: {fileID: 978799426}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1029806575
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,118 +3744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa210463542603e4d8b0685c5a130755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
---- !u!1 &1174947705
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1174947706}
-  - component: {fileID: 1174947707}
-  m_Layer: 0
-  m_Name: Spline
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1174947706
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174947705}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5383477, y: -4.679266, z: 9.33}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 978799427}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1174947707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174947705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dab5c7d4c32e743048dfca98e2d5914f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineContainer
-  m_Spline:
-    m_EditModeType: 1
-    m_Knots: []
-    m_MetaData: []
-    m_Closed: 0
-    m_IntData:
-      m_Data: []
-    m_FloatData:
-      m_Data: []
-    m_Float4Data:
-      m_Data: []
-    m_ObjectData:
-      m_Data: []
-  m_Splines:
-  - m_EditModeType: 1
-    m_Knots:
-    - Position:
-        x: 0
-        y: 0
-        z: 0
-      TangentIn:
-        x: 0
-        y: 0
-        z: -6.386126
-      TangentOut:
-        x: 0
-        y: 0
-        z: 6.386126
-      Rotation:
-        value:
-          x: -0.49562111
-          y: 0.504341
-          z: -0.50434095
-          w: 0.49562094
-    - Position:
-        x: 6.3851547
-        y: -0.111369014
-        z: 0
-      TangentIn:
-        x: -0
-        y: -0
-        z: -0.63861257
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0.63861257
-      Rotation:
-        value:
-          x: 0.49562106
-          y: -0.50434095
-          z: 0.504341
-          w: -0.495621
-    m_MetaData:
-    - Mode: 2
-      Tension: 0.5
-    - Mode: 0
-      Tension: 0.5
-    m_Closed: 0
-    m_IntData:
-      m_Data: []
-    m_FloatData:
-      m_Data: []
-    m_Float4Data:
-      m_Data: []
-    m_ObjectData:
-      m_Data: []
-  m_Knots:
-    m_KnotsLink: []
 --- !u!1 &1257570328
 GameObject:
   m_ObjectHideFlags: 0
@@ -5715,12 +5513,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668252475}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.407303, y: -3.7683864, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.082697, y: -4.948386, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 133392569}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1683789714
 PrefabInstance:
@@ -5901,7 +5699,7 @@ PrefabInstance:
     - target: {fileID: 1477239869373154253, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: splineContainer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 798557407}
     - target: {fileID: 3014461332524398165, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.38
@@ -5945,15 +5743,15 @@ PrefabInstance:
     - target: {fileID: 3179031424623221305, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: splineContainer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 798557407}
     - target: {fileID: 4611620573400276618, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: splineContainer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 798557407}
     - target: {fileID: 7253393269218774221, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: splineContainer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 798557407}
     - target: {fileID: 8584975709201881710, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: m_Name
       value: FeedbackPalancasBotones (1)
@@ -7576,6 +7374,4 @@ SceneRoots:
   - {fileID: 313416991}
   - {fileID: 1725988300}
   - {fileID: 863304854}
-  - {fileID: 978799426}
   - {fileID: 133392568}
-  - {fileID: 1668252477}
