@@ -170,7 +170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   colorObject: 0
   coloredSprite: {fileID: 2717099908744366669}
-  wallColorID: 0
 --- !u!1 &2892686473253628195
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +248,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1403812574, guid: d4e272cdcc2ce544f9b0a384a74e1948, type: 3}
   m_Color: {r: 0, g: 0.0027253628, b: 1, a: 0.5568628}
   m_FlipX: 0
@@ -339,7 +338,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1403812574, guid: d4e272cdcc2ce544f9b0a384a74e1948, type: 3}
   m_Color: {r: 0, g: 0, b: 1, a: 0.5568628}
   m_FlipX: 0

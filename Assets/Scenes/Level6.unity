@@ -5943,6 +5943,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 5119815871745419988, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 373.98483
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119815871745419988, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 257.02957
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119815871745419988, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 135.99448
+      objectReference: {fileID: 0}
     - target: {fileID: 5251828688615591303, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.09
