@@ -2032,6 +2032,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 332869940}
     m_Modifications:
+    - target: {fileID: 1624093241055138259, guid: d8daa4f94f9a0564c98c7afc9f51f29b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624093241055138259, guid: d8daa4f94f9a0564c98c7afc9f51f29b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 4019407019270980602, guid: d8daa4f94f9a0564c98c7afc9f51f29b, type: 3}
       propertyPath: m_Name
       value: WallPurple
@@ -2638,6 +2646,9 @@ PolygonCollider2D:
       - {x: 10.289064, y: 1.1838946}
       - {x: 14.155862, y: 1.3953736}
       - {x: 14.503906, y: 1.4227602}
+      - {x: 15.655386, y: 1.4234451}
+      - {x: 15.546883, y: 1.6529255}
+      - {x: 14.738416, y: 1.6595327}
       - {x: 14.669423, y: 1.8020011}
       - {x: 14.465353, y: 1.9898148}
       - {x: 5.8761287, y: 1.494606}

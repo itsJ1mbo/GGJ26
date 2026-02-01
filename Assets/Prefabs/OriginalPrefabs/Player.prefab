@@ -712,7 +712,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementComponent
   speed: 4
-  playerID: 1
   canInteract: 0
   joint: {fileID: 0}
   _player1: 0
@@ -729,8 +728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080c4578940c2154aa34ff9dd7cbce88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AuraComponent
-  colorObject: 0
-  coloredSprite: {fileID: 2882621984751456657}
+  colorObject: 1
+  coloredSprite: {fileID: 7112203636779127393}
   isPlayer: 1
 --- !u!58 &5476994268638860824
 CircleCollider2D:
