@@ -91,12 +91,29 @@ public class SprintEnemy : MonoBehaviour
         if (distanceToPlayer <= detectionRange)
         {
             Vector3 direction = (targetTransform.position - transform.position).normalized;
+
+            // Lanzamos el rayo
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, detectionRange, visionMask);
 
-            if (hit.collider != null && hit.collider.CompareTag("Player"))
+            if (hit.collider != null)
             {
-                timer = chargeTime;
-                currentState = State.Charging;
+               
+                Debug.Log("Rayo tocando a: " + hit.collider.gameObject.name + " con Tag: " + hit.collider.tag);
+
+                if (hit.collider.CompareTag("Player"))
+                {
+                    Debug.DrawRay(transform.position, direction * distanceToPlayer, Color.red); 
+                    timer = chargeTime;
+                    currentState = State.Charging;
+                }
+                else
+                {
+                    Debug.DrawRay(transform.position, direction * distanceToPlayer, Color.green); 
+                }
+            }
+            else
+            {
+                Debug.DrawRay(transform.position, direction * detectionRange, Color.white); 
             }
         }
     }
