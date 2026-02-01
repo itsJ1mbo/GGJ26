@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{c03e6809-3132-4092-99f9-09f380de5057}">
+		<property name="assetPath">
+			<value>AllSFX/AudiosVelas-003.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.063673469387755</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c5cf9c49-976e-4677-b3f5-2cf3f4eb0fac}</destination>
+		</relationship>
+	</object>
+</objects>
