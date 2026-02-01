@@ -41,7 +41,6 @@ public class MusicManager : MonoBehaviour
 
     private void InitializeMusic()
     {
-        Debug.Log("InicializamosMusica");
         musicInstance = RuntimeManager.CreateInstance(musicEventReference);
         musicInstance.start();
     }
