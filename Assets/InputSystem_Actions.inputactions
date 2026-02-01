@@ -554,6 +554,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Restart",
+                    "type": "Button",
+                    "id": "5564a34e-ca90-498c-b3aa-1d436ac571cc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -570,12 +579,12 @@
                 },
                 {
                     "name": "",
-                    "id": "299f648b-9013-4622-87f9-d1fb3e1e1f10",
+                    "id": "f41ae29c-6be4-4c04-ad8f-b4e3fd84ad68",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Start",
+                    "action": "Restart",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
