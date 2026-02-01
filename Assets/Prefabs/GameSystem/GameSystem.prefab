@@ -15740,6 +15740,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SystemPause
       objectReference: {fileID: 0}
+    - target: {fileID: 4516096110272914943, guid: ea6d4e302d50a204fa128a21a1c61923, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992831143324819492, guid: ea6d4e302d50a204fa128a21a1c61923, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279617501893596333, guid: ea6d4e302d50a204fa128a21a1c61923, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751048283699371702, guid: ea6d4e302d50a204fa128a21a1c61923, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
