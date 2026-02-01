@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class DelayedTextFadeAndPulse : MonoBehaviour
+public class CreditsComponent : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textToFadeIn;
 
@@ -25,6 +25,8 @@ public class DelayedTextFadeAndPulse : MonoBehaviour
 
             StartCoroutine(Sequence());
         }
+
+        AudioManager.Instance.CantoGregoriano();
     }
 
     private IEnumerator Sequence()
@@ -62,13 +64,15 @@ public class DelayedTextFadeAndPulse : MonoBehaviour
 
     private void Update()
     { 
-        if (Time.timeSinceLevelLoad > 15f && Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Time.timeSinceLevelLoad > 15f && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             SceneManager.LoadScene("MainMenu");
+            AudioManager.Instance.StopCanto();
         }
         else if(Time.timeSinceLevelLoad > 80f) // pasar al menu despues de 80 seconds
         {
             SceneManager.LoadScene("MainMenu");
+            AudioManager.Instance.StopCanto();
         }
     }
 }

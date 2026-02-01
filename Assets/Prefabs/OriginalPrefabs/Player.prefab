@@ -695,6 +695,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 41ecd90f-08df-414f-aee4-e14265c27fdd
     m_ActionName: 'Player/Restart[/Keyboard/r]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5564a34e-ca90-498c-b3aa-1d436ac571cc
+    m_ActionName: 'MainMenu/Restart[/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -767,8 +771,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.28999996, y: 2.8573608}
-  m_Radius: 5.38916
+  m_Offset: {x: 0.28999996, y: 2.1080685}
+  m_Radius: 5.282119
 --- !u!50 &5370273672638145402
 Rigidbody2D:
   serializedVersion: 5
@@ -844,8 +848,8 @@ Transform:
   m_GameObject: {fileID: 7898754716643062990}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 3.7338, z: 0}
+  m_LocalScale: {x: 0.18161175, y: 0.18161175, z: 0.18161175}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5434544621387738539}
