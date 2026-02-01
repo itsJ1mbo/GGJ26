@@ -23,6 +23,7 @@ public class PalancaComponent : MonoBehaviour
         _isOpen = !_isOpen;
 
         activable.ChangeColor(_openColor);
+        AudioManager.Instance.PalancaoBoton();
 
         if (_isOpen)
         {
