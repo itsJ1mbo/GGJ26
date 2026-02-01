@@ -714,6 +714,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -34.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6009636393457345086, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6009636393457345086, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -22.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8189504425964524642, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: _minSize
       value: 12
@@ -733,30 +741,6 @@ PrefabInstance:
     - target: {fileID: 8223764501586281789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: sceneNamesInOrder.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: 'sceneNamesInOrder.Array.data[1]'
-      value: Level1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: 'sceneNamesInOrder.Array.data[2]'
-      value: Level2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: 'sceneNamesInOrder.Array.data[3]'
-      value: Level3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: 'sceneNamesInOrder.Array.data[4]'
-      value: Level4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: 'sceneNamesInOrder.Array.data[5]'
-      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8699563867158238890, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.x

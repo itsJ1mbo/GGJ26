@@ -15637,7 +15637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4941920982836167869, guid: d58707c747603e8429185f8d3672564e, type: 3}
       propertyPath: sceneNamesInOrder.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4941920982836167869, guid: d58707c747603e8429185f8d3672564e, type: 3}
       propertyPath: 'sceneNamesInOrder.Array.data[1]'
@@ -15654,6 +15654,14 @@ PrefabInstance:
     - target: {fileID: 4941920982836167869, guid: d58707c747603e8429185f8d3672564e, type: 3}
       propertyPath: 'sceneNamesInOrder.Array.data[4]'
       value: Level4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941920982836167869, guid: d58707c747603e8429185f8d3672564e, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[6]'
+      value: Level6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941920982836167869, guid: d58707c747603e8429185f8d3672564e, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[7]'
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 6928647008915104085, guid: d58707c747603e8429185f8d3672564e, type: 3}
       propertyPath: m_Name

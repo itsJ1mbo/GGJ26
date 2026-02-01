@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: 456513179
     Data4: -891424504
   Banks:
-  - {fileID: 6748151734440654471}
+  - {fileID: 0}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -99,7 +99,7 @@ MonoBehaviour:
     Data3: -913619013
     Data4: -1278840627
   Banks:
-  - {fileID: 6748151734440654471}
+  - {fileID: 0}
   - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
     Data3: -2104699490
     Data4: -1313014206
   Banks:
-  - {fileID: 6748151734440654471}
+  - {fileID: 0}
   - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 1
@@ -201,7 +201,7 @@ MonoBehaviour:
     Data3: -838080372
     Data4: 637622824
   Banks:
-  - {fileID: 6748151734440654471}
+  - {fileID: 0}
   - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
     Data3: -1750749559
     Data4: -1448966876
   Banks:
-  - {fileID: 2857104518216548160}
+  - {fileID: 0}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -282,7 +282,7 @@ MonoBehaviour:
     Data3: -502454643
     Data4: -771757456
   Banks:
-  - {fileID: 6748151734440654471}
+  - {fileID: 0}
   - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
     Data3: -502454643
     Data4: -771757456
   Banks:
-  - {fileID: 2857104518216548160}
+  - {fileID: 0}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -333,7 +333,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/PruebaBank.bank
   Name: PruebaBank
   StudioPath: bank:/PruebaBank
-  lastModified: 639055081452855607
+  lastModified: 639055422189164761
   FileSizes:
   - Name: Desktop
     Value: 3865856
@@ -357,7 +357,7 @@ MonoBehaviour:
     Data3: -1405841484
     Data4: -619930050
   Banks:
-  - {fileID: 6748151734440654471}
+  - {fileID: 0}
   - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
@@ -381,7 +381,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639054855370316545
+  lastModified: 639055422188904734
   FileSizes:
   - Name: Desktop
     Value: 1378
@@ -405,7 +405,7 @@ MonoBehaviour:
     Data3: -1298483282
     Data4: -1447054694
   Banks:
-  - {fileID: 2857104518216548160}
+  - {fileID: 0}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -458,7 +458,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639055081451970491
+  lastModified: 639055422188914774
   FileSizes:
   - Name: Desktop
     Value: 1588
@@ -525,7 +525,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -1043093434815663507}
   cacheVersion: 131858
-  cacheTime: 639055081452855607
+  cacheTime: 639055422189164761
   SerializableEventsDict:
   - key: event:/sfx_muerte_vela
     index: 0
@@ -570,7 +570,7 @@ MonoBehaviour:
     Data3: 495926151
     Data4: 1345238217
   Banks:
-  - {fileID: 6748151734440654471}
+  - {fileID: 0}
   - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
     Data3: -1750749559
     Data4: -1448966876
   Banks:
-  - {fileID: 6748151734440654471}
+  - {fileID: 0}
   - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
@@ -678,7 +678,7 @@ MonoBehaviour:
     Data3: -1340633948
     Data4: 1892802251
   Banks:
-  - {fileID: 6748151734440654471}
+  - {fileID: 0}
   - {fileID: -2291942688757235725}
   IsStream: 1
   Is3D: 0
@@ -746,7 +746,7 @@ MonoBehaviour:
     Data3: -2080891754
     Data4: -769896266
   Banks:
-  - {fileID: 6748151734440654471}
+  - {fileID: 0}
   - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
@@ -774,7 +774,7 @@ MonoBehaviour:
     Data3: -1298483282
     Data4: -1447054694
   Banks:
-  - {fileID: 6748151734440654471}
+  - {fileID: 0}
   - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
