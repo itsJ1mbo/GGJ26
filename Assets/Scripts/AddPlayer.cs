@@ -19,39 +19,54 @@ public class AddPlayer : MonoBehaviour
         if (gamepadCount >= 2)
         {
             // 2+ mandos: cada jugador usa su propio mando con leftStick + cuadrado
+            // Incluimos Keyboard para satisfacer el control scheme, pero cada jugador usa su gamepad
             player1 = PlayerInput.Instantiate(player1Prefab,
                 controlScheme: "WASD",
-                pairWithDevices: new InputDevice[] { Gamepad.all[0] });
+                pairWithDevices: new InputDevice[] { Keyboard.current, Gamepad.all[0] });
 
             player2 = PlayerInput.Instantiate(player2Prefab,
                 controlScheme: "ARROW",
-                pairWithDevices: new InputDevice[] { Gamepad.all[1] });
+                pairWithDevices: new InputDevice[] { Keyboard.current, Gamepad.all[1] });
 
             // Override bindings de P2 para usar leftStick en lugar de rightStick
-            var moveAction = player2.actions.FindAction("Move");
-            if (moveAction != null)
+            var moveActionP2 = player2.actions.FindAction("Move");
+            if (moveActionP2 != null)
             {
-                for (int i = 0; i < moveAction.bindings.Count; i++)
+                for (int i = 0; i < moveActionP2.bindings.Count; i++)
                 {
-                    var binding = moveAction.bindings[i];
+                    var binding = moveActionP2.bindings[i];
                     if (!string.IsNullOrEmpty(binding.path) && binding.path.Contains("rightStick"))
                     {
                         string newPath = binding.path.Replace("rightStick", "leftStick");
-                        moveAction.ApplyBindingOverride(i, newPath);
+                        moveActionP2.ApplyBindingOverride(i, newPath);
+                    }
+                }
+            }
+
+            // Override Interact de P1 para usar buttonWest (cuadrado) en lugar de leftShoulder
+            var interactActionP1 = player1.actions.FindAction("Interact");
+            if (interactActionP1 != null)
+            {
+                for (int i = 0; i < interactActionP1.bindings.Count; i++)
+                {
+                    var binding = interactActionP1.bindings[i];
+                    if (!string.IsNullOrEmpty(binding.path) && binding.path.Contains("leftShoulder"))
+                    {
+                        interactActionP1.ApplyBindingOverride(i, "<Gamepad>/buttonWest");
                     }
                 }
             }
 
             // Override Interact de P2 para usar buttonWest (cuadrado) en lugar de rightShoulder
-            var interactAction = player2.actions.FindAction("Interact");
-            if (interactAction != null)
+            var interactActionP2 = player2.actions.FindAction("Interact");
+            if (interactActionP2 != null)
             {
-                for (int i = 0; i < interactAction.bindings.Count; i++)
+                for (int i = 0; i < interactActionP2.bindings.Count; i++)
                 {
-                    var binding = interactAction.bindings[i];
+                    var binding = interactActionP2.bindings[i];
                     if (!string.IsNullOrEmpty(binding.path) && binding.path.Contains("rightShoulder"))
                     {
-                        interactAction.ApplyBindingOverride(i, "<Gamepad>/buttonWest");
+                        interactActionP2.ApplyBindingOverride(i, "<Gamepad>/buttonWest");
                     }
                 }
             }
