@@ -69,7 +69,7 @@ public class CreditsComponent : MonoBehaviour
             SceneManager.LoadScene("MainMenu");
             AudioManager.Instance.StopCanto();
         }
-        else if(Time.timeSinceLevelLoad > 80f) // pasar al menu despues de 80 seconds
+        else if(Time.timeSinceLevelLoad > 90f) // pasar al menu despues de 80 seconds
         {
             SceneManager.LoadScene("MainMenu");
             AudioManager.Instance.StopCanto();

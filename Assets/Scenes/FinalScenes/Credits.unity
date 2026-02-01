@@ -186,8 +186,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1083214205}
   - component: {fileID: 1083214204}
-  - component: {fileID: 1083214203}
   - component: {fileID: 1083214206}
+  - component: {fileID: 1083214207}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -195,14 +195,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1083214203
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083214202}
-  m_Enabled: 1
 --- !u!20 &1083214204
 Camera:
   m_ObjectHideFlags: 0
@@ -313,6 +305,20 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1083214207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083214202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &1213950784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   textToFadeIn: {fileID: 1213950786}
-  delayBeforeFade: 20
+  delayBeforeFade: 45
   fadeInDuration: 1.5
   activarParpadeo: 1
   alphaMinimo: 0.3
