@@ -11,7 +11,7 @@ public class SettingsManager : MonoBehaviour
 
     // Nombres por defecto, puedes cambiarlos en el Inspector de Unity
     public string masterBusPath = "bus:/";
-    public string musicBusPath = "bus:/OST"; // Ojo: Verifica el nombre exacto en FMOD
+    public string musicBusPath = "bus:/OST";
     public string effectsBusPath = "bus:/SFX";
 
     // Variables privadas para controlar los buses

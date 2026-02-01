@@ -53,6 +53,12 @@ public class AudioManager : MonoBehaviour
         musicInstance.release();
     }
 
+    public void StopEnemigo()
+    {
+        musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        musicInstance.release();
+    }
+
     public void ApagarLlama()
     {
         PlayEventReference(sfxApagarLlamaEvent);
@@ -74,9 +80,12 @@ public class AudioManager : MonoBehaviour
         PlayEventReference(sfxMecheroEvent);
     }
 
-    public void Monstruo()
+    public EventInstance Monstruo()
     {
-        PlayEventReference(sfxMonstruoEvent);
+        EventInstance enemyVoice = RuntimeManager.CreateInstance(sfxMonstruoEvent);
+        enemyVoice.start();
+        enemyVoice.release();
+        return enemyVoice;
     }
 
     public void MuerteVela()
@@ -102,5 +111,10 @@ public class AudioManager : MonoBehaviour
     {
         FMOD.Studio.Bus masterBus = RuntimeManager.GetBus("bus:/");
         masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+    public void StopAllSFX()
+    {
+        FMOD.Studio.Bus sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        sfxBus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

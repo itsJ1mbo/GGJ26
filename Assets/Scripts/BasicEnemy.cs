@@ -17,6 +17,9 @@ public class BasicEnemy : MonoBehaviour
 
     private Animator _animator;
 
+    private FMOD.Studio.EventInstance _enemyVoiceInstance;
+
+
     void Awake() 
     {
         // Unity busca el componente Animator que está pegado en este mismo objeto
@@ -24,6 +27,8 @@ public class BasicEnemy : MonoBehaviour
     }
     void Start()
     {
+        _enemyVoiceInstance = AudioManager.Instance.Monstruo();
+
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _enemyCollider = GetComponent<Collider2D>();
 
@@ -36,10 +41,17 @@ public class BasicEnemy : MonoBehaviour
             targetPoint = patrolPoints[0].position;
         }
     }
-
+    void UpdateSoundPosition()
+    {
+        if (_enemyVoiceInstance.isValid())
+        {
+            _enemyVoiceInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        }
+    }
     void Update()
     {
         Move();
+        UpdateSoundPosition();
     }
 
     void Move()
@@ -144,7 +156,7 @@ public class BasicEnemy : MonoBehaviour
 
     void AbsorbEnemy()
     {
-        //AudioManager.Instance.Monstruo();
+        //AudioManager.Instance.StopEnemigo();
         Destroy(this.gameObject);
     }
 
@@ -160,6 +172,15 @@ public class BasicEnemy : MonoBehaviour
             case AuraComponent.AuraColor.YELLOW: _spriteRenderer.color = Color.yellow; break;
             case AuraComponent.AuraColor.PURPLE: _spriteRenderer.color = new Color(0.5f, 0, 0.5f); break;
             case AuraComponent.AuraColor.CYAN: _spriteRenderer.color = Color.cyan; break;
+        }
+    }
+
+    void OnDestroy()
+    {
+        if (_enemyVoiceInstance.isValid())
+        {
+            _enemyVoiceInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            _enemyVoiceInstance.release();
         }
     }
 }

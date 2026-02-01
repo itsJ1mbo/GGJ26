@@ -66,6 +66,8 @@ public class LevelManager : MonoBehaviour
             ? sceneNamesInOrder[currentIndex + 1]
             : sceneNamesInOrder[0];
 
+        AudioManager.Instance.StopAllSFX();
+
         StartCoroutine(TransitionSequence(nextSceneName));
     }
 
