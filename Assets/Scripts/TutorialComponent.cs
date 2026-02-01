@@ -11,6 +11,7 @@ public class TutorialComponent : MonoBehaviour
     public Image _arrows;
     public Image _jl;
     public Image _jr;
+    public Image _controller;
     public TMP_Text _textL;
     public TMP_Text _textR;
 
@@ -18,6 +19,7 @@ public class TutorialComponent : MonoBehaviour
     private Color _arrowsColor;
     private Color _jlColor;
     private Color _jrColor;
+    private Color _controllerColor;
     private Color _textLColor;
     private Color _textRColor;
 
@@ -33,6 +35,7 @@ public class TutorialComponent : MonoBehaviour
         _jrColor = _jr.color;
         _textLColor = _textL.color;
         _textRColor = _textR.color;
+        _controllerColor = _controller.color;
     }
 
     // Update is called once per frame
@@ -50,7 +53,11 @@ public class TutorialComponent : MonoBehaviour
         }
         else if (GameManager.Instance._gamepad == 2)
         {
-            
+            if(!(_p1Move && _p2Move))
+                _controller.color = new Color(_controllerColor.r, _controllerColor.g, _controllerColor.b, Mathf.Lerp(_controller.color.a, 1f, Time.deltaTime * _inSpeed));
+            else
+                _controller.color = new Color(_controllerColor.r, _controllerColor.g, _controllerColor.b, Mathf.Lerp(_controller.color.a, 0f, Time.deltaTime * _outSpeed));
+                    
         }
     }
 }
