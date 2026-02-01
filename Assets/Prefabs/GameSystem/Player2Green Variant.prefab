@@ -44,6 +44,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2Green Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6171843331619536013, guid: 683ba50d93050e04d980b24a4e05cd4f, type: 3}
+      propertyPath: m_Size.x
+      value: 2.291585
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171843331619536013, guid: 683ba50d93050e04d980b24a4e05cd4f, type: 3}
+      propertyPath: m_Size.y
+      value: 2.291585
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171843331619536013, guid: 683ba50d93050e04d980b24a4e05cd4f, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.83687353
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171843331619536013, guid: 683ba50d93050e04d980b24a4e05cd4f, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.8841691
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319883544169625931, guid: 683ba50d93050e04d980b24a4e05cd4f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319883544169625931, guid: 683ba50d93050e04d980b24a4e05cd4f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.61
+      objectReference: {fileID: 0}
     - target: {fileID: 6793147941236308580, guid: 683ba50d93050e04d980b24a4e05cd4f, type: 3}
       propertyPath: speed
       value: 8

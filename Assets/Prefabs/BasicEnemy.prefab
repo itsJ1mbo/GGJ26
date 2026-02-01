@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7959614000604285851}
   - component: {fileID: 580627726899008318}
   - component: {fileID: 4607558209993470961}
+  - component: {fileID: 8723753061998094339}
   m_Layer: 0
   m_Name: BasicEnemy
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.96942, y: 4.74755, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3363012050994792874, guid: 6ce09da6f63f76f47ade51ec3e58f3cc, type: 3}
+  m_Sprite: {fileID: -5567736040623963329, guid: 1e5a0d4df41673a46b8aaacbbd58c764, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,10 +106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa04d5e85dae4c648b2b3c5212c92808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicEnemy
-  colorID: 0
+  enemyColor: 5
   moveSpeed: 3
-  pointA: {fileID: 0}
-  pointB: {fileID: 0}
+  patrolPoints: []
 --- !u!70 &580627726899008318
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -143,8 +143,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.4903406, y: -0.32913357}
+  m_Size: {x: 2.1083105, y: 4.1360145}
   m_Direction: 0
 --- !u!50 &4607558209993470961
 Rigidbody2D:
@@ -173,3 +173,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &8723753061998094339
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2881309315766194461}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6d49e8efa97aa794fb6c47bc6f4de813, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
