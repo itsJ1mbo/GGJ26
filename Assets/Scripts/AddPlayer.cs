@@ -19,13 +19,14 @@ public class AddPlayer : MonoBehaviour
         if (gamepadCount >= 2)
         {
             // 2+ mandos: cada jugador usa su propio mando con leftStick + cuadrado
+            // Incluimos Keyboard para satisfacer el control scheme, pero cada jugador usa su gamepad
             player1 = PlayerInput.Instantiate(player1Prefab,
                 controlScheme: "WASD",
-                pairWithDevices: new InputDevice[] { Gamepad.all[0] });
+                pairWithDevices: new InputDevice[] { Keyboard.current, Gamepad.all[0] });
 
             player2 = PlayerInput.Instantiate(player2Prefab,
                 controlScheme: "ARROW",
-                pairWithDevices: new InputDevice[] { Gamepad.all[1] });
+                pairWithDevices: new InputDevice[] { Keyboard.current, Gamepad.all[1] });
 
             // Override bindings de P2 para usar leftStick en lugar de rightStick
             var moveActionP2 = player2.actions.FindAction("Move");
