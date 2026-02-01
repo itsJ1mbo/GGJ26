@@ -4012,6 +4012,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.22
       objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[1]'
+      value: Level1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[2]'
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[3]'
+      value: Level3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[4]'
+      value: Level4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
