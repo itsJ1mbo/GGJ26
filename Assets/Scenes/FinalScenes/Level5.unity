@@ -3754,7 +3754,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1926077669301174745, guid: 2c9d227b938c6a6409125fba6f43bb1a, type: 3}
       propertyPath: enemyColor
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7486239197958353959, guid: 2c9d227b938c6a6409125fba6f43bb1a, type: 3}
       propertyPath: m_LocalScale.x
