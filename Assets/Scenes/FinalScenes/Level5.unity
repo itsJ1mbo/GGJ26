@@ -638,10 +638,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 2107708918447347681, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 311
-      objectReference: {fileID: 0}
     - target: {fileID: 2408503192649815972, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.84
@@ -690,10 +686,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -3.79
       objectReference: {fileID: 0}
-    - target: {fileID: 4005695364731383878, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: m_Convex
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4172640407917534032, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_Name
       value: GameSystem
@@ -701,10 +693,6 @@ PrefabInstance:
     - target: {fileID: 4424175987768959058, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4829888098484527891, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5088201002177669944, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_Color.b
@@ -733,18 +721,6 @@ PrefabInstance:
     - target: {fileID: 5251828688615591303, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.y
       value: -27.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 6290363208149183046, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458068546740183713, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8183213110334388187, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8200054898376354834, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.x
