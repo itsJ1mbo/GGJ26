@@ -25,8 +25,10 @@ public class MovableObject : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
+             Debug.Log("Entro Layer");
             if (collision.gameObject.GetComponentInParent<PlayerMovementComponent>() != null)
             {
+                Debug.Log("Entro componente");
                 collision.gameObject.GetComponentInParent<PlayerMovementComponent>().canInteract = true;
                 collision.gameObject.GetComponentInParent<PlayerMovementComponent>().joint = joint;
 
