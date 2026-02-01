@@ -12,6 +12,9 @@ public class GoalComponent : MonoBehaviour
     [SerializeField] private GameObject finalParticleSystem;
 
 
+    [SerializeField]
+    GoalObjComponent [] goalObjs;
+
     private Animator firstSparkAnimator;
     private Animator secondSparkAnimator;
 
@@ -28,6 +31,18 @@ public class GoalComponent : MonoBehaviour
         secondSparkAnimator = secondSpark.GetComponent<Animator>();
     }
 
+
+    private void Update()
+    {
+        if (checkEnd())
+        {
+            _levelDone = true;
+            AudioManager.Instance.Claps();
+            Color newColor = Color.white;
+            TransitionNextLevel(newColor);
+        }
+
+    }
 
 
     private IEnumerator CoroutineTransitionNextLevel(Color secondSparkColor)
@@ -63,8 +78,20 @@ public class GoalComponent : MonoBehaviour
         StartCoroutine(CoroutineTransitionNextLevel(secondSparkColor));
     }
 
+
+    private bool checkEnd()
+    {
+        int i = 0;
+        while (i < goalObjs.Length && goalObjs[i].complete)
+        {
+            i++;
+        }
+        return i >= goalObjs.Length;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        /*
         if (!_levelDone && other.CompareTag("Player"))
         {
             _playersInside++;
@@ -109,9 +136,11 @@ public class GoalComponent : MonoBehaviour
                 
             }
         }
+        */
     }
     private void OnTriggerExit2D(Collider2D other)
     {
+        /*
         if (other.CompareTag("Player"))
         {
             _playersInside--;
@@ -122,5 +151,6 @@ public class GoalComponent : MonoBehaviour
                 secondSparkAnimator.Play("GoalDissapear");
             }
         }
+        */
     }
 }
