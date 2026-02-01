@@ -77,7 +77,7 @@ public class AuraComponent : ColorObject
     // cuando otro jugador entra en el aura, cambia el color a morado
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if ((!isPlayer && collision.CompareTag("Player")) || (isPlayer && collision.CompareTag("PlayerAura")))
         {
             AddColorToCounters(collision.GetComponentInParent<AuraComponent>().GetBaseColor());
             RecalculateFinalColor();
@@ -92,7 +92,7 @@ public class AuraComponent : ColorObject
     // cuando otro jugador sale del aura, vuelve al color inicial
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if ((!isPlayer && collision.CompareTag("Player")) || (isPlayer && collision.CompareTag("PlayerAura")))
         {
             RemoveColorFromCounters(collision.GetComponentInParent<AuraComponent>().GetBaseColor());
             RecalculateFinalColor();
