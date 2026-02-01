@@ -174,7 +174,11 @@ public class SprintEnemy : MonoBehaviour
         
     }
 
-    void AbsorbEnemy() { Destroy(this.gameObject); }
+    void AbsorbEnemy() 
+    {
+        //AudioManager.Instance.Monstruo();
+        Destroy(this.gameObject); 
+    }
 
     void UpdateEnemyColorVisuals()
     {
