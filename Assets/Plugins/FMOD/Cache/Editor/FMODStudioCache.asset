@@ -333,7 +333,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/PruebaBank.bank
   Name: PruebaBank
   StudioPath: bank:/PruebaBank
-  lastModified: 639055422189164761
+  lastModified: 639055081452855607
   FileSizes:
   - Name: Desktop
     Value: 3865856
@@ -381,7 +381,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639055422188904734
+  lastModified: 639054855370316545
   FileSizes:
   - Name: Desktop
     Value: 1378
@@ -458,7 +458,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639055422188914774
+  lastModified: 639055081451970491
   FileSizes:
   - Name: Desktop
     Value: 1588
@@ -525,7 +525,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -1043093434815663507}
   cacheVersion: 131858
-  cacheTime: 639055422189164761
+  cacheTime: 639055081452855607
   SerializableEventsDict:
   - key: event:/sfx_muerte_vela
     index: 0
