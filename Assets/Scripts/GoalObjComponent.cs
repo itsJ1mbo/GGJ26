@@ -17,6 +17,7 @@ public class GoalObjComponent : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerCount++;
+            AudioManager.Instance.Clinclinclin();
             if (playerCount >= necessaryPlayers)
                 complete = true;
 
