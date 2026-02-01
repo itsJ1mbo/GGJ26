@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: c24a398a48cbb5842a8fc22f406a853e
+guid: 8f44a7926b2d82440ba1f69eaafc2372
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6713919142895907979
-    second: JL_0
+      213: 7826462180048369958
+    second: bichejo_white_2_0
+  - first:
+      213: -3779450150312702414
+    second: bichejo_white_2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JL_0
+      name: bichejo_white_2_0
       rect:
         serializedVersion: 2
-        x: 209
-        y: 526
-        width: 251
-        height: 238
+        x: 807
+        y: 344
+        width: 6
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57b8ef48c1e53d2a0800000000000000
-      internalID: -6713919142895907979
+      spriteID: 629ffc9e2ed2d9c60800000000000000
+      internalID: 7826462180048369958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bichejo_white_2_1
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 259
+        width: 337
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e8058dc12bc8bc0800000000000000
+      internalID: -3779450150312702414
       vertices: []
       indices: 
       edges: []
@@ -138,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b0e0f0cb27b603d48a01e625991e4514
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JL_0: -6713919142895907979
+      bichejo_white_2_0: 7826462180048369958
+      bichejo_white_2_1: -3779450150312702414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
