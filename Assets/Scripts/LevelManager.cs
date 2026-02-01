@@ -62,7 +62,6 @@ public class LevelManager : MonoBehaviour
         string currentSceneName = SceneManager.GetActiveScene().name;
         int currentIndex = System.Array.IndexOf(sceneNamesInOrder, currentSceneName);
 
-        SaveManager.Instance.SaveGame();
         string nextSceneName = (currentIndex != -1 && currentIndex + 1 < sceneNamesInOrder.Length)
             ? sceneNamesInOrder[currentIndex + 1]
             : sceneNamesInOrder[0];
