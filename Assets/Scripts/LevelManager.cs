@@ -93,7 +93,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        AudioManager.Instance.PapelArrugao();
+        AudioManager.Instance.Tiza();
         SceneManager.sceneLoaded -= OnSceneLoaded;
 
         if (this != null && currentEffect != null)
