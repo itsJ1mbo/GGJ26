@@ -34,7 +34,7 @@ public class GoalComponent : MonoBehaviour
 
     private void Update()
     {
-        if (checkEnd())
+        if (!_levelDone && checkEnd())
         {
             _levelDone = true;
             AudioManager.Instance.Claps();
