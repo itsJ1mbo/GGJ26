@@ -644,7 +644,15 @@ PrefabInstance:
       value: FeedbackPalancasBotones2
       objectReference: {fileID: 0}
     - target: {fileID: 8784593245389724452, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
+      propertyPath: color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784593245389724452, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
       propertyPath: color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784593245389724452, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}
+      propertyPath: color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9190822031182741321, guid: 410bbe9030a95ba4b8de87c9b5c26d64, type: 3}

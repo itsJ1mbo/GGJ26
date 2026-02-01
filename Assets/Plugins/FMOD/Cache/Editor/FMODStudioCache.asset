@@ -333,7 +333,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/PruebaBank.bank
   Name: PruebaBank
   StudioPath: bank:/PruebaBank
-  lastModified: 639055081452855607
+  lastModified: 639055408423329607
   FileSizes:
   - Name: Desktop
     Value: 3865856
@@ -381,7 +381,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639054855370316545
+  lastModified: 639054684998736037
   FileSizes:
   - Name: Desktop
     Value: 1378
@@ -458,7 +458,7 @@ MonoBehaviour:
   Path: FMOD/GGJ26/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639055081451970491
+  lastModified: 639055408423047803
   FileSizes:
   - Name: Desktop
     Value: 1588
@@ -525,10 +525,32 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -1043093434815663507}
   cacheVersion: 131858
-  cacheTime: 639055081452855607
+  cacheTime: 639055408423329607
   SerializableEventsDict:
-  - key: event:/sfx_tiza
+  - key: event:/sfx_muerte_vela
     index: 0
+  - key: event:/sfx_tiza
+    index: 1
+  - key: event:/sfx_claps
+    index: 3
+  - key: event:/sfx_monstruo1
+    index: 4
+  - key: event:/sfx_mechero
+    index: 5
+  - key: event:/sfx_clinclinclin
+    index: 6
+  - key: event:/sfx_apagar_llama
+    index: 7
+  - key: event:/sfx_monstruo2-SOLOUSAMOSELPRIMERO
+    index: 8
+  - key: event:/sfx_palanca_boton
+    index: 9
+  - key: event:/sfx_papel_arrugao
+    index: 10
+  - key: event:/ost_canto_gregoriano
+    index: 11
+  - key: event:/PruebaEvento
+    index: 12
 --- !u!114 &1594692474741689187
 MonoBehaviour:
   m_ObjectHideFlags: 0
