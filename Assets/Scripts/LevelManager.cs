@@ -72,6 +72,7 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator TransitionSequence(string sceneToLoad)
     {
+        AudioManager.Instance.PapelArrugao();
 
         if (meltCanvasPrefab != null)
         {
@@ -93,7 +94,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
+        AudioManager.Instance.PapelArrugao();
         SceneManager.sceneLoaded -= OnSceneLoaded;
 
         if (this != null && currentEffect != null)

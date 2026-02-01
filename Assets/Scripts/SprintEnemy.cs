@@ -153,23 +153,16 @@ public class SprintEnemy : MonoBehaviour
                     playerColor = playerAura.GetCurrentColor();
                 }
 
-                if ((playerColor & enemyColor) == enemyColor)
+            
+                if (LevelManager.Instance != null)
                 {
-                    AbsorbEnemy();
+                    Debug.Log("bye bye");
+                    AudioManager.Instance.ApagarLlama();
+                    LevelManager.Instance.RestartLevel();
                 }
-                else
-                {
-                    if (!isHidden)
-                    {
-                        if (LevelManager.Instance != null)
-                        {
-                            Debug.Log("bye bye");
-                            AudioManager.Instance.ApagarLlama();
-                            LevelManager.Instance.RestartLevel();
-                        }
-                        Destroy(collision.gameObject);
-                    }
-                }
+                Destroy(collision.gameObject);
+ 
+                
             }
         
     }
