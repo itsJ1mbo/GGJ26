@@ -70,8 +70,6 @@ public class AddPlayer : MonoBehaviour
                     }
                 }
             }
-
-            GameManager.Instance._gamepad = true;
         }
         else if (gamepadCount == 1)
         {
@@ -85,8 +83,6 @@ public class AddPlayer : MonoBehaviour
             player2 = PlayerInput.Instantiate(player2Prefab,
                 controlScheme: "ARROW",
                 pairWithDevices: devices);
-
-            GameManager.Instance._gamepad = true;
         }
         else
         {
@@ -98,9 +94,9 @@ public class AddPlayer : MonoBehaviour
             player2 = PlayerInput.Instantiate(player2Prefab,
                 controlScheme: "ARROW",
                 pairWithDevices: new InputDevice[] { Keyboard.current });
-
-            GameManager.Instance._gamepad = false;
         }
+        
+        GameManager.Instance._gamepad = gamepadCount;
 
         // Posicionar jugadores en spawns
         if (spawn.Length > 0)

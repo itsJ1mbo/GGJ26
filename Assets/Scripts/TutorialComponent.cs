@@ -41,12 +41,16 @@ public class TutorialComponent : MonoBehaviour
         _wasd.color = !_p1Move ? new Color(_wasdColor.r, _wasdColor.g, _wasdColor.b, Mathf.Lerp(_wasd.color.a, 1f, Time.deltaTime * _inSpeed)) : new Color(_wasdColor.r, _wasdColor.g, _wasdColor.b, Mathf.Lerp(_wasd.color.a, 0f, Time.deltaTime * _outSpeed));
         _arrows.color = !_p2Move ? new Color(_arrowsColor.r, _arrowsColor.g, _arrowsColor.b, Mathf.Lerp(_arrows.color.a, 1f, Time.deltaTime * _inSpeed)) : new Color(_arrowsColor.r, _arrowsColor.g, _arrowsColor.b, Mathf.Lerp(_arrows.color.a, 0f, Time.deltaTime * _outSpeed));
 
-        if (GameManager.Instance._gamepad)
+        if (GameManager.Instance._gamepad == 1)
         {
             _jl.color = !_p1Move ? new Color(_jlColor.r, _jlColor.g, _jlColor.b, Mathf.Lerp(_jl.color.a, 1f, Time.deltaTime * _inSpeed)) : new Color(_jlColor.r, _jlColor.g, _jlColor.b, Mathf.Lerp(_jl.color.a, 0f, Time.deltaTime * _outSpeed));
             _jr.color = !_p2Move ? new Color(_jrColor.r, _jrColor.g, _jrColor.b, Mathf.Lerp(_jr.color.a, 1f, Time.deltaTime * _inSpeed)) : new Color(_jrColor.r, _jrColor.g, _jrColor.b, Mathf.Lerp(_jr.color.a, 0f, Time.deltaTime * _outSpeed));
             _textL.color = !_p1Move ? new Color(_textLColor.r, _textLColor.g, _textLColor.b, Mathf.Lerp(_textL.color.a, 1f, Time.deltaTime * _inSpeed)) : new Color(_textLColor.r, _textLColor.g, _textLColor.b, Mathf.Lerp(_textL.color.a, 0f, Time.deltaTime * _outSpeed));
             _textR.color = !_p2Move ? new Color(_textRColor.r, _textRColor.g, _textRColor.b, Mathf.Lerp(_textR.color.a, 1f, Time.deltaTime * _inSpeed)) : new Color(_textRColor.r, _textRColor.g, _textRColor.b, Mathf.Lerp(_textR.color.a, 0f, Time.deltaTime * _outSpeed));
+        }
+        else if (GameManager.Instance._gamepad == 2)
+        {
+            
         }
     }
 }
