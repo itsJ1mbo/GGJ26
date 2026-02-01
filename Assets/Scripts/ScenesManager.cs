@@ -14,5 +14,7 @@ public class ScenesManager : MonoBehaviour
     public void FirstLevel()
     {
         SceneManager.LoadScene("Level1");
+        SaveManager.Instance._currentLevel = 0;
+        SaveManager.Instance.SaveGame();
     }
 }
