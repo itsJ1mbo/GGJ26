@@ -75,5 +75,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3395120978603791010, guid: c3a23e6324339f2489ca0104b893e605, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2727583658391214038}
   m_SourcePrefab: {fileID: 100100000, guid: c3a23e6324339f2489ca0104b893e605, type: 3}
+--- !u!1 &4022035429190734964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3395120978603791010, guid: c3a23e6324339f2489ca0104b893e605, type: 3}
+  m_PrefabInstance: {fileID: 1787022382286030550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2727583658391214038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022035429190734964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805c5d7e95d51a54b9dc997ef4fa2831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GravitateOnStop
+  minDistance: 2.32
+  stillSpeedThreshold: 0.21
+  attractionSpeed: 3

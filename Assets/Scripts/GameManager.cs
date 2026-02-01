@@ -53,4 +53,14 @@ public class GameManager : MonoBehaviour
         LevelManager.Instance.RestartLevel();
 
     }
+
+    public GameObject GetPlayer1()
+    {
+        return _players[(int)Player.ONE];
+    }
+
+    public GameObject GetPlayer2()
+    {
+        return _players[(int)Player.TWO];
+    }
 }
