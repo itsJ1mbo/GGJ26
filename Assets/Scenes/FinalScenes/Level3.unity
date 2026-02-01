@@ -2834,7 +2834,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -7670272320693302389, guid: 39bc670b9d00f334997bce31b1b8362b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2852,13 +2852,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988540492}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7845289, y: 3.392157, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.059974745, w: 0.99819994}
+  m_LocalPosition: {x: -3.97, y: 3.81, z: 0}
+  m_LocalScale: {x: 1.198, y: 1.198, z: 1.198}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.877}
 --- !u!1 &1022768628
 GameObject:
   m_ObjectHideFlags: 0
@@ -4773,7 +4773,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5119815871745419988, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.89999
+      value: -0.8999901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119815871745419988, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.6000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119815871745419988, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00000006658916
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119815871745419988, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999757
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119815871745419988, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.006982533
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119815871745419988, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6167752354479559361, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.x
