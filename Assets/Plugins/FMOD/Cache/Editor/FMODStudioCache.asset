@@ -27,6 +27,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &-8480189039339574683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PruebaEvento/GameState
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: GameState
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2878392550
+    data2: 3094782888
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Menu
+  - Game
+  Exists: 1
 --- !u!114 &-7758345335677190075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,14 +72,14 @@ MonoBehaviour:
     Data3: 456513179
     Data4: -891424504
   Banks:
-  - {fileID: 2857104518216548160}
+  - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 95059
+  Length: 2000
 --- !u!114 &-7187010601328002578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +100,7 @@ MonoBehaviour:
     Data4: -1278840627
   Banks:
   - {fileID: 6748151734440654471}
+  - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -121,6 +148,7 @@ MonoBehaviour:
     Data4: -1313014206
   Banks:
   - {fileID: 6748151734440654471}
+  - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -174,6 +202,7 @@ MonoBehaviour:
     Data4: 637622824
   Banks:
   - {fileID: 6748151734440654471}
+  - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -181,61 +210,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1253
---- !u!114 &-5140578396163936042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx_apagar_llama
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/sfx_apagar_llama
-  Guid:
-    Data1: 401014466
-    Data2: 1334021727
-    Data3: -502454643
-    Data4: -771757456
-  Banks:
-  - {fileID: 6748151734440654471}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 863
---- !u!114 &-1751697813711819376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx_mechero
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/sfx_mechero
-  Guid:
-    Data1: 1813574823
-    Data2: 1194980646
-    Data3: -1405841484
-    Data4: -619930050
-  Banks:
-  - {fileID: 6748151734440654471}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1410
---- !u!114 &-754445781111388672
+--- !u!114 &-5479674095808017465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,21 +220,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PruebaEvento/GameState
+  m_Name: parameter:/PruebaEvento/P1Movement
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: GameState
+  Name: P1Movement
   StudioPath: 
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 2878392550
-    data2: 3094782888
+    data1: 3672639199
+    data2: 1906402181
   Type: 2
   IsGlobal: 0
   Labels:
-  - Menu
-  - Game
+  - Quieto
+  - Movimiento
   Exists: 1
 --- !u!114 &-5417049228382662665
 MonoBehaviour:
@@ -288,6 +263,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6217
+--- !u!114 &-5140578396163936042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_apagar_llama
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_apagar_llama
+  Guid:
+    Data1: 401014466
+    Data2: 1334021727
+    Data3: -502454643
+    Data4: -771757456
+  Banks:
+  - {fileID: 6748151734440654471}
+  - {fileID: -2291942688757235725}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 863
 --- !u!114 &-4403977264741609716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +318,54 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 863
+--- !u!114 &-2291942688757235725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PruebaBank.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD/GGJ26/Build/Desktop/PruebaBank.bank
+  Name: PruebaBank
+  StudioPath: bank:/PruebaBank
+  lastModified: 639055081452855607
+  FileSizes:
+  - Name: Desktop
+    Value: 3865856
+  Exists: 1
+--- !u!114 &-1751697813711819376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_mechero
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/sfx_mechero
+  Guid:
+    Data1: 1813574823
+    Data2: 1194980646
+    Data3: -1405841484
+    Data4: -619930050
+  Banks:
+  - {fileID: 6748151734440654471}
+  - {fileID: -2291942688757235725}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1410
 --- !u!114 &-1690591837528737327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +413,36 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &-1049248203294509455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PruebaEvento
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PruebaEvento
+  Guid:
+    Data1: -802894679
+    Data2: 1232014215
+    Data3: -1602851148
+    Data4: -823576147
+  Banks:
+  - {fileID: -2291942688757235725}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5479674095808017465}
+  - {fileID: 3645327028489817915}
+  - {fileID: -8480189039339574683}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 95059
 --- !u!114 &-1043093434815663507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +463,32 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1588
   Exists: 1
+--- !u!114 &-754445781111388672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PruebaEvento/GameState
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: GameState
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2878392550
+    data2: 3094782888
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Menu
+  - Game
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +504,7 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -1043093434815663507}
   - {fileID: -1690591837528737327}
-  - {fileID: 2857104518216548160}
+  - {fileID: -2291942688757235725}
   EditorEvents:
   - {fileID: -7758345335677190075}
   - {fileID: -7187010601328002578}
@@ -411,13 +518,14 @@ MonoBehaviour:
   - {fileID: -6121908680691253791}
   - {fileID: 1594692474741689187}
   - {fileID: 6852518272794287320}
+  - {fileID: -1049248203294509455}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1690591837528737327}
   StringsBanks:
   - {fileID: -1043093434815663507}
   cacheVersion: 131858
-  cacheTime: 639055113236082748
+  cacheTime: 639055081452855607
   SerializableEventsDict:
   - key: event:/sfx_tiza
     index: 0
@@ -441,6 +549,7 @@ MonoBehaviour:
     Data4: 1345238217
   Banks:
   - {fileID: 6748151734440654471}
+  - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -468,6 +577,7 @@ MonoBehaviour:
     Data4: -1448966876
   Banks:
   - {fileID: 6748151734440654471}
+  - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -475,6 +585,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6217
+--- !u!114 &3645327028489817915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PruebaEvento/P2Movement
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: P2Movement
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2126709602
+    data2: 3268434515
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Quieto
+  - Movimiento
+  Exists: 1
 --- !u!114 &6346007953626634368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,26 +637,6 @@ MonoBehaviour:
   - Quieto
   - Movimiento
   Exists: 1
---- !u!114 &7570786897801852925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/PruebaBank.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: FMOD/GGJ26/Build/Desktop/PruebaBank.bank
-  Name: PruebaBank
-  StudioPath: bank:/PruebaBank
-  lastModified: 639055113236082748
-  FileSizes:
-  - Name: Desktop
-    Value: 3865856
-  Exists: 1
 --- !u!114 &6852518272794287320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,6 +657,7 @@ MonoBehaviour:
     Data4: 1892802251
   Banks:
   - {fileID: 6748151734440654471}
+  - {fileID: -2291942688757235725}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -568,6 +685,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1588
   Exists: 1
+--- !u!114 &7570786897801852925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PruebaBank.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD/GGJ26/Build/Desktop/PruebaBank.bank
+  Name: PruebaBank
+  StudioPath: bank:/PruebaBank
+  lastModified: 639055113236082748
+  FileSizes:
+  - Name: Desktop
+    Value: 3865856
+  Exists: 1
 --- !u!114 &8675161330061271221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,6 +725,7 @@ MonoBehaviour:
     Data4: -769896266
   Banks:
   - {fileID: 6748151734440654471}
+  - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -615,6 +753,7 @@ MonoBehaviour:
     Data4: -1447054694
   Banks:
   - {fileID: 6748151734440654471}
+  - {fileID: -2291942688757235725}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
