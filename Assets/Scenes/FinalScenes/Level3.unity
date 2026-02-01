@@ -2919,7 +2919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1306241702}
   - component: {fileID: 1306241701}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Level3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
