@@ -733,7 +733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 333733925}
   - component: {fileID: 333733924}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Level4_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1611,6 +1611,30 @@ PrefabInstance:
     - target: {fileID: 8223764501586281789, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.y
       value: 11.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: sceneNamesInOrder.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[1]'
+      value: Level1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[2]'
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[3]'
+      value: Level3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[4]'
+      value: Level4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538565460099206896, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      propertyPath: 'sceneNamesInOrder.Array.data[5]'
+      value: Level5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

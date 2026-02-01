@@ -10530,6 +10530,10 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0.7686275
       objectReference: {fileID: 0}
+    - target: {fileID: 2177428108839743369, guid: 12d9ab3c220e19f41bd76bbef28e0ab8, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1975
+      objectReference: {fileID: 0}
     - target: {fileID: 4643462929719712635, guid: 12d9ab3c220e19f41bd76bbef28e0ab8, type: 3}
       propertyPath: m_Name
       value: CameraRig
