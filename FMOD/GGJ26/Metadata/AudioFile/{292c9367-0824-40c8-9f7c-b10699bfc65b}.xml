@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{292c9367-0824-40c8-9f7c-b10699bfc65b}">
+		<property name="assetPath">
+			<value>AllSFX/Claps-011.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.62693877551020405</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c5cf9c49-976e-4677-b3f5-2cf3f4eb0fac}</destination>
+		</relationship>
+	</object>
+</objects>

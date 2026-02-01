@@ -170,11 +170,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SprintEnemy
   enemyColor: 1
-  detectionRange: 5
+  detectionRange: 8
   visionMask:
     serializedVersion: 2
     m_Bits: 640
-  sprintSpeed: 5
+  sprintSpeed: 8
   chargeTime: 0.5
-  cooldownTime: 2
+  cooldownTime: 1
   currentState: 0

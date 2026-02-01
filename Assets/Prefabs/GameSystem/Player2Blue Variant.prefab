@@ -36,6 +36,26 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4624643266396272064, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
+      propertyPath: m_Size.x
+      value: 2.291585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624643266396272064, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
+      propertyPath: m_Size.y
+      value: 2.291585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624643266396272064, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.83687353
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624643266396272064, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.8841691
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772829181566857222, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.59
+      objectReference: {fileID: 0}
     - target: {fileID: 5462547818544165673, guid: 0a470813a9447d34dba625d5e69bc4bf, type: 3}
       propertyPath: speed
       value: 8

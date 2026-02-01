@@ -15,6 +15,13 @@ public class BasicEnemy : MonoBehaviour
     private Collider2D _enemyCollider;
     private bool isHidden = false;
 
+    private Animator _animator;
+
+    void Awake() 
+    {
+        // Unity busca el componente Animator que está pegado en este mismo objeto
+        _animator = GetComponent<Animator>();
+    }
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();

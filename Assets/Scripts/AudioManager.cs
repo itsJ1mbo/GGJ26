@@ -5,39 +5,86 @@ using FMODUnity;
 
 public class AudioManager : MonoBehaviour
 {
-    public EventReference endLevelEventReference;
-    public EventReference botonEventReference;
-    public EventReference abrirCerrarPuertaEventReference;
-    public EventReference botePinturaEventReference;
-    public EventReference cambioParedColorEventReference;
+    // EJEMPLO USO DESDE DONDE QUIERA LLAMAR A LAS CLAPS: 
+    // AudioManager.Instance.Claps(); desde donde quieras
+    public static AudioManager Instance { get; private set; }
+
+    public EventReference ostCantoGregorianoEvent;
+    public EventReference sfxApagarLlamaEvent;
+    public EventReference sfxClapsEvent;
+    public EventReference sfxClinclinclinEvent;
+    public EventReference sfxMecheroEvent;
+    public EventReference sfxMonstruoEvent;
+    public EventReference sfxMuerteVelaEvent;
+    public EventReference sfxPalancaoBotonEvent;
+    public EventReference sfxPapelArrugaoEvent;
+    public EventReference sfxTizaEvent;
+
+    void Awake()
+    {
+        if (!Instance)
+        {
+            DontDestroyOnLoad(transform.gameObject);
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void PlayEventReference(EventReference eventReference)
     {
         RuntimeManager.PlayOneShot(eventReference);
     }
-    public void EndLevel()
+    public void CantoGregoriano()
     {
-        PlayEventReference(endLevelEventReference);
+        PlayEventReference(ostCantoGregorianoEvent);
     }
 
-    public void Boton()
+    public void ApagarLlama()
     {
-        PlayEventReference(botonEventReference);
+        PlayEventReference(sfxApagarLlamaEvent);
     }
     
 
-    public void AbrirCerrarPuerta()
+    public void Claps()
     {
-        PlayEventReference(abrirCerrarPuertaEventReference);
+        PlayEventReference(sfxClapsEvent);
     }
 
-    public void BotePintura()
+    public void Clinclinclin()
     {
-        PlayEventReference(botePinturaEventReference);
+        PlayEventReference(sfxClinclinclinEvent);
     }
 
-    public void CambioParedColor()
+    public void Mechero()
     {
-        PlayEventReference(cambioParedColorEventReference);
+        PlayEventReference(sfxMecheroEvent);
+    }
+
+    public void Monstruo()
+    {
+        PlayEventReference(sfxMonstruoEvent);
+    }
+
+    public void MuerteVela()
+    {
+        PlayEventReference(sfxMuerteVelaEvent);
+    }
+
+    public void PalancaoBoton()
+    {
+        PlayEventReference(sfxPalancaoBotonEvent);
+    }
+
+    public void PapelArrugao()
+    {
+        PlayEventReference(sfxPapelArrugaoEvent);
+    }
+
+    public void Tiza()
+    {
+        PlayEventReference(sfxTizaEvent);
     }
 }
