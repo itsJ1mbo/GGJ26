@@ -15,10 +15,12 @@ public class PlayerMovementComponent : MonoBehaviour
 
     Rigidbody2D rb;
     public HingeJoint2D joint;
+    public PalancaComponent palancaReference = null;
 
     [HideInInspector] public bool _player1;
 
     private bool _firstMove = true;
+
 
     private float stopTimer = 0f;
     public float stopDelay = 1.0f;
@@ -124,25 +126,34 @@ public class PlayerMovementComponent : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext value)
     {
-       
-        if(joint != null && joint.connectedBody != null)
+       if (joint != null)
         {
-            canInteract = true;
-        }
-
-        if (value.canceled && canInteract)
-        {
-            if (joint.connectedBody == null)
+            if(joint.connectedBody != null)
             {
-                joint.connectedBody = rb;
-                Rigidbody2D thisRb = joint.gameObject.GetComponent<Rigidbody2D>();
-                thisRb.bodyType = RigidbodyType2D.Dynamic;
+                canInteract = true;
             }
-            else
+
+            if (value.canceled && canInteract)
             {
-                Rigidbody2D thisRb = joint.gameObject.GetComponent<Rigidbody2D>();
-                thisRb.bodyType = RigidbodyType2D.Kinematic;
-                joint.connectedBody = null;
+                if (joint.connectedBody == null)
+                {
+                    joint.connectedBody = rb;
+                    Rigidbody2D thisRb = joint.gameObject.GetComponent<Rigidbody2D>();
+                    thisRb.bodyType = RigidbodyType2D.Dynamic;
+                }
+                else
+                {
+                    Rigidbody2D thisRb = joint.gameObject.GetComponent<Rigidbody2D>();
+                    thisRb.bodyType = RigidbodyType2D.Kinematic;
+                    joint.connectedBody = null;
+                }
+            }
+        }
+        else if(palancaReference != null)
+        {
+            if (value.canceled && canInteract)
+            {
+                palancaReference.Activate();
             }
         }
 

@@ -12,13 +12,30 @@ public class PalancaComponent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.layer == 7)
         {
-            Activate();
+            if (collision.gameObject.GetComponentInParent<PlayerMovementComponent>() != null)
+            {
+                collision.gameObject.GetComponentInParent<PlayerMovementComponent>().canInteract = true;
+                collision.gameObject.GetComponentInParent<PlayerMovementComponent>().palancaReference = this;
+            }
         }
     }
 
-    void Activate()
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 7)
+        {
+            if (collision.gameObject.GetComponentInParent<Rigidbody2D>() != null)
+            {
+
+                collision.gameObject.GetComponentInParent<PlayerMovementComponent>().canInteract = false;
+                collision.gameObject.GetComponentInParent<PlayerMovementComponent>().palancaReference = null;
+            }
+        }
+    }
+
+    public void Activate()
     {
         _isOpen = !_isOpen;
 
@@ -41,7 +58,7 @@ public class PalancaComponent : MonoBehaviour
     private void Awake()
     {
         _colorOriginal = _openColor;
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer = GetComponentInParent<SpriteRenderer>();
     }
 
     private void Start()
