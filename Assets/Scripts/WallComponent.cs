@@ -20,7 +20,7 @@ public class WallComponent : ColorObject
                 if (playerAura.GetCurrentColor() == colorObject)
                 {
                     Physics2D.IgnoreCollision(collision, muroCollider, true);
-                    Debug.Log("Pared " + colorObject + " dejando pasar al jugador.");
+                    //Debug.Log("Pared " + colorObject + " dejando pasar al jugador.");
                 }
             }
         }
@@ -29,7 +29,7 @@ public class WallComponent : ColorObject
     private void OnTriggerExit2D(Collider2D collision)
     {
         Physics2D.IgnoreCollision(collision, muroCollider, false);
-        Debug.Log("Pared " + colorObject + " bloqueando al jugador.");
+        //Debug.Log("Pared " + colorObject + " bloqueando al jugador.");
     }
 
 
