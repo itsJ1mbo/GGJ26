@@ -678,14 +678,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3019827636850857398, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 20.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 3019827636850857398, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.79
-      objectReference: {fileID: 0}
     - target: {fileID: 4172640407917534032, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_Name
       value: GameSystem
@@ -716,11 +708,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5251828688615591303, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.27
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 5251828688615591303, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.82
+      value: -56.5
       objectReference: {fileID: 0}
     - target: {fileID: 8200054898376354834, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -764,16 +756,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8699563867158238890, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.3
+      value: 52.1
       objectReference: {fileID: 0}
     - target: {fileID: 8699563867158238890, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.06
+      value: -5.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4412715680952076421, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1137562243}
   m_SourcePrefab: {fileID: 100100000, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
 --- !u!1 &200883311
 GameObject:
@@ -3571,6 +3566,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1137562241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4412715680952076421, guid: bee7313452f68894c8fc8cc68509a9e8, type: 3}
+  m_PrefabInstance: {fileID: 130759400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1137562243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137562241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041ccd9d182545b4a999f42323ce4929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoalObjComponent
+  necessaryPlayers: 1
+  playerCount: 0
+  complete: 0
 --- !u!1 &1192579529
 GameObject:
   m_ObjectHideFlags: 0
