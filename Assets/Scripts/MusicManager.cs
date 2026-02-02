@@ -2,6 +2,7 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
@@ -34,12 +35,15 @@ public class MusicManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void Start()
-    {
-        InitializeMusic();
-    }
 
-    private void InitializeMusic()
+    private void Update()
+    {
+        if (Keyboard.current.oKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene("Credits");
+        }
+    }
+    public void InitializeMusic()
     {
         musicInstance = RuntimeManager.CreateInstance(musicEventReference);
         musicInstance.start();
@@ -68,10 +72,10 @@ public class MusicManager : MonoBehaviour
         SetParameter("P2Movement", (float)newState);
     }
 
-    public void SetMusicStateByIndex(int index)
-    {
-        SetMusicState((MusicState)index);
-    }
+    //public void SetMusicStateByIndex(int index)
+    //{
+    //    SetMusicState((MusicState)index);
+    //}
 
     public void SetPlayer1StateByIndex(int index)
     {
@@ -82,41 +86,15 @@ public class MusicManager : MonoBehaviour
     {
         SetPlayer2State((PlayerState)index);
     }
-    void Update()
+
+    public void StopMusicInstance()
     {
-        if (Keyboard.current == null) return;
-
-        // Tecla M -> Cambia a Menu
-        if (Keyboard.current.cKey.wasPressedThisFrame)
-        {
-            SetMusicState(MusicState.MENU);
-            Debug.Log("M�sica cambiada a Menu");
-        }
-
-        // Tecla C -> Cambia a Caminando
-        if (Keyboard.current.gKey.wasPressedThisFrame)
-        {
-            SetMusicState(MusicState.GAME);
-            Debug.Log("M�sica cambiada a Game");
-        }
-        // Tecla Q -> Cambia a Quieto
-        if (Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            SetPlayer1State(PlayerState.QUIETO);
-            Debug.Log("M�sica cambiada a Quieto");
-        }
-
-        // Tecla C -> Cambia a Caminando
-        if (Keyboard.current.cKey.wasPressedThisFrame)
-        {
-            SetPlayer1State(PlayerState.CAMINANDO);
-            Debug.Log("M�sica cambiada a Caminando");
-        }
+        musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        musicInstance.release();
     }
 
     void OnDestroy()
     {
-        musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        musicInstance.release();
+        StopMusicInstance();
     }
 }

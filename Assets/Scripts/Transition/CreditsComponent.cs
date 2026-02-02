@@ -17,6 +17,7 @@ public class CreditsComponent : MonoBehaviour
 
     private void Start()
     {
+        MusicManager.Instance.StopMusicInstance();
         if (textToFadeIn != null)
         {
             Color c = textToFadeIn.color;
